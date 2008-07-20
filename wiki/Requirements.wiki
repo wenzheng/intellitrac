@@ -1,5 +1,7 @@
 #summary List of requirements.
 
+See http://intellitrac.googlecode.com/svn/trunk/doc/ for UML diagrams.
+
 = Tickets =
 
  * viewing the list of tickets
