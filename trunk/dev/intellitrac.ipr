@@ -267,7 +267,7 @@
   <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/intellijtrac.iml" filepath="$PROJECT_DIR$/intellijtrac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intellitrac.iml" filepath="$PROJECT_DIR$/intellitrac.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA 7757" project-jdk-type="IDEA JDK">
