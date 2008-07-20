@@ -13,3 +13,7 @@
 
  * viewing the wiki (starting from home)
  * editing
+
+= Configuration =
+
+The plugin should automatically detect HTTP authentication mode (basic or digest) and use appriopriate one. Users will not have to know it.
