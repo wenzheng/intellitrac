@@ -1,0 +1,22 @@
+#summary GUI description.
+
+= Main panel =
+
+This panel will be visible within IDE by clicking a button on the IDE toolbar (just like "Ant", "Maven projects" or "TODO"). It will consist of three tabs.
+
+== Tickets ==
+
+=== Toolbar ===
+There will be a toolbar at the top and a list of reports at the bottom. It will be always visible, however it will change its content depending on the current context. It will always contain navigation buttons (home (reports list), back) in a constant place, e.g. right-aligned.
+
+=== List of reports ===
+It will be the first state of the Tickets tab.
+
+ * Open report (only active if a report is selected in the list) - goes to list of tickets.
+
+
+== Wiki ==
+
+== Help ==
+
+= Details =
