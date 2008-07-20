@@ -48,3 +48,13 @@ TODO: specification.
 == Help ==
 
 This tab will just display contents of a help web page.
+
+= Settings =
+
+This panel will be accessible by clicking "IntelliTrac settings" in Project settings. It will be just a form with following fields:
+
+ * Trac URL - text field - direct URL to the Trac project (concrete project, e.g. http://my-track.com/project).
+ * Login
+ * Password
+
+OK and Cancel buttons underneath.
