@@ -4,7 +4,7 @@
 
 This panel will be visible within IDE by clicking a button on the IDE toolbar (just like "Ant", "Maven projects" or "TODO"). It will consist of three tabs: [GUI#Tickets tickets], [GUI#Wiki wiki] and [GUI#Help help].
 
-[[# Tickets]] == Tickets ==
+== # Tickets ==
 
 === Toolbar ===
 There will be a toolbar at the top and a list of reports at the bottom. It will be always visible, however it will change its content depending on the current context. It will always contain navigation buttons (home ([GUI#ReportsList reports list]), back, [GUI#TicketEditor new ticket]) in a constant place, e.g. right-aligned.
