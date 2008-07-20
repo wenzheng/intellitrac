@@ -1,0 +1,15 @@
+#summary List of requirements.
+
+= Tickets =
+
+ * viewing the list of tickets
+   * configurable predefined reports (my, active, closed)
+   * adding/removing/editing queries
+ * editing/adding new tickets
+ * ability to start/pause/stop working on the ticket (system automatically calculates time spent on working on a ticket)
+
+
+= Wiki =
+
+ * viewing the wiki (starting from home)
+ * editing
