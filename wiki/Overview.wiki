@@ -21,6 +21,8 @@ The development includes following:
 
 The project will be developed under IntelliJ IDEA 7 using Plugin Development Package (http://www.jetbrains.com/idea/plugins/plugin_developers.html).
 
+See also LibrariesAndFrameworks.
+
 = Useful links =
 
  * http://ws.apache.org/xmlrpc/index.html
