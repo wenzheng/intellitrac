@@ -15,10 +15,9 @@ However XML-RPC is a deprecated protocol (SOAP is more common nowadays), it stil
 
 = Technical issues =
 
-The development includes following major libraries:
+The development includes following:
  * Java Development Kit 6 update 7
  * IntelliJ IDEA Software Development Kit 7757
- * Apache XML-RPC (http://ws.apache.org/xmlrpc)
 
 The project will be developed under IntelliJ IDEA 7 using Plugin Development Package (http://www.jetbrains.com/idea/plugins/plugin_developers.html).
 
