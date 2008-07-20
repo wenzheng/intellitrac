@@ -24,13 +24,27 @@ It will be the first state of the Tickets tab. Toolbar will contain buttons:
    * there is a selected ticket in the list.
 
  * Stop working on a ticket - updates this ticket, adding calculated time. It will be active if all these conditions are met:
-   * there is a selected ticket in the list.
+   * there is a selected ticket in the list,
    * the user started working on this ticket (by clicking "start working on a ticket").
 
- * Stop working on a ticket - updates this ticket, adding calculated time. It will be active if all these conditions are met:
-   * there is a selected ticket in the list.
+ * Pause working on a ticket - pauses the timer for this ticket working time, but does not stop it - the user is still working on this ticket. Required conditions:
+   * there is a selected ticket in the list,
    * the user started working on this ticket (by clicking "start working on a ticket").
+
+ * Edit ticket - navigates to [GUI#TicketEditor ticket editor].
+
+=== Report editor ===
+
+A form for editing a report (TODO: more detailed specification).
+
+=== Ticket editor ===
+
+A form for editing a ticket (TODO: more detailed specification).
 
 == Wiki ==
 
+TODO: specification.
+
 == Help ==
+
+This tab will just display contents of a help web page.
