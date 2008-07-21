@@ -1,6 +1,6 @@
 #summary List of requirements.
 
-See http://intellitrac.googlecode.com/svn/trunk/doc/ for UML diagrams.
+http://intellitrac.googlecode.com/svn/trunk/doc/img/use_cases.png
 
 = Tickets =
 
