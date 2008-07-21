@@ -1,7 +1,5 @@
 #summary List of requirements.
 
-http://intellitrac.googlecode.com/svn/trunk/doc/img/use_cases.png
-
 = Tickets =
 
  * viewing the list of tickets
@@ -19,3 +17,7 @@ http://intellitrac.googlecode.com/svn/trunk/doc/img/use_cases.png
 = Configuration =
 
 The plugin should automatically detect HTTP authentication mode (basic or digest) and use appriopriate one. Users will not have to know it.
+
+= UML =
+
+http://intellitrac.googlecode.com/svn/trunk/doc/img/use_cases.png
