@@ -35,11 +35,13 @@ It will be the first state of the Tickets tab. Toolbar will contain buttons:
 
 === Report editor ===
 
-A form for editing a report (TODO: more detailed specification).
+ * Title
+ * Description
+ * Query
 
 === Ticket editor ===
 
-A form for editing a ticket (TODO: more detailed specification).
+Analogous to the web ticket editor.
 
 == Wiki ==
 
