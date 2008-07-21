@@ -1,8 +1,13 @@
 <!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
 <idea-plugin>
-  <name>Plugin name here</name>
-  <description>short description of the plugin</description>
+  <name>IntelliTrac</name>
+  <description>Trac integration for IntelliJ IDEA.</description>
   <version>1.0</version>
-  <vendor>YourCompany</vendor>
+  <vendor>KNP UE Krakow</vendor>
   <idea-version since-build="3000"/>
+  <project-components>
+    <component>
+      <implementation-class>pl.krakow.ae.knp.intellitrac.IntelliTrac</implementation-class>
+    </component>
+  </project-components>
 </idea-plugin>
