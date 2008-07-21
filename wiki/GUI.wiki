@@ -6,7 +6,7 @@ This panel will be visible within IDE by clicking a button on the IDE toolbar (j
 
 == Tickets ==
 
-See http://intellitrac.googlecode.com/svn/trunk/doc/img/tickets_flow.png for page flow.
+http://intellitrac.googlecode.com/svn/trunk/doc/img/tickets_flow.png
 
 === Toolbar ===
 There will be a toolbar at the top and a list of reports at the bottom. It will be always visible, however it will change its content depending on the current context. It will always contain navigation buttons (home ([#Reports_list reports list]), back, [#Ticket_editor new ticket]) in a constant place, e.g. right-aligned.
