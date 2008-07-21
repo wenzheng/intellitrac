@@ -45,7 +45,16 @@ Analogous to the web ticket editor.
 
 == Wiki ==
 
-TODO: specification.
+Wiki mode will consist of a toolbar at the top and a wiki-browser.
+
+=== Toolbar ===
+There will be a toolbar at the top. It will be always visible - it will contain navigation buttons (home wiki page, back, [#Wiki_editor new wiki page], [#Wiki_editor edit this page], delete this page, delete this version, attach file).
+
+=== Wiki browser ===
+Will just display wiki pages rendered in HTML. Links will work here.
+
+=== Wiki editor ===
+Just an editor with "preview", "submit" and "cancel" buttons.
 
 == Help ==
 
