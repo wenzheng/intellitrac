@@ -1,0 +1,16 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <name>IntelliTrac</name>
+  <description>Trac integration for IntelliJ IDEA.</description>
+  <version>1.0</version>
+  <vendor>KNP UE Krakow</vendor>
+  <idea-version since-build="3000"/>
+  <project-components>
+    <component>
+      <implementation-class>pl.krakow.ae.knp.intellitrac.components.ToolWindowComponent</implementation-class>
+    </component>
+    <component>
+      <implementation-class>pl.krakow.ae.knp.intellitrac.components.ConfigurationComponent</implementation-class>
+    </component>
+  </project-components>
+</idea-plugin>
