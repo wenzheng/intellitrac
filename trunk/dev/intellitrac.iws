@@ -23,33 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/dto" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac\components\ToolWindowComponent.java" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/components/ToolWindowComponent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/big_logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iml" afterPath="$PROJECT_DIR$/intellitrac.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/small_logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gateway/TracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gateway/TracGateway.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gateway/TracGatewayLocator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/components/ToolWindowForm.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac\components\ConfigurationComponent.java" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/components/ConfigurationComponent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/utils/MouseCursors.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gateway/ConnectionFailedException.java" />
-      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac\gui\components\IntelliTracConfiguration.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac\components\ConfigurationForm.java" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/components/ConfigurationForm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/components" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/components" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/utils/IntelliTracIcons.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/BundleLocator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/dto/TracConfigurationBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.ipr" afterPath="$PROJECT_DIR$/intellitrac.ipr" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac\components\ConfigurationForm.form" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/components/ConfigurationForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/utils" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac\components\IntelliTracConfiguration.java" afterPath="C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac\gui\components\IntelliTracConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/components/ToolWindowForm.form" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,8 +84,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -176,110 +150,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="intellitrac" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\pl" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\pl\krakow\ae\knp\intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -363,6 +233,11 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="intellitrac" />
+      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
+      <option name="PROGRAM_PARAMETERS" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -391,11 +266,6 @@
       <method>
         <option name="Make" value="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="intellitrac" />
-      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
-      <option name="PROGRAM_PARAMETERS" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
@@ -675,13 +545,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="140" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.28848347">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/krakow/ae/knp/intellitrac/gui/utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
