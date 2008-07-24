@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gateway;
+package org.trzcinka.intellitrac.gateway;
 
-import pl.krakow.ae.knp.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.dto.TracConfigurationBean;
 
 public interface TracGateway {
 

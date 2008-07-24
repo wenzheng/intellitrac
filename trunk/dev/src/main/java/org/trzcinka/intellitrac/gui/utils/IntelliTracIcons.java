@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gui.utils;
+package org.trzcinka.intellitrac.gui.utils;
 
 import javax.swing.*;
 

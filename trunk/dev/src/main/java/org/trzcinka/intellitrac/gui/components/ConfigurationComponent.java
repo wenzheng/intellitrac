@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gui.components;
+package org.trzcinka.intellitrac.gui.components;
 
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.ProjectComponent;
@@ -28,9 +28,9 @@ import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pl.krakow.ae.knp.intellitrac.gui.utils.IntelliTracIcons;
-import pl.krakow.ae.knp.intellitrac.dto.TracConfigurationBean;
-import pl.krakow.ae.knp.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
+import org.trzcinka.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 
 import javax.swing.*;
 

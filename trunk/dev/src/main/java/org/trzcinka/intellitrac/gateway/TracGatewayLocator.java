@@ -14,17 +14,14 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gui.components;
+package org.trzcinka.intellitrac.gateway;
 
-import javax.swing.*;
+import org.trzcinka.intellitrac.gateway.xmlrpc.XmlRpcTracGateway;
 
-public class ToolWindowForm {
+public class TracGatewayLocator {
 
-  private JTabbedPane tabbedPane;
-  private JPanel rootComponent;
-
-  public JComponent getRootComponent() {
-    return rootComponent;
+  public static TracGateway retrieveTracGateway() {
+    return XmlRpcTracGateway.getInstance();
   }
 
 }
