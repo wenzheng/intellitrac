@@ -7,10 +7,10 @@
   <idea-version since-build="3000"/>
   <project-components>
     <component>
-      <implementation-class>pl.krakow.ae.knp.intellitrac.components.ToolWindowComponent</implementation-class>
+      <implementation-class>pl.krakow.ae.knp.intellitrac.gui.components.ToolWindowComponent</implementation-class>
     </component>
     <component>
-      <implementation-class>pl.krakow.ae.knp.intellitrac.components.ConfigurationComponent</implementation-class>
+      <implementation-class>pl.krakow.ae.knp.intellitrac.gui.components.ConfigurationComponent</implementation-class>
     </component>
   </project-components>
 </idea-plugin>

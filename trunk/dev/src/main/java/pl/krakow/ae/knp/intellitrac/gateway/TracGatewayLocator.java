@@ -16,24 +16,12 @@
 
 package pl.krakow.ae.knp.intellitrac.gateway;
 
-import pl.krakow.ae.knp.intellitrac.dto.TracConfigurationBean;
+import pl.krakow.ae.knp.intellitrac.gateway.xmlrpc.XmlRpcTracGateway;
 
-public interface TracGateway {
+public class TracGatewayLocator {
 
-  /**
-   * Tests given configuration. Returns nothing if succeeded. Throws ConnectionFailedException
-   * if there were problems during test.
-   *
-   * @param configuration configuration.
-   * @throws ConnectionFailedException if there were problems during test.
-   */
-  void testConnection(TracConfigurationBean.TracConfiguration configuration) throws ConnectionFailedException;
-
-  /**
-   * Sets the given configuration.
-   *
-   * @param configuration configuration.
-   */
-  void setConfiguration(TracConfigurationBean.TracConfiguration configuration);
+  public static TracGateway retrieveTracGateway() {
+    return XmlRpcTracGateway.getInstance();
+  }
 
 }

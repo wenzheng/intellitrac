@@ -23,31 +23,57 @@ import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
+import pl.krakow.ae.knp.intellitrac.gateway.ConnectionFailedException;
 import pl.krakow.ae.knp.intellitrac.gateway.TracGateway;
+import pl.krakow.ae.knp.intellitrac.dto.TracConfigurationBean;
 
 import java.net.URL;
 
 public class XmlRpcTracGateway implements TracGateway {
   private static final Object[] EMPTY_ARRAY = new Object[]{};
 
-  public boolean isConnectionRight(String url, String login, String password) {
+  private static TracGateway instance;
+
+  private TracConfigurationBean.TracConfiguration configuration;
+
+  private XmlRpcTracGateway() {
+  }
+
+  public static TracGateway getInstance() {
+    if (instance == null) {
+      instance = new XmlRpcTracGateway();
+    }
+    return instance;
+  }
+
+  public void testConnection(TracConfigurationBean.TracConfiguration configuration) throws ConnectionFailedException {
     try {
       XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
 
-      config.setServerURL(new URL(url));
+      config.setServerURL(new URL(configuration.getTracUrl()));
       XmlRpcClient xmlRpcClient = new XmlRpcClient();
       xmlRpcClient.setConfig(config);
       XmlRpcCommonsTransportFactory transportFactory = new XmlRpcCommonsTransportFactory(xmlRpcClient);
-      Credentials credentials = new UsernamePasswordCredentials(login, password);
+      Credentials credentials = new UsernamePasswordCredentials(configuration.getLogin(), configuration.getPassword());
       HttpClient httpClient = new HttpClient();
       httpClient.getState().setCredentials(AuthScope.ANY, credentials);
       transportFactory.setHttpClient(httpClient);
       xmlRpcClient.setTransportFactory(transportFactory);
 
-      return xmlRpcClient.execute("system.listMethods", EMPTY_ARRAY) != null;
+      xmlRpcClient.execute("system.listMethods", EMPTY_ARRAY);
 
     } catch (Exception e) {
-      return false;
+      throw new ConnectionFailedException(e);
     }
   }
+
+  /**
+   * Sets the given configuration.
+   *
+   * @param configuration configuration.
+   */
+  public void setConfiguration(TracConfigurationBean.TracConfiguration configuration) {
+    this.configuration = configuration;
+  }
+
 }

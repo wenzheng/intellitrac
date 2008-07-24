@@ -14,35 +14,29 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.components;
+package pl.krakow.ae.knp.intellitrac.gui.components;
 
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.wm.ToolWindowManager;
-import com.intellij.openapi.wm.ToolWindowAnchor;
 import com.intellij.openapi.wm.ToolWindow;
-import com.intellij.openapi.options.Configurable;
-import com.intellij.openapi.options.ConfigurationException;
-import com.intellij.ui.content.ContentFactory;
-import com.intellij.ui.content.Content;
+import com.intellij.openapi.wm.ToolWindowAnchor;
+import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.peer.PeerFactory;
+import com.intellij.ui.content.Content;
+import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nls;
-import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.NonNls;
-
-import javax.swing.*;
-import java.awt.*;
+import pl.krakow.ae.knp.intellitrac.BundleLocator;
+import pl.krakow.ae.knp.intellitrac.gui.utils.IntelliTracIcons;
 
 /**
- * 
  * Tool window component.
  *
  * @author Michal Trzcinka
  */
 public class ToolWindowComponent implements ProjectComponent {
-  private static final String COMPONENT_NAME = "IntelliTrac";
-  private static final String TOOL_WINDOW_ID = "IntelliTracToolWindow";
+  private static final String COMPONENT_NAME = BundleLocator.getBundle().getString("tool_window.title");
+
+  private static final String TOOL_WINDOW_ID = "IntelliTrac";
 
   private Project project;
   private ToolWindow toolWindow;
@@ -55,14 +49,14 @@ public class ToolWindowComponent implements ProjectComponent {
   }
 
   private void initToolWindow() {
-  ToolWindowManager toolWindowManager = ToolWindowManager.getInstance(project);
+    ToolWindowManager toolWindowManager = ToolWindowManager.getInstance(project);
 
-    JComponent panel = new JPanel(new BorderLayout());
-    panel.add(new JLabel("Hello World!", JLabel.CENTER), BorderLayout.CENTER);
+    toolWindow = toolWindowManager.registerToolWindow(TOOL_WINDOW_ID, false, ToolWindowAnchor.RIGHT);
+    toolWindow.setIcon( IntelliTracIcons.getInstance().getSmallIcon() );
 
-    toolWindow = toolWindowManager.registerToolWindow(TOOL_WINDOW_ID, false, ToolWindowAnchor.LEFT);
     ContentFactory contentFactory = PeerFactory.getInstance().getContentFactory();
-    Content content = contentFactory.createContent(panel, COMPONENT_NAME, false);
+    Content content = contentFactory.createContent(new ToolWindowForm().getRootComponent(), null, false);
+
     toolWindow.getContentManager().addContent(content);
   }
 
