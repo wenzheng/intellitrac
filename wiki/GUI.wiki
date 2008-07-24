@@ -69,5 +69,6 @@ This panel will be accessible by clicking "IntelliTrac settings" in Project sett
  * Trac URL - text field - direct URL to the Trac project (concrete project, e.g. http://my-track.com/project).
  * Login
  * Password
+ * Test connection
 
 OK and Cancel buttons underneath.
