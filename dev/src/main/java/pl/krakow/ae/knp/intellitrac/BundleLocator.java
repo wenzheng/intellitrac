@@ -14,23 +14,15 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.components;
+package pl.krakow.ae.knp.intellitrac;
 
-/**
- * Data interface representing IntelliTrac configuration.
- *
- * @author Michal Trzcinka
- */
-public interface IntelliTracConfiguration {
-  String getTracUrl();
+import java.util.ResourceBundle;
 
-  void setTracUrl(String tracUrl);
+public class BundleLocator {
+  private static final String BUNDLE_NAME = "bundle";
 
-  String getLogin();
+  public static ResourceBundle getBundle() {
+    return ResourceBundle.getBundle(BUNDLE_NAME);
+  }
 
-  void setLogin(String login);
-
-  String getPassword();
-
-  void setPassword(String password);
 }

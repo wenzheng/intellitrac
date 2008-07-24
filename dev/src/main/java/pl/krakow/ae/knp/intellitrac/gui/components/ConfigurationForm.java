@@ -14,14 +14,20 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.components;
+package pl.krakow.ae.knp.intellitrac.gui.components;
 
 import pl.krakow.ae.knp.intellitrac.gateway.TracGateway;
-import pl.krakow.ae.knp.intellitrac.gateway.xmlrpc.XmlRpcTracGateway;
+import pl.krakow.ae.knp.intellitrac.gateway.TracGatewayLocator;
+import pl.krakow.ae.knp.intellitrac.gateway.ConnectionFailedException;
+import pl.krakow.ae.knp.intellitrac.BundleLocator;
+import pl.krakow.ae.knp.intellitrac.gui.utils.MouseCursors;
+import pl.krakow.ae.knp.intellitrac.dto.TracConfigurationBean;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.*;
+import java.util.ResourceBundle;
 
 import com.intellij.openapi.ui.Messages;
 
@@ -40,8 +46,21 @@ public class ConfigurationForm {
        */
       public void actionPerformed(ActionEvent e) {
         if (e.getSource() == testConnectionButton) {
-          TracGateway gateway = new XmlRpcTracGateway();
-          Messages.showMessageDialog(String.valueOf(gateway.isConnectionRight(tracUrl.getText(), login.getText(), password.getText())), "s", null);
+          Container parent = ((Component) e.getSource()).getParent();
+          Cursor oldCursor = parent.getCursor();
+          parent.setCursor(MouseCursors.WAIT_CURSOR);
+          ResourceBundle bundle = BundleLocator.getBundle();
+          TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
+          try {
+            TracConfigurationBean.TracConfiguration configuration = new TracConfigurationBean();
+            getData(configuration);
+            gateway.testConnection(configuration);
+            Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_success"), bundle.getString("dialogs.success"), null);
+          } catch (ConnectionFailedException exception) {
+            Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
+          } finally {
+            parent.setCursor(oldCursor);
+          }
         }
       }
     });
@@ -51,19 +70,19 @@ public class ConfigurationForm {
     return rootComponent;
   }
 
-  public void setData(ConfigurationComponent data) {
+  public void setData(TracConfigurationBean.TracConfiguration data) {
     tracUrl.setText(data.getTracUrl());
     login.setText(data.getLogin());
     password.setText(data.getPassword());
   }
 
-  public void getData(ConfigurationComponent data) {
+  public void getData(TracConfigurationBean.TracConfiguration data) {
     data.setTracUrl(tracUrl.getText());
     data.setLogin(login.getText());
     data.setPassword(password.getText());
   }
 
-  public boolean isModified(ConfigurationComponent data) {
+  public boolean isModified(TracConfigurationBean.TracConfiguration data) {
     if (tracUrl.getText() != null ? !tracUrl.getText().equals(data.getTracUrl()) : data.getTracUrl() != null)
       return true;
     if (login.getText() != null ? !login.getText().equals(data.getLogin()) : data.getLogin() != null) return true;
