@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gateway;
+package org.trzcinka.intellitrac.gui.components;
 
-/**
- * Indicates that connection to the Trac server has failed.
- */
-public class ConnectionFailedException extends Exception {
+import javax.swing.*;
 
-  public ConnectionFailedException(Throwable e) {
-    super(e);
+public class ToolWindowForm {
+
+  private JTabbedPane tabbedPane;
+  private JPanel rootComponent;
+
+  public JComponent getRootComponent() {
+    return rootComponent;
   }
-  
+
 }

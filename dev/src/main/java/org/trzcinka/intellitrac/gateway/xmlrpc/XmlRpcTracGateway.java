@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gateway.xmlrpc;
+package org.trzcinka.intellitrac.gateway.xmlrpc;
 
 import org.apache.commons.httpclient.Credentials;
 import org.apache.commons.httpclient.HttpClient;
@@ -23,9 +23,9 @@ import org.apache.commons.httpclient.auth.AuthScope;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
-import pl.krakow.ae.knp.intellitrac.gateway.ConnectionFailedException;
-import pl.krakow.ae.knp.intellitrac.gateway.TracGateway;
-import pl.krakow.ae.knp.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gateway.TracGateway;
+import org.trzcinka.intellitrac.dto.TracConfigurationBean;
 
 import java.net.URL;
 

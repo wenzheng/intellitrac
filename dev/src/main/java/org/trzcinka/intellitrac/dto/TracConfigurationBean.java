@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.dto;
+package org.trzcinka.intellitrac.dto;
 
 public class TracConfigurationBean implements TracConfigurationBean.TracConfiguration {
 

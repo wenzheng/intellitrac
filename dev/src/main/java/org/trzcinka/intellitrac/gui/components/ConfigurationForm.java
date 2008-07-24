@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gui.components;
+package org.trzcinka.intellitrac.gui.components;
 
-import pl.krakow.ae.knp.intellitrac.gateway.TracGateway;
-import pl.krakow.ae.knp.intellitrac.gateway.TracGatewayLocator;
-import pl.krakow.ae.knp.intellitrac.gateway.ConnectionFailedException;
-import pl.krakow.ae.knp.intellitrac.BundleLocator;
-import pl.krakow.ae.knp.intellitrac.gui.utils.MouseCursors;
-import pl.krakow.ae.knp.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.gateway.TracGateway;
+import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.gui.utils.MouseCursors;
+import org.trzcinka.intellitrac.dto.TracConfigurationBean;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -14,12 +14,15 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gui.utils;
+package org.trzcinka.intellitrac;
 
-import java.awt.*;
+import java.util.ResourceBundle;
 
-public class MouseCursors {
+public class BundleLocator {
+  private static final String BUNDLE_NAME = "bundle";
 
-  public static final Cursor WAIT_CURSOR = new Cursor(Cursor.WAIT_CURSOR);
+  public static ResourceBundle getBundle() {
+    return ResourceBundle.getBundle(BUNDLE_NAME);
+  }
 
 }

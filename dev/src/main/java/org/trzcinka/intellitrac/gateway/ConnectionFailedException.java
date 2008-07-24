@@ -14,14 +14,15 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gateway;
+package org.trzcinka.intellitrac.gateway;
 
-import pl.krakow.ae.knp.intellitrac.gateway.xmlrpc.XmlRpcTracGateway;
+/**
+ * Indicates that connection to the Trac server has failed.
+ */
+public class ConnectionFailedException extends Exception {
 
-public class TracGatewayLocator {
-
-  public static TracGateway retrieveTracGateway() {
-    return XmlRpcTracGateway.getInstance();
+  public ConnectionFailedException(Throwable e) {
+    super(e);
   }
-
+  
 }

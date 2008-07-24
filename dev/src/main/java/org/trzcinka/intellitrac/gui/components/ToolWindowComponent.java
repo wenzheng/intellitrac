@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.krakow.ae.knp.intellitrac.gui.components;
+package org.trzcinka.intellitrac.gui.components;
 
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
@@ -25,8 +25,8 @@ import com.intellij.peer.PeerFactory;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
-import pl.krakow.ae.knp.intellitrac.BundleLocator;
-import pl.krakow.ae.knp.intellitrac.gui.utils.IntelliTracIcons;
+import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
 
 /**
  * Tool window component.
