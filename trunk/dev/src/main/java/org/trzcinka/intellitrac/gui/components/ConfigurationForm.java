@@ -16,20 +16,20 @@
 
 package org.trzcinka.intellitrac.gui.components;
 
+import com.intellij.openapi.ui.Messages;
+import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.dto.TracConfiguration;
+import org.trzcinka.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
-import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
-import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.gui.utils.MouseCursors;
-import org.trzcinka.intellitrac.dto.TracConfigurationBean;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.*;
 import java.util.ResourceBundle;
-
-import com.intellij.openapi.ui.Messages;
 
 public class ConfigurationForm {
 
@@ -45,22 +45,20 @@ public class ConfigurationForm {
        * Invoked when an action occurs.
        */
       public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == testConnectionButton) {
-          Container parent = ((Component) e.getSource()).getParent();
-          Cursor oldCursor = parent.getCursor();
-          parent.setCursor(MouseCursors.WAIT_CURSOR);
-          ResourceBundle bundle = BundleLocator.getBundle();
-          TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
-          try {
-            TracConfigurationBean.TracConfiguration configuration = new TracConfigurationBean();
-            getData(configuration);
-            gateway.testConnection(configuration);
-            Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_success"), bundle.getString("dialogs.success"), null);
-          } catch (ConnectionFailedException exception) {
-            Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
-          } finally {
-            parent.setCursor(oldCursor);
-          }
+        Container parent = ((Component) e.getSource()).getParent();
+        Cursor oldCursor = parent.getCursor();
+        parent.setCursor(MouseCursors.WAIT_CURSOR);
+        ResourceBundle bundle = BundleLocator.getBundle();
+        TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
+        try {
+          TracConfiguration configuration = new TracConfigurationBean();
+          getData(configuration);
+          gateway.testConnection(configuration);
+          Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_success"), bundle.getString("dialogs.success"), null);
+        } catch (ConnectionFailedException exception) {
+          Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
+        } finally {
+          parent.setCursor(oldCursor);
         }
       }
     });
@@ -70,24 +68,28 @@ public class ConfigurationForm {
     return rootComponent;
   }
 
-  public void setData(TracConfigurationBean.TracConfiguration data) {
+  public void setData(TracConfiguration data) {
     tracUrl.setText(data.getTracUrl());
     login.setText(data.getLogin());
     password.setText(data.getPassword());
   }
 
-  public void getData(TracConfigurationBean.TracConfiguration data) {
+  public void getData(TracConfiguration data) {
     data.setTracUrl(tracUrl.getText());
     data.setLogin(login.getText());
     data.setPassword(password.getText());
   }
 
-  public boolean isModified(TracConfigurationBean.TracConfiguration data) {
-    if (tracUrl.getText() != null ? !tracUrl.getText().equals(data.getTracUrl()) : data.getTracUrl() != null)
+  public boolean isModified(TracConfiguration data) {
+    if (tracUrl.getText() != null ? !tracUrl.getText().equals(data.getTracUrl()) : data.getTracUrl() != null) {
       return true;
-    if (login.getText() != null ? !login.getText().equals(data.getLogin()) : data.getLogin() != null) return true;
-    if (password.getText() != null ? !password.getText().equals(data.getPassword()) : data.getPassword() != null)
+    }
+    if (login.getText() != null ? !login.getText().equals(data.getLogin()) : data.getLogin() != null) {
       return true;
+    }
+    if (password.getText() != null ? !password.getText().equals(data.getPassword()) : data.getPassword() != null) {
+      return true;
+    }
     return false;
   }
 

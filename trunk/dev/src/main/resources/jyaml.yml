@@ -1,0 +1,6 @@
+minimalOutput: true
+indentAmount: "    "
+suppressWarnings: true
+encoding: "UTF-8"
+transfers:
+  report: org.trzcinka.intellitrac.dto.Report

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components;
+package org.trzcinka.intellitrac.gui.components.toolwindow;
 
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
@@ -27,6 +27,7 @@ import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
+import org.trzcinka.intellitrac.gui.components.toolwindow.ToolWindowForm;
 
 /**
  * Tool window component.
@@ -55,7 +56,7 @@ public class ToolWindowComponent implements ProjectComponent {
     toolWindow.setIcon( IntelliTracIcons.getInstance().getSmallIcon() );
 
     ContentFactory contentFactory = PeerFactory.getInstance().getContentFactory();
-    Content content = contentFactory.createContent(new ToolWindowForm().getRootComponent(), null, false);
+    Content content = contentFactory.createContent(new ToolWindowForm(project).getRootComponent(), null, false);
 
     toolWindow.getContentManager().addContent(content);
   }

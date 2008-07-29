@@ -3,14 +3,19 @@
   <name>IntelliTrac</name>
   <description>Trac integration for IntelliJ IDEA.</description>
   <version>1.0</version>
-  <vendor>KNP UE Krakow</vendor>
+  <vendor>Michal Trzcinka</vendor>
   <idea-version since-build="3000"/>
+
   <project-components>
     <component>
-      <implementation-class>org.trzcinka.intellitrac.gui.components.ToolWindowComponent</implementation-class>
+      <implementation-class>org.trzcinka.intellitrac.gui.components.toolwindow.ToolWindowComponent</implementation-class>
     </component>
     <component>
       <implementation-class>org.trzcinka.intellitrac.gui.components.ConfigurationComponent</implementation-class>
     </component>
+    <component>
+      <implementation-class>org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponent</implementation-class>
+    </component>
   </project-components>
+
 </idea-plugin>
