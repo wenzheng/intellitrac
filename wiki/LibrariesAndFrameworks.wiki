@@ -1,3 +1,5 @@
 #summary List of used libraries and frameworks.
 
  * Apache XML-RPC (http://ws.apache.org/xmlrpc) - used for communication with Trac via XML-RPC protocol.
+
+ * JYaml - used for YAML support (for configuration files).
