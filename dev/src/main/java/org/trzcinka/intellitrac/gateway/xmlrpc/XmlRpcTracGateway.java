@@ -26,6 +26,7 @@ import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.dto.TracConfiguration;
 
 import java.net.URL;
 
@@ -34,7 +35,7 @@ public class XmlRpcTracGateway implements TracGateway {
 
   private static TracGateway instance;
 
-  private TracConfigurationBean.TracConfiguration configuration;
+  private TracConfiguration configuration;
 
   private XmlRpcTracGateway() {
   }
@@ -46,7 +47,7 @@ public class XmlRpcTracGateway implements TracGateway {
     return instance;
   }
 
-  public void testConnection(TracConfigurationBean.TracConfiguration configuration) throws ConnectionFailedException {
+  public void testConnection(TracConfiguration configuration) throws ConnectionFailedException {
     try {
       XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
 
@@ -72,7 +73,7 @@ public class XmlRpcTracGateway implements TracGateway {
    *
    * @param configuration configuration.
    */
-  public void setConfiguration(TracConfigurationBean.TracConfiguration configuration) {
+  public void setConfiguration(TracConfiguration configuration) {
     this.configuration = configuration;
   }
 

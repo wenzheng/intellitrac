@@ -14,17 +14,23 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components;
+package org.trzcinka.intellitrac.dto;
 
-import javax.swing.*;
+/**
+ * Data interface representing IntelliTrac configuration.
+ *
+ * @author Michal Trzcinka
+ */
+public interface TracConfiguration {
+  String getTracUrl();
 
-public class ToolWindowForm {
+  void setTracUrl(String tracUrl);
 
-  private JTabbedPane tabbedPane;
-  private JPanel rootComponent;
+  String getLogin();
 
-  public JComponent getRootComponent() {
-    return rootComponent;
-  }
+  void setLogin(String login);
 
+  String getPassword();
+
+  void setPassword(String password);
 }

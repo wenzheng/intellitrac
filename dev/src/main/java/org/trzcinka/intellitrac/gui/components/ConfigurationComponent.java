@@ -30,9 +30,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
 import org.trzcinka.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.dto.TracConfiguration;
+import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 
 import javax.swing.*;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Represents per-project plugin configuration.
@@ -40,9 +44,9 @@ import javax.swing.*;
  * @author Michal Trzcinka
  */
 @State(name = "IntelliTrac",
-  storages = @Storage(id = "IntellITrac", file = "$PROJECT_FILE$"))
+  storages = @Storage(id = "GeneralSettings", file = "$PROJECT_FILE$"))
 public class ConfigurationComponent implements ProjectComponent, Configurable,
-  PersistentStateComponent<ConfigurationComponent>, TracConfigurationBean.TracConfiguration {
+  PersistentStateComponent<ConfigurationComponent>, TracConfiguration {
 
   private ConfigurationForm form;
 

@@ -16,34 +16,33 @@
 
 package org.trzcinka.intellitrac.dto;
 
-public class TracConfigurationBean implements TracConfiguration {
+public class Report {
 
-  private String tracUrl;
-  private String login;
-  private String password;
+  private String name;
+  private String description;
+  private String query;
 
-  public String getTracUrl() {
-    return tracUrl;
+  public String getName() {
+    return name;
   }
 
-  public void setTracUrl(String tracUrl) {
-    this.tracUrl = tracUrl;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public String getLogin() {
-    return login;
+  public String getDescription() {
+    return description;
   }
 
-  public void setLogin(String login) {
-    this.login = login;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
-  public String getPassword() {
-    return password;
+  public String getQuery() {
+    return query;
   }
 
-  public void setPassword(String password) {
-    this.password = password;
+  public void setQuery(String query) {
+    this.query = query;
   }
-
 }

@@ -17,6 +17,7 @@
 package org.trzcinka.intellitrac.gateway;
 
 import org.trzcinka.intellitrac.dto.TracConfigurationBean;
+import org.trzcinka.intellitrac.dto.TracConfiguration;
 
 public interface TracGateway {
 
@@ -27,13 +28,13 @@ public interface TracGateway {
    * @param configuration configuration.
    * @throws ConnectionFailedException if there were problems during test.
    */
-  void testConnection(TracConfigurationBean.TracConfiguration configuration) throws ConnectionFailedException;
+  void testConnection(TracConfiguration configuration) throws ConnectionFailedException;
 
   /**
    * Sets the given configuration.
    *
    * @param configuration configuration.
    */
-  void setConfiguration(TracConfigurationBean.TracConfiguration configuration);
+  void setConfiguration(TracConfiguration configuration);
 
 }

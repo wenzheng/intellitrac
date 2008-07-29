@@ -26,8 +26,8 @@ public class IntelliTracIcons {
   private Icon smallIcon;
 
   private IntelliTracIcons() {
-    bigIcon = new ImageIcon(getClass().getClassLoader().getResource("big_logo.png"));
-    smallIcon = new ImageIcon(getClass().getClassLoader().getResource("small_logo.png"));
+    bigIcon = new ImageIcon(getClass().getClassLoader().getResource("images/big_logo.png"));
+    smallIcon = new ImageIcon(getClass().getClassLoader().getResource("images/small_logo.png"));
   }
 
   public static IntelliTracIcons getInstance() {
