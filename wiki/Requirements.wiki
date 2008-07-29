@@ -3,8 +3,14 @@
 = Tickets =
 
  * viewing the list of tickets
-   * configurable predefined reports (my, active, closed)
-   * adding/removing/editing queries
+   * configurable predefined reports
+     * All tickets
+     * All active tickets
+     * All accepted tickets
+     * My all tickets
+     * My all active tickets
+     * My all accepted tickets
+   * adding/removing/editing reports
  * editing/adding new tickets
  * ability to start/pause/stop working on the ticket (system automatically calculates time spent on working on a ticket)
 
