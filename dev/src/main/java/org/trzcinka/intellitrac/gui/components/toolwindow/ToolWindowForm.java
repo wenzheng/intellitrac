@@ -16,24 +16,21 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow;
 
-import com.intellij.openapi.project.Project;
-import com.intellij.openapi.actionSystem.DataContext;
-import com.intellij.openapi.actionSystem.DataKeys;
-import com.intellij.ide.DataManager;
-
 import javax.swing.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-import org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponent;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.TicketsForm;
+import com.intellij.openapi.project.Project;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportsListForm;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportEditorForm;
+import org.trzcinka.intellitrac.dto.Report;
 
-public class ToolWindowForm {
+public class ToolWindowForm implements StateListener {
 
   private JTabbedPane tabbedPane;
   private JPanel rootComponent;
-  private TicketsForm ticketsForm;
+  private JPanel ticketsContent;
 
+  private ReportsListForm reportsListForm;
+  private ReportEditorForm reportEditorForm;
   private Project project;
 
   public ToolWindowForm(Project project) {
@@ -45,7 +42,21 @@ public class ToolWindowForm {
   }
 
   private void createUIComponents() {
-    ticketsForm = new TicketsForm(project); 
+    ticketsContent = new JPanel();
+    reportsListForm = new ReportsListForm(project, this);
+    reportEditorForm = new ReportEditorForm(project, this);
+    ticketsContent.add(reportsListForm.getRootComponent());
+
   }
 
+  public void stateChanged(StateInfo stateInfo) {
+    switch (stateInfo.getState()) {
+      case REPORT_EDITOR:
+        Report report = (Report) stateInfo.getInfo().get(StateData.REPORT);
+        reportEditorForm.setData(report);
+        ticketsContent.removeAll();
+        ticketsContent.repaint();
+        ticketsContent.add(reportEditorForm.getRootComponent());
+    }
+  }
 }

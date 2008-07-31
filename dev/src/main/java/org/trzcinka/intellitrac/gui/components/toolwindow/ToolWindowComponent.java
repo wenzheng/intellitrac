@@ -27,7 +27,6 @@ import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
-import org.trzcinka.intellitrac.gui.components.toolwindow.ToolWindowForm;
 
 /**
  * Tool window component.
@@ -40,7 +39,6 @@ public class ToolWindowComponent implements ProjectComponent {
   private static final String TOOL_WINDOW_ID = "IntelliTrac";
 
   private Project project;
-  private ToolWindow toolWindow;
 
   public ToolWindowComponent(Project project) {
     this.project = project;
@@ -52,11 +50,12 @@ public class ToolWindowComponent implements ProjectComponent {
   private void initToolWindow() {
     ToolWindowManager toolWindowManager = ToolWindowManager.getInstance(project);
 
-    toolWindow = toolWindowManager.registerToolWindow(TOOL_WINDOW_ID, false, ToolWindowAnchor.RIGHT);
-    toolWindow.setIcon( IntelliTracIcons.getInstance().getSmallIcon() );
+    ToolWindow toolWindow = toolWindowManager.registerToolWindow(TOOL_WINDOW_ID, false, ToolWindowAnchor.RIGHT);
+    toolWindow.setIcon(IntelliTracIcons.getInstance().getSmallIcon());
 
     ContentFactory contentFactory = PeerFactory.getInstance().getContentFactory();
-    Content content = contentFactory.createContent(new ToolWindowForm(project).getRootComponent(), null, false);
+    ToolWindowForm toolWindowForm = new ToolWindowForm(project);
+    Content content = contentFactory.createContent(toolWindowForm.getRootComponent(), null, false);
 
     toolWindow.getContentManager().addContent(content);
   }
@@ -80,7 +79,6 @@ public class ToolWindowComponent implements ProjectComponent {
   }
 
   public void projectClosed() {
-    // called when project is being closed
   }
 
 }
