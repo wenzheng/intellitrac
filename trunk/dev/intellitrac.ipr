@@ -75,7 +75,12 @@
         <inspection_tool class="ValidExternallyBoundObject" level="WARNING" enabled="true" />
       </profile>
     </profiles>
-    <list size="0" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="SERVER PROBLEM" />
+      <item index="1" class="java.lang.String" itemvalue="INFO" />
+      <item index="2" class="java.lang.String" itemvalue="WARNING" />
+      <item index="3" class="java.lang.String" itemvalue="ERROR" />
+    </list>
   </component>
   <component name="JavacSettings">
     <option name="DEBUGGING_INFO" value="true" />
@@ -259,8 +264,11 @@
       <item class="org.trzcinka.intellitrac.gui.components.toolwindow.ToolWindowForm" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
       </item>
-      <item class="org.trzcinka.intellitrac.gui.components.toolwindow.tickets.TicketsForm" icon="" removable="true" auto-create-binding="true" can-attach-label="false" is-container="true">
+      <item class="org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportsListForm" icon="" removable="true" auto-create-binding="true" can-attach-label="false" is-container="true">
         <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
       </item>
     </group>
   </component>

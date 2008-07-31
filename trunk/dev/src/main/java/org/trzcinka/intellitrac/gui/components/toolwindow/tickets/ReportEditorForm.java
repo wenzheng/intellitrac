@@ -16,36 +16,42 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
 
-import com.intellij.ide.DataManager;
-import com.intellij.openapi.actionSystem.DataContext;
-import com.intellij.openapi.actionSystem.DataKeys;
 import com.intellij.openapi.project.Project;
-import org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponent;
+import org.trzcinka.intellitrac.dto.Report;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class TicketsForm {
+public class ReportEditorForm {
 
-  private JToolBar ticketsToolbar;
-  private JPanel constantToolbar;
-  private JButton newTicket;
-  private JButton goHome;
-  private JButton goBack;
-  private JPanel ticketsContent;
+  private JTextField name;
+  private JTextField description;
+  private JTextField query;
   private JPanel rootComponent;
-  private JList reportsList;
 
   private Project project;
+  private StateListener stateListener;
 
-  public TicketsForm(Project project) {
+  public ReportEditorForm(Project project, StateListener stateListener) {
     this.project = project;
+    this.stateListener = stateListener;
   }
 
-  private void createUIComponents() {
-    ReportsConfigurationComponent reportsConf = project.getComponent(ReportsConfigurationComponent.class);
-    reportsList = new JList(reportsConf.getReports().toArray());
-
-    reportsList.setCellRenderer(new ReportsListCellRenderer());
-
+  public void setData(Report data) {
+    name.setText(data.getName());
+    description.setText(data.getDescription());
+    query.setText(data.getQuery());
   }
+
+  public void getData(Report data) {
+    data.setName(name.getText());
+    data.setDescription(description.getText());
+    data.setQuery(query.getText());
+  }
+
+  public Component getRootComponent() {
+    return rootComponent;
+  }
+
 }

@@ -2,9 +2,62 @@
 - !report
     name: All tickets
     description: Lists all tickets.
-    query: SELECT p.value AS __color__, id AS ticket, summary, component, version, milestone, t.type AS type, owner, status, time AS created, changetime AS _changetime, description AS _description reporter AS _reporter FROM ticket t LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority' ORDER BY CAST(p.value AS int), milestone, t.type, time
-
+    query: |
+      SELECT p.value AS __color__,
+         t.milestone AS __group__,
+         (CASE status
+            WHEN 'closed' THEN 'color: #777; background: #ddd; border-color: #ccc;'
+            ELSE
+              (CASE owner WHEN $USER THEN 'font-weight: bold' END)
+          END) AS __style__,
+         id AS ticket, summary, component, status,
+         resolution,version, t.type AS type, priority, owner,
+         changetime AS modified,
+         time AS _time,reporter AS _reporter
+        FROM ticket t
+        LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+        ORDER BY (milestone IS NULL), milestone DESC, (status = 'closed'),
+              (CASE status WHEN 'closed' THEN changetime ELSE (-1) * CAST(p.value AS int) END) DESC
+        
+- !report
+    name: All active tickets
+    description: Lists all active tickets.
+    query: |
+     SELECT p.value AS __color__,
+        id AS ticket, summary, component, version, milestone, t.type AS type,
+        (CASE status WHEN 'assigned' THEN owner||' *' ELSE owner END) AS owner,
+        time AS created,
+        changetime AS _changetime, description AS _description,
+        reporter AS _reporter
+       FROM ticket t
+       LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+       WHERE status IN ('new', 'assigned', 'reopened')
+       ORDER BY p.value, milestone, t.type, time
+- !report
+    name: My all tickets
+    description: Lists all tickets assigned to the user.
+    query: |
+     SELECT p.value AS __color__,
+     (CASE status WHEN 'assigned' THEN 'Assigned' ELSE 'Owned' END) AS __group__,
+     id AS ticket, summary, component, version, milestone,
+     t.type AS type, priority, time AS created,
+     changetime AS _changetime, description AS _description,
+     reporter AS _reporter
+     FROM ticket t
+     LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+     WHERE owner = $USER
+     ORDER BY (status = 'assigned') DESC, p.value, milestone, t.type, time
 - !report
     name: My active tickets
     description: Lists all active tickets assigned to the user.
-    query: * from pupu
+    query: |
+     SELECT p.value AS __color__,
+     (CASE status WHEN 'assigned' THEN 'Assigned' ELSE 'Owned' END) AS __group__,
+     id AS ticket, summary, component, version, milestone,
+     t.type AS type, priority, time AS created,
+     changetime AS _changetime, description AS _description,
+     reporter AS _reporter
+     FROM ticket t
+     LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+     WHERE t.status IN ('new', 'assigned', 'reopened') AND owner = $USER
+     ORDER BY (status = 'assigned') DESC, p.value, milestone, t.type, time
