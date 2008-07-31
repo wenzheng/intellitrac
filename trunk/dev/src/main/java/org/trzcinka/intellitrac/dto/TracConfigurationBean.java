@@ -16,6 +16,9 @@
 
 package org.trzcinka.intellitrac.dto;
 
+/**
+ * Simple JavaBean representing IntelliTrac configuration.
+ */
 public class TracConfigurationBean implements TracConfiguration {
 
   private String tracUrl;
