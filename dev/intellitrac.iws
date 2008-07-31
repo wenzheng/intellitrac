@@ -23,23 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ReportEditorForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/default_reports.yml" afterPath="$PROJECT_DIR$/src/main/resources/default_reports.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ReportEditorForm.form" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\TicketsForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ReportsListForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\TicketsForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ReportsListForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TracConfigurationBean.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TracConfigurationBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.ipr" afterPath="$PROJECT_DIR$/intellitrac.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowComponent.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Report.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Report.java" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,7 +108,44 @@
     <favorites_list name="intellitrac" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Report.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Report.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="13" selection-start="689" selection-end="689" vertical-scroll-proportion="0.33333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TracConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TracConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="17" selection-start="749" selection-end="749" vertical-scroll-proportion="0.2246696">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurationComponent.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="44" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.54919237">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TracConfigurationBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TracConfigurationBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="58" selection-start="698" selection-end="698" vertical-scroll-proportion="0.12481645">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -180,120 +203,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="intellitrac" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Program Files\JetBrains\IntelliJ IDEA 7.0.3\lib\openapi.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Program Files\JetBrains\IntelliJ IDEA 7.0.3\lib\openapi.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Program Files\JetBrains\IntelliJ IDEA 7.0.3\lib\openapi.jar!\com\intellij" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Program Files\JetBrains\IntelliJ IDEA 7.0.3\lib\openapi.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Program Files\JetBrains\IntelliJ IDEA 7.0.3\lib\openapi.jar!\com\intellij" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\Program Files\JetBrains\IntelliJ IDEA 7.0.3\lib\openapi.jar!\com\intellij\testFramework" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -611,34 +520,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ReportsListCellRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="926" selection-end="926" vertical-scroll-proportion="0.32452276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="47" selection-start="3099" selection-end="3099" vertical-scroll-proportion="1.4423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="16" selection-start="2165" selection-end="2165" vertical-scroll-proportion="0.44230768">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="670" selection-end="670" vertical-scroll-proportion="0.33924612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="658" selection-end="658" vertical-scroll-proportion="0.33924612">
@@ -719,6 +600,34 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="2" selection-start="684" selection-end="684" vertical-scroll-proportion="0.4743025">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Report.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="689" selection-end="689" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TracConfigurationBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="58" selection-start="698" selection-end="698" vertical-scroll-proportion="0.12481645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TracConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="749" selection-end="749" vertical-scroll-proportion="0.2246696">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="44" selection-start="2080" selection-end="2080" vertical-scroll-proportion="0.54919237">
           <folding />
         </state>
       </provider>

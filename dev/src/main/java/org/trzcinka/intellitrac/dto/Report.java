@@ -16,6 +16,9 @@
 
 package org.trzcinka.intellitrac.dto;
 
+/**
+ * Represents a tickets report.
+ */
 public class Report {
 
   private String name;
