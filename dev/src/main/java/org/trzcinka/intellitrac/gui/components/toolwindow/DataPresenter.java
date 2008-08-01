@@ -16,6 +16,25 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow;
 
-public enum StateData {
-  REPORT
+import javax.swing.*;
+
+/**
+ * Classes implementing this interface will be usually forms which should be able
+ * to update its content.
+ */
+public interface DataPresenter {
+
+  /**
+   * This method is invoked by controller when it receives a change of state notification.
+   * Classes implementing this interface should update its data based on given state change info.
+   *
+   * @param info info.
+   */
+  void updateData(Object info);
+
+  /**
+   * @return root component.
+   */
+  JComponent getRootComponent();
+
 }

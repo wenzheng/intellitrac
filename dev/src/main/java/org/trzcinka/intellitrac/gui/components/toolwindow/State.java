@@ -16,6 +16,9 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow;
 
+/**
+ * Enumerates possible GUI states of the tool window.
+ */
 public enum State {
 
   REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR

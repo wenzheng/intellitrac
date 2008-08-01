@@ -31,6 +31,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
 
+/**
+ * IntelliTrac configuration form. The configuration is per-project - it is shown under
+ * project settings.
+ */
 public class ConfigurationForm {
 
   private JPanel rootComponent;

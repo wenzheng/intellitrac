@@ -41,7 +41,6 @@ import java.util.ArrayList;
 /**
  * Represents per-project plugin configuration.
  *
- * @author Michal Trzcinka
  */
 @State(name = "IntelliTrac",
   storages = @Storage(id = "GeneralSettings", file = "$PROJECT_FILE$"))

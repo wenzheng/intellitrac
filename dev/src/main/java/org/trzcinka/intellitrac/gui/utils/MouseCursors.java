@@ -18,6 +18,9 @@ package org.trzcinka.intellitrac.gui.utils;
 
 import java.awt.*;
 
+/**
+ * Holds mouse cursors used by the plugin.
+ */
 public class MouseCursors {
 
   public static final Cursor WAIT_CURSOR = new Cursor(Cursor.WAIT_CURSOR);

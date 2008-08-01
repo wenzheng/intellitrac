@@ -16,21 +16,23 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow;
 
+import com.intellij.openapi.project.Project;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportEditorForm;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportsListForm;
+
 import javax.swing.*;
 
-import com.intellij.openapi.project.Project;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportsListForm;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportEditorForm;
-import org.trzcinka.intellitrac.dto.Report;
-
+/**
+ * Acts as a controller. Reacts to state changes by adjusting GUI.
+ */
 public class ToolWindowForm implements StateListener {
 
   private JTabbedPane tabbedPane;
   private JPanel rootComponent;
   private JPanel ticketsContent;
 
-  private ReportsListForm reportsListForm;
-  private ReportEditorForm reportEditorForm;
+  private DataPresenter reportsListForm;
+  private DataPresenter reportEditorForm;
   private Project project;
 
   public ToolWindowForm(Project project) {
@@ -52,11 +54,15 @@ public class ToolWindowForm implements StateListener {
   public void stateChanged(StateInfo stateInfo) {
     switch (stateInfo.getState()) {
       case REPORT_EDITOR:
-        Report report = (Report) stateInfo.getInfo().get(StateData.REPORT);
-        reportEditorForm.setData(report);
+        reportEditorForm.updateData(stateInfo.getInfo());
         ticketsContent.removeAll();
         ticketsContent.repaint();
         ticketsContent.add(reportEditorForm.getRootComponent());
+        break;
+      case REPORTS_LIST:
+        ticketsContent.removeAll();
+        ticketsContent.repaint();
+        ticketsContent.add(reportsListForm.getRootComponent());
     }
   }
 }

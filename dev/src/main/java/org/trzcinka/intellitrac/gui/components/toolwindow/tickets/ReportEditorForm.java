@@ -18,40 +18,77 @@ package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
 
 import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.dto.Report;
+import org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponent;
+import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
+import org.trzcinka.intellitrac.gui.components.toolwindow.State;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ReportEditorForm {
+public class ReportEditorForm implements DataPresenter {
 
+  private JPanel rootComponent;
+
+  private Long id;
   private JTextField name;
   private JTextField description;
-  private JTextField query;
-  private JPanel rootComponent;
+  private JTextArea query;
+
+  private JButton okButton;
+  private JButton cancelButton;
 
   private Project project;
   private StateListener stateListener;
 
-  public ReportEditorForm(Project project, StateListener stateListener) {
+
+  public ReportEditorForm(final Project project, final StateListener stateListener) {
     this.project = project;
     this.stateListener = stateListener;
+    okButton.addActionListener(new ActionListener() {
+      /**
+       * Invoked when an action occurs.
+       */
+      public void actionPerformed(ActionEvent e) {
+        ReportsConfigurationComponent reportsConf = project.getComponent(ReportsConfigurationComponent.class);
+        Report report = new Report();
+        getData(report);
+        reportsConf.updateReport(report);
+        StateInfo info = new StateInfo(State.REPORTS_LIST, null);
+        stateListener.stateChanged(info);
+      }
+    });
   }
 
   public void setData(Report data) {
+    id = data.getId();
     name.setText(data.getName());
     description.setText(data.getDescription());
     query.setText(data.getQuery());
   }
 
   public void getData(Report data) {
+    data.setId(id);
     data.setName(name.getText());
     data.setDescription(description.getText());
     data.setQuery(query.getText());
   }
 
-  public Component getRootComponent() {
+  public JComponent getRootComponent() {
     return rootComponent;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  public void updateData(Object info) {
+    if (!(info instanceof Report)) {
+      throw new IllegalArgumentException();
+    }
+    Report report = (Report) info;
+    setData(report);
   }
 
 }

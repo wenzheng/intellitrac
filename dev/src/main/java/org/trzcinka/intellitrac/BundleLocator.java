@@ -18,6 +18,9 @@ package org.trzcinka.intellitrac;
 
 import java.util.ResourceBundle;
 
+/**
+ * Should be used to retrieve proper resources bundle.
+ */
 public class BundleLocator {
   private static final String BUNDLE_NAME = "bundle";
 
