@@ -1,0 +1,3 @@
+#summary GUI state changes overview.
+
+http://intellitrac.googlecode.com/svn/trunk/doc/img/GUI_state_changes_overview.png
