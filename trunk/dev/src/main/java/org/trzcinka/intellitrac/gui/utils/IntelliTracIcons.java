@@ -18,6 +18,9 @@ package org.trzcinka.intellitrac.gui.utils;
 
 import javax.swing.*;
 
+/**
+ * Holds icons used by the plugin.
+ */
 public class IntelliTracIcons {
 
   private static IntelliTracIcons instance;

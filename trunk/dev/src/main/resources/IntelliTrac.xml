@@ -1,0 +1,49 @@
+<!--
+  ~ Copyright 2008 Michal Trzcinka
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~  http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License. 
+  -->
+<component name="IntelliTrac">
+  <option name="reports">
+    <list>
+      <Report>
+        <option name="description" value="Lists all tickets."/>
+        <option name="id" value="1"/>
+        <option name="name" value="All tickets"/>
+        <option name="query"
+                value="SELECT p.value AS __color__,&#10;   t.milestone AS __group__,&#10;   (CASE status&#10;      WHEN 'closed' THEN 'color: #777; background: #ddd; border-color: #ccc;'&#10;      ELSE&#10;        (CASE owner WHEN $USER THEN 'font-weight: bold' END)&#10;    END) AS __style__,&#10;   id AS ticket, summary, component, status,&#10;   resolution,version, t.type AS type, priority, owner,&#10;   changetime AS modified,&#10;   time AS _time,reporter AS _reporter&#10;  FROM ticket t&#10;  LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'&#10;  ORDER BY (milestone IS NULL), milestone DESC, (status = 'closed'),&#10;        (CASE status WHEN 'closed' THEN changetime ELSE (-1) * CAST(p.value AS int) END) DESC&#10;  "/>
+      </Report>
+      <Report>
+        <option name="description" value="Lists all active tickets."/>
+        <option name="id" value="2"/>
+        <option name="name" value="All active tickets"/>
+        <option name="query"
+                value="SELECT p.value AS __color__,&#10;   id AS ticket, summary, component, version, milestone, t.type AS type,&#10;   (CASE status WHEN 'assigned' THEN owner||' *' ELSE owner END) AS owner,&#10;   time AS created,&#10;   changetime AS _changetime, description AS _description,&#10;   reporter AS _reporter&#10;  FROM ticket t&#10;  LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'&#10;  WHERE status IN ('new', 'assigned', 'reopened')&#10;  ORDER BY p.value, milestone, t.type, time"/>
+      </Report>
+      <Report>
+        <option name="description" value="Lists all tickets assigned to the user."/>
+        <option name="id" value="3"/>
+        <option name="name" value="My all tickets"/>
+        <option name="query"
+                value="SELECT p.value AS __color__,&#10;(CASE status WHEN 'assigned' THEN 'Assigned' ELSE 'Owned' END) AS __group__,&#10;id AS ticket, summary, component, version, milestone,&#10;t.type AS type, priority, time AS created,&#10;changetime AS _changetime, description AS _description,&#10;reporter AS _reporter&#10;FROM ticket t&#10;LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'&#10;WHERE owner = $USER&#10;ORDER BY (status = 'assigned') DESC, p.value, milestone, t.type, time"/>
+      </Report>
+      <Report>
+        <option name="description" value="Lists all active tickets assigned to the user."/>
+        <option name="id" value="4"/>
+        <option name="name" value="My active tickets"/>
+        <option name="query"
+                value="SELECT p.value AS __color__,&#10;(CASE status WHEN 'assigned' THEN 'Assigned' ELSE 'Owned' END) AS __group__,&#10;id AS ticket, summary, component, version, milestone,&#10;t.type AS type, priority, time AS created,&#10;changetime AS _changetime, description AS _description,&#10;reporter AS _reporter&#10;FROM ticket t&#10;LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'&#10;WHERE t.status IN ('new', 'assigned', 'reopened') AND owner = $USER&#10;ORDER BY (status = 'assigned') DESC, p.value, milestone, t.type, time"/>
+      </Report>
+    </list>
+  </option>
+</component>

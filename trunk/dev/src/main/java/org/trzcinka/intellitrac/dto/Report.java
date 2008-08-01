@@ -21,9 +21,18 @@ package org.trzcinka.intellitrac.dto;
  */
 public class Report {
 
+  private Long id;
   private String name;
   private String description;
   private String query;
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   public String getName() {
     return name;

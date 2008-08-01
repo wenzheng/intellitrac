@@ -16,23 +16,19 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
 
-import org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponent;
-import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
-import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
-import org.trzcinka.intellitrac.gui.components.toolwindow.State;
-import org.trzcinka.intellitrac.gui.components.toolwindow.StateData;
+import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.dto.Report;
+import org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponent;
+import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
+import org.trzcinka.intellitrac.gui.components.toolwindow.State;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 
 import javax.swing.*;
-
-import com.intellij.openapi.project.Project;
-
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.Map;
-import java.util.HashMap;
+import java.awt.event.ActionListener;
 
-public class ReportsListForm {
+public class ReportsListForm implements DataPresenter {
 
   private JPanel ticketsContent;
   private JPanel rootComponent;
@@ -55,20 +51,25 @@ public class ReportsListForm {
       public void actionPerformed(ActionEvent e) {
         Report selectedReport = (Report) reportsList.getSelectedValue();
         if (selectedReport != null) {
-          Map<StateData, Object> stateData = new HashMap<StateData, Object>();
-          stateData.put(StateData.REPORT, selectedReport);
-          StateInfo info = new StateInfo(State.REPORT_EDITOR, stateData);
+          StateInfo info = new StateInfo(State.REPORT_EDITOR, selectedReport);
           stateListener.stateChanged(info);
         }
       }
     });
   }
 
-  private void createUIComponents() {   
+  private void createUIComponents() {
     ReportsConfigurationComponent reportsConf = project.getComponent(ReportsConfigurationComponent.class);
-    reportsList = new JList(reportsConf.getReports().toArray());
+    reportsList = new JList(reportsConf);
     reportsList.setCellRenderer(new ReportsListCellRenderer());
 
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  public void updateData(Object info) {
+    //TODO: Implement
   }
 
   public JComponent getRootComponent() {

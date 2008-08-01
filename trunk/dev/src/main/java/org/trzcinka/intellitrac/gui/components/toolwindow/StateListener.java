@@ -16,8 +16,16 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow;
 
+/**
+ * Classes implementing this interface should be able to react to GUI state changes properly.
+ */
 public interface StateListener {
 
+  /**
+   * Notifies about a change of state.
+   *
+   * @param stateInfo new state information.
+   */
   void stateChanged(StateInfo stateInfo);
 
 }

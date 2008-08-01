@@ -16,24 +16,34 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow;
 
-import java.util.Map;
-import java.util.HashMap;
-
+/**
+ * Whenever GUI state changes, this class provides additional information about it. For example, if
+ * a user decided to edit a ticket, the new StateInfo instance should be created with
+ * TICKET_EDITOR as state and additional data in provided object (for example ticket ID to edit
+ * a ticket).
+ */
 public class StateInfo {
 
   private State state;
-  private Map<StateData, Object> info;
+  private Object info;
 
-  public StateInfo(State state, Map<StateData, Object> info) {
+  /**
+   * Instantiates state info.
+   *
+   * @param state new state.
+   * @param info  info, may be null.
+   */
+  public StateInfo(State state, Object info) {
     this.state = state;
-    this.info = new HashMap<StateData, Object>(info);
+    this.info = info;
   }
 
   public State getState() {
     return state;
   }
 
-  public Map<StateData, Object> getInfo() {
+  public Object getInfo() {
     return info;
   }
+
 }

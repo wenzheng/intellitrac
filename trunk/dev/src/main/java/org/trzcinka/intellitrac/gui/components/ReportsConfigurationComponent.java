@@ -22,39 +22,26 @@ import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.util.xmlb.XmlSerializerUtil;
-import org.ho.yaml.Yaml;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.dto.Report;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Date: 2008-07-28
- *
- * @author Michal Trzcinka
+ * Represents reports configuration. Reports list are stored in IntelliJ IDEA project configuration file.
  */
 @State(name = "IntelliTrac",
   storages = @Storage(id = "Reports", file = "$PROJECT_FILE$"))
-public class ReportsConfigurationComponent implements ProjectComponent, PersistentStateComponent<ReportsConfigurationComponent> {
+public class ReportsConfigurationComponent extends AbstractListModel implements ProjectComponent, PersistentStateComponent<ReportsConfigurationComponent> {
 
   private static Logger logger = Logger.getInstance(ReportsConfigurationComponent.class.getName());
-
-  private static final String DEFAULT_REPORTS_FILENAME = "default_reports.yml";
 
   private List<Report> reports;
 
   public ReportsConfigurationComponent() {
-    retrieveDefaultReports();
-
-  }
-
-  private void retrieveDefaultReports() {
-    try {
-      reports = Yaml.loadType(getClass().getResourceAsStream("/" + DEFAULT_REPORTS_FILENAME), ArrayList.class);
-    } catch (Exception e) {
-      logger.error("Could not load default reports from plugin resources. The IntelliTrac plugin is probably damaged.", e);
-    }
+    reports = new ArrayList<Report>();
   }
 
   public void initComponent() {
@@ -72,6 +59,21 @@ public class ReportsConfigurationComponent implements ProjectComponent, Persiste
   }
 
   public void projectClosed() {
+  }
+
+
+  /**
+   * {@inheritDoc}
+   */
+  public int getSize() {
+    return reports.size();
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  public Object getElementAt(int index) {
+    return reports.get(index);
   }
 
   /**
@@ -92,6 +94,16 @@ public class ReportsConfigurationComponent implements ProjectComponent, Persiste
    */
   public void loadState(ReportsConfigurationComponent state) {
     XmlSerializerUtil.copyBean(state, this);
+  }
+
+  public void updateReport(Report report) {
+    for (int i = 0; i < reports.size(); i++) {
+      Report r = reports.get(i);
+      if (r.getId().equals(report.getId())) {
+        reports.set(i, report);
+        fireContentsChanged(this, i, i);
+      }
+    }
   }
 
   //
