@@ -17,7 +17,9 @@
 package org.trzcinka.intellitrac.gui.components;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.trzcinka.intellitrac.dto.Report;
+import org.junit.Before;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,17 +28,22 @@ import java.util.List;
 @Test
 public class ReportsConfigurationComponentTest {
 
+  ReportsConfigurationComponent component;
+
+  @BeforeMethod
+  public void setUp() {
+    component = new ReportsConfigurationComponent();
+    component.setReports(generateReports());
+  }
 
   public void testUpdateReport() {
-    ReportsConfigurationComponent component = new ReportsConfigurationComponent();
-    component.setReports(generateReports());
     Report updatedReport2 = new Report();
     final String updatedReportText = "Updated report2";
     updatedReport2.setDescription(updatedReportText);
     updatedReport2.setId(2L);
     updatedReport2.setName(updatedReportText);
     updatedReport2.setQuery(updatedReportText);
-    component.updateReport(updatedReport2);
+    component.saveReport(updatedReport2);
 
     assert component.getReports().get(1).getDescription().equals(updatedReportText);
     assert component.getReports().get(1).getId().equals(2L);
@@ -71,4 +78,18 @@ public class ReportsConfigurationComponentTest {
     return result;
   }
 
+  public void testAddReport() {
+    int initialSize = component.getReports().size();
+
+    Report newReport = new Report();
+    newReport.setDescription("a");
+    newReport.setName("a");
+    newReport.setQuery("c");
+
+    component.saveReport(newReport);
+
+    assert component.getReports().size() == initialSize + 1;
+
+    assert component.getReports().contains(newReport);
+  }
 }

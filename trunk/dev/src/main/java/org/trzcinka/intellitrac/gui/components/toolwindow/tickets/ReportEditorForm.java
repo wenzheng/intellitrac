@@ -55,11 +55,20 @@ public class ReportEditorForm implements DataPresenter {
         ReportsConfigurationComponent reportsConf = project.getComponent(ReportsConfigurationComponent.class);
         Report report = new Report();
         getData(report);
-        reportsConf.updateReport(report);
-        StateInfo info = new StateInfo(State.REPORTS_LIST, null);
-        stateListener.stateChanged(info);
+        reportsConf.saveReport(report);
+        reportsListRedirect();
       }
     });
+    cancelButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        reportsListRedirect();
+      }
+    });
+  }
+
+  private void reportsListRedirect() {
+    StateInfo info = new StateInfo(State.REPORTS_LIST, null);
+    stateListener.stateChanged(info);
   }
 
   public void setData(Report data) {
@@ -81,14 +90,23 @@ public class ReportEditorForm implements DataPresenter {
   }
 
   /**
-   * {@inheritDoc}
+   * If the editor should edit a current report, info should contain a report. If the editor
+   * is to create a new one, info should be null.
+   *
+   * @param info info.
    */
   public void updateData(Object info) {
-    if (!(info instanceof Report)) {
-      throw new IllegalArgumentException();
+    Report report;
+    if (info != null) {
+      if (!(info instanceof Report)) {
+        throw new IllegalArgumentException();
+      }
+      report = (Report) info;
+    } else {
+      report = new Report();
     }
-    Report report = (Report) info;
     setData(report);
+
   }
 
 }

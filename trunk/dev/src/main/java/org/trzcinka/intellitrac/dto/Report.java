@@ -57,4 +57,27 @@ public class Report {
   public void setQuery(String query) {
     this.query = query;
   }
+
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
+    if (obj == null || getClass() != obj.getClass()) return false;
+
+    Report report = (Report) obj;
+
+    if (!description.equals(report.description)) return false;
+    if (!id.equals(report.id)) return false;
+    if (!name.equals(report.name)) return false;
+    if (!query.equals(report.query)) return false;
+
+    return true;
+  }
+
+  public int hashCode() {
+    int result;
+    result = id.hashCode();
+    result = 31 * result + name.hashCode();
+    result = 31 * result + description.hashCode();
+    result = 31 * result + query.hashCode();
+    return result;
+  }
 }
