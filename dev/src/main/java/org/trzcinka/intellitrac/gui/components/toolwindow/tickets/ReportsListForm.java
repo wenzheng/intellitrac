@@ -17,6 +17,8 @@
 package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
 
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
+import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponent;
 import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
@@ -27,8 +29,11 @@ import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 
 public class ReportsListForm implements DataPresenter {
+
+  private static final ResourceBundle BUNDLE = BundleLocator.getBundle();
 
   private JPanel ticketsContent;
   private JPanel rootComponent;
@@ -38,12 +43,12 @@ public class ReportsListForm implements DataPresenter {
   private JButton addButton;
   private JButton editButton;
   private JButton removeButton;
-  private Project project;
-  private StateListener stateListener;
 
-  public ReportsListForm(Project project, final StateListener stateListener) {
+  private Project project;
+  private ReportsConfigurationComponent reportsConf;
+
+  public ReportsListForm(final Project project, final StateListener stateListener) {
     this.project = project;
-    this.stateListener = stateListener;
     editButton.addActionListener(new ActionListener() {
       /**
        * Invoked when an action occurs.
@@ -56,20 +61,37 @@ public class ReportsListForm implements DataPresenter {
         }
       }
     });
+    removeButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Report selectedReport = (Report) reportsList.getSelectedValue();
+        if (selectedReport != null) {
+          String message = BUNDLE.getString("tool_window.tickets.reports_list.confirm_report_removal");
+          int answer = Messages.showYesNoDialog(project, message, BUNDLE.getString("dialogs.warning"), null);
+          if (answer == 0) {
+            reportsConf.removeReport(selectedReport);
+          }
+        }
+      }
+    });
+    addButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        StateInfo info = new StateInfo(State.REPORT_EDITOR, null);
+        stateListener.stateChanged(info);
+      }
+    });
   }
 
   private void createUIComponents() {
-    ReportsConfigurationComponent reportsConf = project.getComponent(ReportsConfigurationComponent.class);
+    reportsConf = project.getComponent(ReportsConfigurationComponent.class);
     reportsList = new JList(reportsConf);
     reportsList.setCellRenderer(new ReportsListCellRenderer());
-
+    reportsList.getSelectionModel().setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
   }
 
   /**
    * {@inheritDoc}
    */
   public void updateData(Object info) {
-    //TODO: Implement
   }
 
   public JComponent getRootComponent() {

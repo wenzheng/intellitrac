@@ -28,24 +28,21 @@ import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
-import org.trzcinka.intellitrac.dto.TracConfigurationBean;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
-import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
 
 import javax.swing.*;
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * Represents per-project plugin configuration.
- *
  */
-@State(name = "IntelliTrac",
+@State(name = ConfigurationComponent.COMPONENT_NAME,
   storages = @Storage(id = "GeneralSettings", file = "$PROJECT_FILE$"))
 public class ConfigurationComponent implements ProjectComponent, Configurable,
   PersistentStateComponent<ConfigurationComponent>, TracConfiguration {
+
+  static final String COMPONENT_NAME = "IntelliTrac.ConfigurationComponent";
 
   private ConfigurationForm form;
 
@@ -69,7 +66,7 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
 
   @NotNull
   public String getComponentName() {
-    return "ConfigurationComponent";
+    return COMPONENT_NAME;
   }
 
   public void projectOpened() {

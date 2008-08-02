@@ -21,11 +21,15 @@ import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportEditorFo
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportsListForm;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Acts as a controller. Reacts to state changes by adjusting GUI.
  */
 public class ToolWindowForm implements StateListener {
+
+  private static final String REPORTS_LIST = "REPORTS_LIST";
+  private static final String REPORT_EDITOR = "REPORT_EDITOR";
 
   private JTabbedPane tabbedPane;
   private JPanel rootComponent;
@@ -34,6 +38,8 @@ public class ToolWindowForm implements StateListener {
   private DataPresenter reportsListForm;
   private DataPresenter reportEditorForm;
   private Project project;
+  private CardLayout cardLayout;
+
 
   public ToolWindowForm(Project project) {
     this.project = project;
@@ -44,25 +50,23 @@ public class ToolWindowForm implements StateListener {
   }
 
   private void createUIComponents() {
-    ticketsContent = new JPanel();
+    cardLayout = new CardLayout();
+    ticketsContent = new JPanel(cardLayout);
     reportsListForm = new ReportsListForm(project, this);
     reportEditorForm = new ReportEditorForm(project, this);
-    ticketsContent.add(reportsListForm.getRootComponent());
-
+    ticketsContent.add(REPORTS_LIST, reportsListForm.getRootComponent());
+    ticketsContent.add(REPORT_EDITOR, reportEditorForm.getRootComponent());
   }
 
   public void stateChanged(StateInfo stateInfo) {
     switch (stateInfo.getState()) {
       case REPORT_EDITOR:
         reportEditorForm.updateData(stateInfo.getInfo());
-        ticketsContent.removeAll();
-        ticketsContent.repaint();
-        ticketsContent.add(reportEditorForm.getRootComponent());
+        cardLayout.show(ticketsContent, REPORT_EDITOR);
         break;
       case REPORTS_LIST:
-        ticketsContent.removeAll();
-        ticketsContent.repaint();
-        ticketsContent.add(reportsListForm.getRootComponent());
+        reportsListForm.updateData(stateInfo.getInfo());
+        cardLayout.show(ticketsContent, REPORTS_LIST);
     }
   }
 }

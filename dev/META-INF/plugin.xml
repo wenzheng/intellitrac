@@ -8,7 +8,8 @@
 
   <project-components>
     <component>
-      <implementation-class>org.trzcinka.intellitrac.gui.components.toolwindow.ToolWindowComponent</implementation-class>
+      <implementation-class>org.trzcinka.intellitrac.gui.components.toolwindow.ToolWindowComponent
+      </implementation-class>
     </component>
     <component>
       <implementation-class>org.trzcinka.intellitrac.gui.components.ConfigurationComponent</implementation-class>
