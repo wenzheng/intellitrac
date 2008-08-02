@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Represents reports configuration. Reports list are stored in IntelliJ IDEA project configuration file.
+ * Represents reports configuration. Reports list is stored in IntelliJ IDEA project configuration file.
  */
 @State(name = "IntelliTrac",
   storages = @Storage(id = "Reports", file = "$PROJECT_FILE$"))

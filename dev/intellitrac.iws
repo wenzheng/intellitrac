@@ -23,120 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IClass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/overview-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/constant-values.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/package-list" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/Reporter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IReporter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ReporterConfig.Property.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ClassMethodMap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/BeforeSuite.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/ObjectFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponentTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/allclasses-noframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/AfterGroups.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponent.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/FileAssert.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TimeBombSkipException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/AfterSuite.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/XmlPackage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/BeforeGroups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/DataProvider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/AfterMethod.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/BundleLocatorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/SuiteRunState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/JUnitConverterTask.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/resources" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/Parameters.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/BeforeTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/help-doc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ReporterConfig.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/overview-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/Test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IInstanceInfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/overview-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IMethodInstance.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestClassFinder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IHookable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/AnnotationConverter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/allclasses-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IMethodInterceptor.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/Optional.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/Factory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/deprecated-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestNGCommandLineArgs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/SuiteRunner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IMethodSelectorContext.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IHookCallBack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IRetryAnalyzer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ISuiteListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IResultMap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/resources/inherit.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/XmlMethodSelector.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestRunner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestNGException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestContext.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/ExpectedExceptions.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestClass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestClass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestNGAntTask.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestListenerAdapter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/Assert.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IMethodSelector.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IExtraOutput.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestNGListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/AssertJUnit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/SkipException.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ISuite.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/SuiteRunner.ProxyTestRunnerFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/SuiteResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/JUnitConverter.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/index-all.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/TestInstance.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/AfterTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.ipr" afterPath="$PROJECT_DIR$/intellitrac.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/IObjectFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ISuiteResult.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/BeforeClass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestRunnerFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/BeforeMethod.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/gui/utils" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponentTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/gui/utils/UtilsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestNG.ExitCodeListener.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestNGMethod.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/gui/components" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/serialized-form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/ITestMethodFinder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/XmlSuite.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/SuiteRunner.DefaultTestRunnerFactory.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/XmlTest.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/AfterClass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/xml/XmlClass.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/TestNG.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/Configuration.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/gui" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/testng-javadoc/org/testng/annotations/package-frame.html" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -205,8 +94,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -282,6 +171,166 @@
           <option name="myItemId" value="intellitrac" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
@@ -303,18 +352,38 @@
     </navigator>
   </component>
   <component name="PropertiesComponent">
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="211" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="182" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="31" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="206" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="164" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="169" />
     <property name="last_opened_file_path" value="C:\dev\projects\intellitrac\doc\prototype" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="169" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="844" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="169" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="885" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="IntroduceConstantDialog.RECENTS_KEY">
@@ -341,25 +410,6 @@
     <option name="showLabels" value="true" />
   </component>
   <component name="RunManager" selected="TestNG.Tests">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -405,6 +455,18 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="intellitrac" />
+      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
+      <option name="PROGRAM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -427,10 +489,17 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="intellitrac" />
-      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
-      <option name="PROGRAM_PARAMETERS" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="false" name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="intellitrac" />
@@ -536,7 +605,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="1058" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27249357" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
@@ -548,13 +617,13 @@
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35682818" order="8" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13870968" order="3" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="8" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" order="8" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" order="8" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="8" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24967742" order="1" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13290323" order="3" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4180645" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2632258" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
@@ -563,8 +632,8 @@
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="0" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="4" />
@@ -578,7 +647,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -697,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="44" selection-start="3002" selection-end="3002" vertical-scroll-proportion="0.12820514">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="13" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.33333334">
@@ -742,13 +804,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/testng-javadoc/index-all.html">
+      <provider editor-type-id="HtmlPreview">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="1852" column="71" selection-start="155400" selection-end="155400" vertical-scroll-proportion="0.33396584">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="HtmlPreview">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="35" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.47469458">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
