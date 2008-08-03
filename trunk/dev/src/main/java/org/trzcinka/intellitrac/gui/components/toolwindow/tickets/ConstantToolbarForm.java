@@ -16,12 +16,34 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
 
+import com.intellij.openapi.project.Project;
+import org.trzcinka.intellitrac.gui.components.toolwindow.State;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ConstantToolbarForm {
 
+  private JPanel rootComponent;
+  private JToolBar toolbar;
   private JButton newTicket;
   private JButton goHome;
   private JButton goBack;
-  private JPanel rootComponent;
+
+  private Project project;
+  private StateListener stateListener;
+
+  public ConstantToolbarForm(Project project, final StateListener stateListener) {
+    this.project = project;
+    this.stateListener = stateListener;
+    goHome.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        StateInfo stateInfo = new StateInfo(State.REPORTS_LIST, null);
+        stateListener.stateChanged(stateInfo);
+      }
+    });
+  }
 }

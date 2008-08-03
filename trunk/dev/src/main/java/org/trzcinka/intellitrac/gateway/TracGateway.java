@@ -16,8 +16,8 @@
 
 package org.trzcinka.intellitrac.gateway;
 
-import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
+import org.trzcinka.intellitrac.dto.Ticket;
 
 import java.net.MalformedURLException;
 import java.util.List;

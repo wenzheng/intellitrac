@@ -16,8 +16,8 @@
 
 package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.tickets_list;
 
-import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.dto.Ticket;
 
 public class TicketSummaryColumn implements TicketsListColumn {
 

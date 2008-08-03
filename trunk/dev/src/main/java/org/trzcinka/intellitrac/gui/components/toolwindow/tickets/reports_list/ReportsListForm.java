@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
+package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.reports_list;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
@@ -25,7 +25,7 @@ import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
 import org.trzcinka.intellitrac.gui.components.toolwindow.State;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.reports_list.ReportsListCellRenderer;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -39,17 +39,20 @@ public class ReportsListForm implements DataPresenter {
   private JPanel ticketsContent;
   private JPanel rootComponent;
   private JList reportsList;
-  private JToolBar toolBar;
   private JButton openButton;
   private JButton addButton;
   private JButton editButton;
   private JButton removeButton;
+  private JToolBar toolbar;
+  private ConstantToolbarForm constantToolbarForm;
 
   private Project project;
+  private StateListener stateListener;
   private ReportsConfigurationComponent reportsConf;
 
   public ReportsListForm(final Project project, final StateListener stateListener) {
     this.project = project;
+    this.stateListener = stateListener;
     editButton.addActionListener(new ActionListener() {
       /**
        * Invoked when an action occurs.
@@ -92,6 +95,7 @@ public class ReportsListForm implements DataPresenter {
   }
 
   private void createUIComponents() {
+    constantToolbarForm = new ConstantToolbarForm(project, stateListener);
     reportsConf = project.getComponent(ReportsConfigurationComponent.class);
     reportsList = new JList(reportsConf);
     reportsList.setCellRenderer(new ReportsListCellRenderer());

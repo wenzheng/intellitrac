@@ -17,9 +17,9 @@
 package org.trzcinka.intellitrac.gui.components.toolwindow;
 
 import com.intellij.openapi.project.Project;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportEditorForm;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportsListForm;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.TicketsListForm;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.report_editor.ReportEditorForm;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.reports_list.ReportsListForm;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.tickets_list.TicketsListForm;
 
 import javax.swing.*;
 import java.awt.*;

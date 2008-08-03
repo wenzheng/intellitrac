@@ -26,6 +26,7 @@ import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.dto.TicketIdsList;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGateway;
@@ -40,7 +41,6 @@ public class XmlRpcTracGateway implements TracGateway {
 
   private static TracGateway instance;
 
-  private TracConfiguration configuration;
   private XmlRpcClient client;
 
   private XmlRpcTracGateway() {
@@ -84,7 +84,6 @@ public class XmlRpcTracGateway implements TracGateway {
    * @throws MalformedURLException when provided configuration URL is malformed.
    */
   public void setConfiguration(TracConfiguration configuration) throws MalformedURLException {
-    this.configuration = configuration;
     client = prepareClient(configuration);
   }
 
@@ -94,9 +93,10 @@ public class XmlRpcTracGateway implements TracGateway {
   public List<Ticket> retrieveTickets(String query) throws ConnectionFailedException {
     List<Ticket> result;
     try {
-      Object[] ticketIds = (Object[]) client.execute("ticket.query", new Object[]{query});
-      result = new ArrayList<Ticket>(ticketIds.length);
-      for (Object ticketId : ticketIds) {
+      Object response = client.execute("ticket.query", new Object[]{query});
+      TicketIdsList list = new TicketIdsAdapter(response);
+      result = new ArrayList<Ticket>(list.getTicketIdsList().length);
+      for (Object ticketId : list.getTicketIdsList()) {
         result.add(retrieveTicket((Integer) ticketId));
       }
     } catch (XmlRpcException e) {
@@ -107,16 +107,8 @@ public class XmlRpcTracGateway implements TracGateway {
 
 
   private Ticket retrieveTicket(int ticketId) throws XmlRpcException {
-    Object[] response = (Object[]) client.execute("ticket.get", new Object[]{ticketId});
-    //TODO: Implement
-    Ticket result = new Ticket();
-    result.setNumber(1);
-    result.setOwner("a");
-    result.setStatus("b");
-    result.setSummary("c");
-    result.setType("a");
-    return result;
+    Object response = client.execute("ticket.get", new Object[]{ticketId});
+    return new TicketAdapter(response);
   }
-
 
 }
