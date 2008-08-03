@@ -22,7 +22,7 @@ import org.trzcinka.intellitrac.dto.Ticket;
 public class TicketNumberColumn implements TicketsListColumn {
 
   public Object getValue(Ticket ticket) {
-    return ticket.getNumber();
+    return ticket.getId();
   }
 
   public Class<?> getColumnClass() {
@@ -30,7 +30,7 @@ public class TicketNumberColumn implements TicketsListColumn {
   }
 
   public String getColumnName() {
-    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.number");
+    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.id");
   }
 
 }

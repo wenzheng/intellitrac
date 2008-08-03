@@ -152,7 +152,7 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
     try {
       TracGatewayLocator.retrieveTracGateway().setConfiguration(this);
     } catch (MalformedURLException e) {
-      Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
+      TracGatewayLocator.handleConnectionProblem();
     }
   }
 

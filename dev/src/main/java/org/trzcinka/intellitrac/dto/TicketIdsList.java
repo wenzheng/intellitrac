@@ -14,24 +14,18 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gateway;
+package org.trzcinka.intellitrac.dto;
 
-import com.intellij.openapi.ui.Messages;
-import org.trzcinka.intellitrac.BundleLocator;
-import org.trzcinka.intellitrac.gateway.xmlrpc.XmlRpcTracGateway;
+public class TicketIdsList {
 
-import java.util.ResourceBundle;
+  private int[] list;
 
-public class TracGatewayLocator {
-
-  private static ResourceBundle bundle = BundleLocator.getBundle();
-
-  public static TracGateway retrieveTracGateway() {
-    return XmlRpcTracGateway.getInstance();
+  public void setTicketIdsList(int[] list) {
+    this.list = list;
   }
 
-  public static void handleConnectionProblem() {
-    Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
+  public int[] getTicketIdsList() {
+    return list;
   }
 
 }

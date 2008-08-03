@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
+package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.report_editor;
 
 import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.dto.Report;

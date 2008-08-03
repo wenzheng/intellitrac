@@ -14,23 +14,19 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.tickets_list;
+package org.trzcinka.intellitrac.gateway.xmlrpc;
 
-import org.trzcinka.intellitrac.BundleLocator;
-import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.dto.TicketIdsList;
 
-public class TicketOwnerColumn implements TicketsListColumn {
+public class TicketIdsAdapter extends TicketIdsList {
 
-  public Object getValue(Ticket ticket) {
-    return ticket.getOwner();
-  }
-
-  public Class<?> getColumnClass() {
-    return String.class;
-  }
-
-  public String getColumnName() {
-    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.owner");
+  public TicketIdsAdapter(Object response) {
+    Object[] array = (Object[]) response;
+    int[] result = new int[array.length];
+    for (int i = 0; i < array.length; i++) {
+      result[i] = (Integer) array[i];
+    }
+    setTicketIdsList(result);
   }
 
 }

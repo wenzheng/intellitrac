@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
+package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.tickets_list;
 
 import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
-import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.tickets_list.TicketsListTableModel;
-import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
-import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -34,6 +34,7 @@ public class TicketsListForm implements DataPresenter {
   private JPanel rootComponent;
   private JToolBar toolBar;
   private JTable ticketsList;
+  private ConstantToolbarForm constantToolbarForm;
   private TicketsListTableModel tableModel;
 
   private Project project;
@@ -53,9 +54,9 @@ public class TicketsListForm implements DataPresenter {
       List<Ticket> tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getQuery());
       tableModel.updateTickets(tickets);
     } catch (ConnectionFailedException e) {
-      e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+      TracGatewayLocator.handleConnectionProblem();
     }
-    
+
   }
 
   public JComponent getRootComponent() {
@@ -63,6 +64,7 @@ public class TicketsListForm implements DataPresenter {
   }
 
   private void createUIComponents() {
+    constantToolbarForm = new ConstantToolbarForm(project, stateListener);
     tableModel = new TicketsListTableModel(new ArrayList<Ticket>(0));
     ticketsList = new JTable(tableModel);
   }
