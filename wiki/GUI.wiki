@@ -21,6 +21,15 @@ It will be the first state of the Tickets tab. Toolbar will contain buttons:
 
 === Tickets list ===
 
+Tickets list will be a table. Every ticket will be described by:
+ * number
+ * summary
+ * type
+ * owner
+ * status
+
+Buttons in the toolbar: 
+
  * Start working on a ticket - registers that the user has just started working on this ticket, starting a timer. It will be active if all these conditions are met:
    * the user is not working on any other ticket yet,
    * there is a selected ticket in the list.
