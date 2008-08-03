@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components.toolwindow.tickets;
+package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.reports_list;
 
 import org.trzcinka.intellitrac.dto.Report;
 

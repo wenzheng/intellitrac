@@ -23,16 +23,20 @@ import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.gui.utils.IntelliTracIcons;
 
 import javax.swing.*;
+import java.net.MalformedURLException;
+import java.util.ResourceBundle;
 
 /**
  * Represents per-project plugin configuration.
@@ -43,6 +47,8 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
   PersistentStateComponent<ConfigurationComponent>, TracConfiguration {
 
   static final String COMPONENT_NAME = "IntelliTrac.ConfigurationComponent";
+
+  private static ResourceBundle bundle = BundleLocator.getBundle();
 
   private ConfigurationForm form;
 
@@ -139,7 +145,15 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
     if (form != null) {
       form.getData(this);
     }
-    TracGatewayLocator.retrieveTracGateway().setConfiguration(this);
+    setIntelliTracConfiguration();
+  }
+
+  private void setIntelliTracConfiguration() {
+    try {
+      TracGatewayLocator.retrieveTracGateway().setConfiguration(this);
+    } catch (MalformedURLException e) {
+      Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
+    }
   }
 
   /**
@@ -176,6 +190,7 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
    */
   public void loadState(ConfigurationComponent state) {
     XmlSerializerUtil.copyBean(state, this);
+    setIntelliTracConfiguration();
   }
 
   public String getTracUrl() {

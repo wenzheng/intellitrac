@@ -19,6 +19,7 @@ package org.trzcinka.intellitrac.gui.components.toolwindow;
 import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportEditorForm;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ReportsListForm;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.TicketsListForm;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,6 +31,7 @@ public class ToolWindowForm implements StateListener {
 
   private static final String REPORTS_LIST = "REPORTS_LIST";
   private static final String REPORT_EDITOR = "REPORT_EDITOR";
+  private static final String TICKETS_LIST = "TICKETS_LIST";
 
   private JTabbedPane tabbedPane;
   private JPanel rootComponent;
@@ -37,6 +39,8 @@ public class ToolWindowForm implements StateListener {
 
   private DataPresenter reportsListForm;
   private DataPresenter reportEditorForm;
+  private DataPresenter ticketsListForm;
+
   private Project project;
   private CardLayout cardLayout;
 
@@ -52,10 +56,14 @@ public class ToolWindowForm implements StateListener {
   private void createUIComponents() {
     cardLayout = new CardLayout();
     ticketsContent = new JPanel(cardLayout);
+
     reportsListForm = new ReportsListForm(project, this);
     reportEditorForm = new ReportEditorForm(project, this);
+    ticketsListForm = new TicketsListForm(project, this);
+
     ticketsContent.add(REPORTS_LIST, reportsListForm.getRootComponent());
     ticketsContent.add(REPORT_EDITOR, reportEditorForm.getRootComponent());
+    ticketsContent.add(TICKETS_LIST, ticketsListForm.getRootComponent());
   }
 
   public void stateChanged(StateInfo stateInfo) {
@@ -67,6 +75,10 @@ public class ToolWindowForm implements StateListener {
       case REPORTS_LIST:
         reportsListForm.updateData(stateInfo.getInfo());
         cardLayout.show(ticketsContent, REPORTS_LIST);
+        break;
+      case TICKETS_LIST:
+        ticketsListForm.updateData(stateInfo.getInfo());
+        cardLayout.show(ticketsContent, TICKETS_LIST);
     }
   }
 }

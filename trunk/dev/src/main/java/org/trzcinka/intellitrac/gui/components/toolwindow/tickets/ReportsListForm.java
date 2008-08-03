@@ -25,6 +25,7 @@ import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
 import org.trzcinka.intellitrac.gui.components.toolwindow.State;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.reports_list.ReportsListCellRenderer;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -77,6 +78,15 @@ public class ReportsListForm implements DataPresenter {
       public void actionPerformed(ActionEvent e) {
         StateInfo info = new StateInfo(State.REPORT_EDITOR, null);
         stateListener.stateChanged(info);
+      }
+    });
+    openButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Report selectedReport = (Report) reportsList.getSelectedValue();
+        if (selectedReport != null) {
+          StateInfo info = new StateInfo(State.TICKETS_LIST, selectedReport);
+          stateListener.stateChanged(info);
+        }
       }
     });
   }

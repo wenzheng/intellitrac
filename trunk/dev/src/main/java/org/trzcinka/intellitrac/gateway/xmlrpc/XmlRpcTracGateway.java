@@ -20,15 +20,20 @@ import org.apache.commons.httpclient.Credentials;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
+import org.apache.commons.lang.StringUtils;
+import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
+import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGateway;
-import org.trzcinka.intellitrac.dto.TracConfigurationBean;
-import org.trzcinka.intellitrac.dto.TracConfiguration;
 
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class XmlRpcTracGateway implements TracGateway {
   private static final Object[] EMPTY_ARRAY = new Object[]{};
@@ -36,6 +41,7 @@ public class XmlRpcTracGateway implements TracGateway {
   private static TracGateway instance;
 
   private TracConfiguration configuration;
+  private XmlRpcClient client;
 
   private XmlRpcTracGateway() {
   }
@@ -49,32 +55,68 @@ public class XmlRpcTracGateway implements TracGateway {
 
   public void testConnection(TracConfiguration configuration) throws ConnectionFailedException {
     try {
-      XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-
-      config.setServerURL(new URL(configuration.getTracUrl()));
-      XmlRpcClient xmlRpcClient = new XmlRpcClient();
-      xmlRpcClient.setConfig(config);
-      XmlRpcCommonsTransportFactory transportFactory = new XmlRpcCommonsTransportFactory(xmlRpcClient);
-      Credentials credentials = new UsernamePasswordCredentials(configuration.getLogin(), configuration.getPassword());
-      HttpClient httpClient = new HttpClient();
-      httpClient.getState().setCredentials(AuthScope.ANY, credentials);
-      transportFactory.setHttpClient(httpClient);
-      xmlRpcClient.setTransportFactory(transportFactory);
-
+      XmlRpcClient xmlRpcClient = prepareClient(configuration);
       xmlRpcClient.execute("system.listMethods", EMPTY_ARRAY);
-
     } catch (Exception e) {
       throw new ConnectionFailedException(e);
     }
+  }
+
+  private XmlRpcClient prepareClient(TracConfiguration configuration) throws MalformedURLException {
+    XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
+
+    config.setServerURL(new URL(StringUtils.removeEnd(configuration.getTracUrl(), "/") + "/login/xmlrpc"));
+    XmlRpcClient xmlRpcClient = new XmlRpcClient();
+    xmlRpcClient.setConfig(config);
+    XmlRpcCommonsTransportFactory transportFactory = new XmlRpcCommonsTransportFactory(xmlRpcClient);
+    Credentials credentials = new UsernamePasswordCredentials(configuration.getLogin(), configuration.getPassword());
+    HttpClient httpClient = new HttpClient();
+    httpClient.getState().setCredentials(AuthScope.ANY, credentials);
+    transportFactory.setHttpClient(httpClient);
+    xmlRpcClient.setTransportFactory(transportFactory);
+    return xmlRpcClient;
   }
 
   /**
    * Sets the given configuration.
    *
    * @param configuration configuration.
+   * @throws MalformedURLException when provided configuration URL is malformed.
    */
-  public void setConfiguration(TracConfiguration configuration) {
+  public void setConfiguration(TracConfiguration configuration) throws MalformedURLException {
     this.configuration = configuration;
+    client = prepareClient(configuration);
   }
+
+  /**
+   * {@inheritDoc}
+   */
+  public List<Ticket> retrieveTickets(String query) throws ConnectionFailedException {
+    List<Ticket> result;
+    try {
+      Object[] ticketIds = (Object[]) client.execute("ticket.query", new Object[]{query});
+      result = new ArrayList<Ticket>(ticketIds.length);
+      for (Object ticketId : ticketIds) {
+        result.add(retrieveTicket((Integer) ticketId));
+      }
+    } catch (XmlRpcException e) {
+      throw new ConnectionFailedException(e);
+    }
+    return result;
+  }
+
+
+  private Ticket retrieveTicket(int ticketId) throws XmlRpcException {
+    Object[] response = (Object[]) client.execute("ticket.get", new Object[]{ticketId});
+    //TODO: Implement
+    Ticket result = new Ticket();
+    result.setNumber(1);
+    result.setOwner("a");
+    result.setStatus("b");
+    result.setSummary("c");
+    result.setType("a");
+    return result;
+  }
+
 
 }
