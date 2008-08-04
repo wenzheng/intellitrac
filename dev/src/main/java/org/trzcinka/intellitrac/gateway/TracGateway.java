@@ -31,7 +31,7 @@ public interface TracGateway {
    * @param configuration configuration. Must be not null.
    * @throws ConnectionFailedException if there were problems during test.
    */
-  void testConnection(TracConfiguration configuration) throws ConnectionFailedException;
+  void testConnection(TracConfiguration configuration) throws ConnectionFailedException, MalformedURLException;
 
   /**
    * Sets the given configuration.

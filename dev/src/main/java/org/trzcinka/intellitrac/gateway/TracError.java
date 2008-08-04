@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components.toolwindow;
+package org.trzcinka.intellitrac.gateway;
 
-/**
- * Enumerates possible GUI states of the tool window.
- */
-public enum State {
+public class TracError extends Error {
 
-  REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR, BACK
+  public TracError(Throwable e) {
+    super(e);
+  }
 
 }

@@ -44,6 +44,7 @@ public class ToolWindowForm implements StateListener {
   private Project project;
   private CardLayout cardLayout;
 
+  private StateInfo lastState;
 
   public ToolWindowForm(Project project) {
     this.project = project;
@@ -67,6 +68,7 @@ public class ToolWindowForm implements StateListener {
   }
 
   public void stateChanged(StateInfo stateInfo) {
+    
     switch (stateInfo.getState()) {
       case REPORT_EDITOR:
         reportEditorForm.updateData(stateInfo.getInfo());
@@ -79,6 +81,10 @@ public class ToolWindowForm implements StateListener {
       case TICKETS_LIST:
         ticketsListForm.updateData(stateInfo.getInfo());
         cardLayout.show(ticketsContent, TICKETS_LIST);
+        break;
+      case BACK:              //TODO: last state
+        stateChanged(lastState);
+        break;
     }
   }
 }

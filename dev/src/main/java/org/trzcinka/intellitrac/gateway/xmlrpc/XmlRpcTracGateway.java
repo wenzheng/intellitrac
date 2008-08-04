@@ -29,8 +29,10 @@ import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.dto.TicketIdsList;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gateway.TracError;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 
+import java.net.ConnectException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -43,6 +45,11 @@ public class XmlRpcTracGateway implements TracGateway {
 
   private XmlRpcClient client;
 
+  private boolean configurationSet;
+
+  /**
+   * Hidden constructor.
+   */
   private XmlRpcTracGateway() {
   }
 
@@ -53,12 +60,12 @@ public class XmlRpcTracGateway implements TracGateway {
     return instance;
   }
 
-  public void testConnection(TracConfiguration configuration) throws ConnectionFailedException {
+  public void testConnection(TracConfiguration configuration) throws ConnectionFailedException, MalformedURLException {
     try {
       XmlRpcClient xmlRpcClient = prepareClient(configuration);
       xmlRpcClient.execute("system.listMethods", EMPTY_ARRAY);
-    } catch (Exception e) {
-      throw new ConnectionFailedException(e);
+    } catch (XmlRpcException e) {
+      handleException(e);
     }
   }
 
@@ -77,6 +84,14 @@ public class XmlRpcTracGateway implements TracGateway {
     return xmlRpcClient;
   }
 
+  private XmlRpcClient retrieveClient() throws ConnectionFailedException {
+    if (!configurationSet) {
+      throw new ConnectionFailedException("Could not connect to Trac server on startup. Verify your settings.");
+    }
+    assert client != null;
+    return client;
+  }
+
   /**
    * Sets the given configuration.
    *
@@ -85,29 +100,37 @@ public class XmlRpcTracGateway implements TracGateway {
    */
   public void setConfiguration(TracConfiguration configuration) throws MalformedURLException {
     client = prepareClient(configuration);
+    configurationSet = true;
   }
 
   /**
    * {@inheritDoc}
    */
-  public List<Ticket> retrieveTickets(String query) throws ConnectionFailedException {
-    List<Ticket> result;
+  public List<Ticket> retrieveTickets(String query) throws ConnectionFailedException, TracError {
+    List<Ticket> result = null;
     try {
-      Object response = client.execute("ticket.query", new Object[]{query});
+      Object response = retrieveClient().execute("ticket.query", new Object[]{query});
       TicketIdsList list = new TicketIdsAdapter(response);
       result = new ArrayList<Ticket>(list.getTicketIdsList().length);
       for (Object ticketId : list.getTicketIdsList()) {
         result.add(retrieveTicket((Integer) ticketId));
       }
     } catch (XmlRpcException e) {
-      throw new ConnectionFailedException(e);
+      handleException(e);
     }
     return result;
   }
 
+  private void handleException(XmlRpcException e) throws ConnectionFailedException {
+    if (e.getCause() instanceof ConnectException) {
+      throw new ConnectionFailedException(e);
+    } else {
+      throw new TracError(e);
+    }
+  }
 
-  private Ticket retrieveTicket(int ticketId) throws XmlRpcException {
-    Object response = client.execute("ticket.get", new Object[]{ticketId});
+  private Ticket retrieveTicket(int ticketId) throws XmlRpcException, ConnectionFailedException {
+    Object response = retrieveClient().execute("ticket.get", new Object[]{ticketId});
     return new TicketAdapter(response);
   }
 

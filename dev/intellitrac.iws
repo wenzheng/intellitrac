@@ -23,29 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\TicketsListForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketNumberColumn.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketNumberColumn.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\ReportEditorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/report_editor/ReportEditorForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketAdapter.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\ReportsListForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\TicketsListForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketIdsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TicketIdsList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/ConnectionFailedException.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/ConnectionFailedException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\ReportsListForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketOwnerColumn.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketOwnerColumn.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\ReportEditorForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/report_editor/ReportEditorForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketSummaryColumn.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketSummaryColumn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.ipr" afterPath="$PROJECT_DIR$/intellitrac.ipr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/report_editor" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Ticket.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Ticket.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracError.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" />
     </list>
     <ignored path="intellitrac.iws" />
@@ -83,19 +72,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponentTest.java" line="39" class="org.trzcinka.intellitrac.gui.components.ReportsConfigurationComponentTest" package="org.trzcinka.intellitrac.gui.components">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" line="95" class="org.trzcinka.intellitrac.gateway.xmlrpc.XmlRpcTracGateway" package="org.trzcinka.intellitrac.gateway.xmlrpc">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -519,13 +495,13 @@
     <frame x="-4" y="-4" width="1598" height="1058" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37337664" order="3" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37329876" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21905379" order="6" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16967742" order="1" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2808146" order="1" />
       <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967743" order="4" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52304393" order="3" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30868167" order="3" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="17" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35682818" order="9" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13870968" order="3" />
@@ -533,14 +509,14 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="11" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20064935" order="1" />
-      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13290323" order="4" />
+      <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13246754" order="4" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35064936" order="0" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36948052" order="0" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="12" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1511254" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20471597" order="2" />
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="14" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="16" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
@@ -614,99 +590,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketNumberColumn.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracError.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.27567568">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketTypeColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="3" selection-start="907" selection-end="907" vertical-scroll-proportion="0.2527027">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="3" selection-start="1438" selection-end="1438" vertical-scroll-proportion="1.0797297">
+        <state line="20" column="29" selection-start="709" selection-end="709" vertical-scroll-proportion="0.3846154">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketOwnerColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="784" selection-end="784" vertical-scroll-proportion="0.16927454">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.05654102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="96" selection-start="3337" selection-end="3337" vertical-scroll-proportion="0.37804878">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/bundle.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="52" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.7915743">
+        <state line="28" column="22" selection-start="993" selection-end="1015" vertical-scroll-proportion="0.7245053">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/ConnectionFailedException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TracConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="721" selection-end="721" vertical-scroll-proportion="0.13461539">
+        <state line="23" column="17" selection-start="749" selection-end="749" vertical-scroll-proportion="0.23943663">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="17" selection-start="820" selection-end="820" vertical-scroll-proportion="0.11308204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="33" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.48076922">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.29310346">
+        <state line="65" column="0" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.46270928">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -718,9 +625,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/ConnectionFailedException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="73" selection-start="3826" selection-end="3826" vertical-scroll-proportion="0.6777188">
+        <state line="27" column="2" selection-start="839" selection-end="839" vertical-scroll-proportion="0.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="12" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.8233333">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -729,7 +643,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.33421752">
+        <state line="55" column="0" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.6775568">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="52" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.8693182">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="60" selection-start="801" selection-end="801" vertical-scroll-proportion="0.55539775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="21" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.3469388">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="50" selection-start="4330" selection-end="4330" vertical-scroll-proportion="0.58096594">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.55539775">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="48" selection-start="2942" selection-end="2942" vertical-scroll-proportion="0.75852275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="13" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.3338068">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

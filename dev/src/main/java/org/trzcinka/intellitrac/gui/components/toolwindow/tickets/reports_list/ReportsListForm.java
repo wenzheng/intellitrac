@@ -28,8 +28,7 @@ import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.ResourceBundle;
 
 public class ReportsListForm implements DataPresenter {
@@ -85,13 +84,27 @@ public class ReportsListForm implements DataPresenter {
     });
     openButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        Report selectedReport = (Report) reportsList.getSelectedValue();
-        if (selectedReport != null) {
-          StateInfo info = new StateInfo(State.TICKETS_LIST, selectedReport);
-          stateListener.stateChanged(info);
+        openReport();
+      }
+    });
+    reportsList.addComponentListener(new ComponentAdapter() {
+    });
+    reportsList.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        if (e.getClickCount() == 2) {
+          openReport();
         }
       }
     });
+  }
+
+  private void openReport() {
+    Report selectedReport = (Report) reportsList.getSelectedValue();
+    if (selectedReport != null) {
+      StateInfo info = new StateInfo(State.TICKETS_LIST, selectedReport);
+      stateListener.stateChanged(info);
+    }
   }
 
   private void createUIComponents() {

@@ -23,6 +23,8 @@ import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
+import org.trzcinka.intellitrac.gui.components.toolwindow.State;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
@@ -55,6 +57,8 @@ public class TicketsListForm implements DataPresenter {
       tableModel.updateTickets(tickets);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
+      StateInfo newInfo = new StateInfo(State.REPORTS_LIST, null);
+      stateListener.stateChanged(newInfo);
     }
 
   }

@@ -24,5 +24,9 @@ public class ConnectionFailedException extends Exception {
   public ConnectionFailedException(Throwable e) {
     super(e);
   }
-  
+
+  public ConnectionFailedException(String e) {
+    super(e);
+  }
+
 }

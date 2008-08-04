@@ -29,6 +29,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.MalformedURLException;
 import java.util.ResourceBundle;
 
 /**
@@ -61,6 +62,8 @@ public class ConfigurationForm {
           Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_success"), bundle.getString("dialogs.success"), null);
         } catch (ConnectionFailedException exception) {
           Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
+        } catch (MalformedURLException e1) {
+          Messages.showMessageDialog(bundle.getString("configuration.dialogs.malformed_url"), bundle.getString("dialogs.error"), null);
         } finally {
           parent.setCursor(oldCursor);
         }
