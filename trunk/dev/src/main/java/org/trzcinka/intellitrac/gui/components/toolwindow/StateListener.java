@@ -28,4 +28,9 @@ public interface StateListener {
    */
   void stateChanged(StateInfo stateInfo);
 
+  /**
+   * Goes back to the last state.
+   */
+  void goBack();
+
 }

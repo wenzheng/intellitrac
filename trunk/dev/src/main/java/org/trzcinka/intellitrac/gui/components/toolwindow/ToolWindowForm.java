@@ -19,6 +19,7 @@ package org.trzcinka.intellitrac.gui.components.toolwindow;
 import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.report_editor.ReportEditorForm;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.reports_list.ReportsListForm;
+import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ticket_editor.TicketEditorForm;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.tickets_list.TicketsListForm;
 
 import javax.swing.*;
@@ -32,6 +33,7 @@ public class ToolWindowForm implements StateListener {
   private static final String REPORTS_LIST = "REPORTS_LIST";
   private static final String REPORT_EDITOR = "REPORT_EDITOR";
   private static final String TICKETS_LIST = "TICKETS_LIST";
+  private static final String TICKET_EDITOR = "TICKET_EDITOR";
 
   private JTabbedPane tabbedPane;
   private JPanel rootComponent;
@@ -40,14 +42,17 @@ public class ToolWindowForm implements StateListener {
   private DataPresenter reportsListForm;
   private DataPresenter reportEditorForm;
   private DataPresenter ticketsListForm;
+  private DataPresenter ticketEditorForm;
 
   private Project project;
   private CardLayout cardLayout;
 
+  private StateInfo currentState;
   private StateInfo lastState;
 
   public ToolWindowForm(Project project) {
     this.project = project;
+    currentState = new StateInfo(State.REPORTS_LIST, null);
   }
 
   public JComponent getRootComponent() {
@@ -61,14 +66,17 @@ public class ToolWindowForm implements StateListener {
     reportsListForm = new ReportsListForm(project, this);
     reportEditorForm = new ReportEditorForm(project, this);
     ticketsListForm = new TicketsListForm(project, this);
+    ticketEditorForm = new TicketEditorForm(project, this);
 
     ticketsContent.add(REPORTS_LIST, reportsListForm.getRootComponent());
     ticketsContent.add(REPORT_EDITOR, reportEditorForm.getRootComponent());
     ticketsContent.add(TICKETS_LIST, ticketsListForm.getRootComponent());
+    ticketsContent.add(TICKET_EDITOR, ticketEditorForm.getRootComponent());
   }
 
   public void stateChanged(StateInfo stateInfo) {
-    
+    lastState = currentState;
+    currentState = stateInfo;
     switch (stateInfo.getState()) {
       case REPORT_EDITOR:
         reportEditorForm.updateData(stateInfo.getInfo());
@@ -82,9 +90,20 @@ public class ToolWindowForm implements StateListener {
         ticketsListForm.updateData(stateInfo.getInfo());
         cardLayout.show(ticketsContent, TICKETS_LIST);
         break;
-      case BACK:              //TODO: last state
-        stateChanged(lastState);
+      case TICKET_EDITOR:
+        ticketEditorForm.updateData(stateInfo.getInfo());
+        cardLayout.show(ticketsContent, TICKET_EDITOR);
         break;
     }
+
   }
+
+  public void goBack() {
+    currentState = lastState;
+    if (lastState != null) {
+      stateChanged(lastState);
+    }
+    lastState = null;
+  }
+
 }

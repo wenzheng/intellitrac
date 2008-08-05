@@ -21,6 +21,6 @@ package org.trzcinka.intellitrac.gui.components.toolwindow;
  */
 public enum State {
 
-  REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR, BACK
+  REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR
 
 }

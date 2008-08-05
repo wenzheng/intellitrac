@@ -47,7 +47,12 @@ public class ConstantToolbarForm {
     });
     goBack.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        StateInfo stateInfo = new StateInfo(State.BACK, null);
+        stateListener.goBack();
+      }
+    });
+    newTicket.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        StateInfo stateInfo = new StateInfo(State.TICKET_EDITOR, null);
         stateListener.stateChanged(stateInfo);
       }
     });

@@ -85,4 +85,7 @@
       </grid>
     </children>
   </grid>
+  <inspectionSuppressions>
+    <suppress inspection="NoLabelFor" id="2f7e9"/>
+  </inspectionSuppressions>
 </form>

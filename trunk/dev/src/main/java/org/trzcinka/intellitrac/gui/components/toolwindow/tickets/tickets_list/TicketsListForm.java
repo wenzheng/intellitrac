@@ -22,29 +22,41 @@ import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
-import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
-import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
 import org.trzcinka.intellitrac.gui.components.toolwindow.State;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateInfo;
+import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TicketsListForm implements DataPresenter {
 
   private JPanel rootComponent;
-  private JToolBar toolBar;
   private JTable ticketsList;
+  private JButton editButton;
   private ConstantToolbarForm constantToolbarForm;
   private TicketsListTableModel tableModel;
 
   private Project project;
   private StateListener stateListener;
 
-  public TicketsListForm(Project project, StateListener stateListener) {
+  public TicketsListForm(Project project, final StateListener stateListener) {
     this.project = project;
     this.stateListener = stateListener;
+    editButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        int selectedRow = ticketsList.getSelectedRow();
+        if (selectedRow != -1) {
+          Ticket ticket = tableModel.getTicket(selectedRow);
+          StateInfo info = new StateInfo(State.TICKET_EDITOR, ticket);
+          stateListener.stateChanged(info);
+        }
+      }
+    });
   }
 
   public void updateData(Object info) {
@@ -53,7 +65,7 @@ public class TicketsListForm implements DataPresenter {
     }
     Report report = (Report) info;
     try {
-      List<Ticket> tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getQuery());
+      List<Ticket> tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getProperQuery());
       tableModel.updateTickets(tickets);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
