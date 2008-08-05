@@ -25,6 +25,9 @@ import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.Map;
 
+/**
+ * Adapts data received from XML-RPC service to the Ticket class.
+ */
 public class TicketAdapter extends Ticket {
 
   private static Logger logger = Logger.getInstance(TicketAdapter.class.getName());

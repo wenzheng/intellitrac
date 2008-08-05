@@ -22,6 +22,9 @@ import org.trzcinka.intellitrac.gateway.xmlrpc.XmlRpcTracGateway;
 
 import java.util.ResourceBundle;
 
+/**
+ * Should be used to retrieve TracGateway instance.
+ */
 public class TracGatewayLocator {
 
   private static ResourceBundle bundle = BundleLocator.getBundle();

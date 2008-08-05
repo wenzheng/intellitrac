@@ -18,6 +18,9 @@ package org.trzcinka.intellitrac.dto;
 
 import java.util.Date;
 
+/**
+ * Represents a ticket.
+ */
 public class Ticket {
 
   private Integer id;

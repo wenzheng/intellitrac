@@ -16,6 +16,9 @@
 
 package org.trzcinka.intellitrac.dto;
 
+/**
+ * Represents list of ticket ids.
+ */
 public class TicketIdsList {
 
   private int[] list;
