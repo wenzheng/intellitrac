@@ -20,8 +20,8 @@ import org.trzcinka.intellitrac.dto.TicketIdsList;
 
 public class TicketIdsAdapter extends TicketIdsList {
 
-  public TicketIdsAdapter(Object response) {
-    Object[] array = (Object[]) response;
+  public TicketIdsAdapter(Object adaptee) {
+    Object[] array = (Object[]) adaptee;
     int[] result = new int[array.length];
     for (int i = 0; i < array.length; i++) {
       result[i] = (Integer) array[i];

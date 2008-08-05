@@ -27,6 +27,7 @@
               <horizontalTextPosition value="11"/>
               <icon value="images/add.png"/>
               <text value=""/>
+              <toolTipText resource-bundle="bundle" key="tool_window.tickets.toolbar.create_ticket"/>
             </properties>
           </component>
           <component id="6fe9d" class="javax.swing.JButton" binding="goHome">
@@ -37,6 +38,7 @@
               <horizontalTextPosition value="11"/>
               <icon value="images/home.png"/>
               <text value=""/>
+              <toolTipText resource-bundle="bundle" key="tool_window.tickets.toolbar.home"/>
             </properties>
           </component>
           <component id="bbb1b" class="javax.swing.JButton" binding="goBack">
@@ -49,6 +51,7 @@
               <opaque value="true"/>
               <selected value="false"/>
               <text value=""/>
+              <toolTipText resource-bundle="bundle" key="tool_window.tickets.toolbar.back"/>
             </properties>
           </component>
         </children>

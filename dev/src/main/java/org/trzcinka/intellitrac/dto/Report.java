@@ -16,6 +16,8 @@
 
 package org.trzcinka.intellitrac.dto;
 
+import org.apache.commons.lang.StringUtils;
+
 /**
  * Represents a tickets report.
  */
@@ -80,4 +82,14 @@ public class Report {
     result = 31 * result + query.hashCode();
     return result;
   }
+
+  /**
+   * Returns proper query string, that is, with newlines removed.
+   *
+   * @return proper query string, that is, with newlines removed.
+   */
+  public String getProperQuery() {
+    return StringUtils.remove(query, "\n");
+  }
+
 }

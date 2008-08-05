@@ -84,4 +84,7 @@ public class TicketsListTableModel extends AbstractTableModel {
     return columns.get(column).getColumnName();
   }
 
+  public Ticket getTicket(int selectedRow) {
+    return tickets.get(selectedRow);
+  }
 }
