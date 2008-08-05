@@ -23,6 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Table model for tickets list.
+ */
 public class TicketsListTableModel extends AbstractTableModel {
   private static final int COLUMN_COUNT = 5;
 

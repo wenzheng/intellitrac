@@ -23,24 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TicketIdsList.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TicketIdsList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/default_reports.yml" afterPath="$PROJECT_DIR$/src/main/resources/default_reports.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateListener.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ticket_editor/TicketEditorForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListTableModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListTableModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Report.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Report.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/BundleLocator.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/BundleLocator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ticket_editor" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracError.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracError.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/report_editor/ReportEditorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/report_editor/ReportEditorForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListTableModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Ticket.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Ticket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketIdsAdapter.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketIdsAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ticket_editor/TicketEditorForm.java" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,7 +148,17 @@
     <favorites_list name="intellitrac" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ReportsListCellRenderer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListCellRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="13" selection-start="850" selection-end="850" vertical-scroll-proportion="0.16962306">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -213,6 +216,618 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="intellitrac" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\test\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\utils" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ToolWindowForm" />
+          <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\tickets_list" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\ticket_editor" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="TicketEditorForm" />
+          <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\reports_list" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\gui\components\toolwindow\tickets\report_editor" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="ReportEditorForm" />
+          <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
         </PATH_ELEMENT>
       </PATH>
     </subPane>
@@ -297,11 +912,6 @@
     <option name="showLabels" value="true" />
   </component>
   <component name="RunManager" selected="Plugin.Plugin">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="intellitrac" />
-      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
-      <option name="PROGRAM_PARAMETERS" />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -340,25 +950,6 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -387,6 +978,30 @@
       <method>
         <option name="Make" value="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="intellitrac" />
+      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
+      <option name="PROGRAM_PARAMETERS" />
     </configuration>
     <configuration default="false" name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="intellitrac" />
@@ -521,7 +1136,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="6" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="13" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3762058" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3762058" order="2" />
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="14" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="16" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="5" />
@@ -540,7 +1155,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="tickets list" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -595,114 +1210,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/default_reports.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="129" selection-end="129" vertical-scroll-proportion="0.13192904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="18" selection-start="1828" selection-end="1828" vertical-scroll-proportion="0.63924795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="36" selection-start="2593" selection-end="2593" vertical-scroll-proportion="0.9400705">
+        <state line="26" column="32" selection-start="877" selection-end="877" vertical-scroll-proportion="0.13461539">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/DataPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="17" selection-start="814" selection-end="814" vertical-scroll-proportion="0.1923077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="54" selection-start="3853" selection-end="3853" vertical-scroll-proportion="1.5182139">
+        <state line="21" column="12" selection-start="732" selection-end="732" vertical-scroll-proportion="0.13461539">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="13" selection-start="975" selection-end="975" vertical-scroll-proportion="0.1923077">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/Report.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="734" selection-end="734" vertical-scroll-proportion="0.17667437">
+        <state line="45" column="13" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.21153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ReportsConfigurationComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="13" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.21518987">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/StateListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="17" selection-start="777" selection-end="777" vertical-scroll-proportion="0.13461539">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="13" selection-start="1254" selection-end="1254" vertical-scroll-proportion="-0.057692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/report_editor/ReportEditorForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="28" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.3846154">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/ToolWindowForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="14" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.88691795">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="58" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.16159695">
+        <state line="85" column="56" selection-start="3159" selection-end="3159" vertical-scroll-proportion="0.44230768">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketIdsAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/utils/IntelliTracIcons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="794" selection-end="794" vertical-scroll-proportion="0.25855514">
+        <state line="23" column="13" selection-start="721" selection-end="721" vertical-scroll-proportion="0.17307693">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/utils/MouseCursors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="57" selection-start="4636" selection-end="4636" vertical-scroll-proportion="0.54942966">
+        <state line="23" column="13" selection-start="726" selection-end="726" vertical-scroll-proportion="0.17307693">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ticket_editor/TicketEditorForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/BundleLocator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="84" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.3555133">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="21" column="45" selection-start="715" selection-end="715" vertical-scroll-proportion="0.13461539">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="13" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.33272058">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="48" column="35" selection-start="1692" selection-end="1692" vertical-scroll-proportion="-0.13578826">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ticket_editor/TicketEditorForm.form">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/ConfigurationForm.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/tickets_list/TicketsListForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/reports_list/ReportsListCellRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.1875">
+        <state line="26" column="13" selection-start="850" selection-end="850" vertical-scroll-proportion="0.16962306">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
   </component>

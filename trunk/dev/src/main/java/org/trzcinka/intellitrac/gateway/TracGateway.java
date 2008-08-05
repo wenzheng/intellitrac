@@ -22,6 +22,9 @@ import org.trzcinka.intellitrac.dto.Ticket;
 import java.net.MalformedURLException;
 import java.util.List;
 
+/**
+ * Represents communication with Trac server.
+ */
 public interface TracGateway {
 
   /**

@@ -16,6 +16,9 @@
 
 package org.trzcinka.intellitrac.gateway;
 
+/**
+ * General non-marked Trac error. It should not be handled.
+ */
 public class TracError extends Error {
 
   public TracError(Throwable e) {

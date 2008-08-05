@@ -43,7 +43,6 @@ public class ReportEditorForm implements DataPresenter {
   private Project project;
   private StateListener stateListener;
 
-
   public ReportEditorForm(final Project project, final StateListener stateListener) {
     this.project = project;
     this.stateListener = stateListener;

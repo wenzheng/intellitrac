@@ -18,6 +18,9 @@ package org.trzcinka.intellitrac.gateway.xmlrpc;
 
 import org.trzcinka.intellitrac.dto.TicketIdsList;
 
+/**
+ * Adapts data received from XML-RPC service to ticket ids list.
+ */
 public class TicketIdsAdapter extends TicketIdsList {
 
   public TicketIdsAdapter(Object adaptee) {
