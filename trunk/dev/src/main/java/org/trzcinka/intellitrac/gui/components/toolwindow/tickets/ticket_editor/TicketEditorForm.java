@@ -17,6 +17,8 @@
 package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ticket_editor;
 
 import com.intellij.openapi.project.Project;
+import com.l2fprod.common.swing.JTaskPane;
+import com.l2fprod.common.swing.JTaskPaneGroup;
 import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm;
@@ -28,6 +30,17 @@ public class TicketEditorForm implements DataPresenter {
   private StateListener stateListener;
   private JPanel rootComponent;
   private ConstantToolbarForm constantToolbarForm;
+  private JTextField summary;
+  private JComboBox componentComboBox;
+  private JComboBox priorityComboBox;
+  private JLabel reporter;
+  private JLabel id;
+  private JLabel owner;
+  private JComboBox typeComboBox;
+  private JComboBox milestoneComboBox;
+  private JComboBox versionComboBox;
+  private JTextField keywordsTextField;
+  private JTextField CCTextField;
 
   public TicketEditorForm(Project project, StateListener stateListener) {
     this.project = project;
