@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/utils/IntelliTracIcons.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/utils/IntelliTracIcons.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/utils/MouseCursors.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/utils/MouseCursors.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/components" afterPath="" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,17 +110,7 @@
     <favorites_list name="intellitrac" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="IntelliTracIcons.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/utils/IntelliTracIcons.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="30" selection-start="627" selection-end="627" vertical-scroll-proportion="0.05782313">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -339,40 +327,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\utils" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\model" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -865,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/utils/IntelliTracIcons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="627" selection-end="627" vertical-scroll-proportion="0.05782313">
+        <state line="25" column="48" selection-start="791" selection-end="791" vertical-scroll-proportion="0.3180272">
           <folding />
         </state>
       </provider>
