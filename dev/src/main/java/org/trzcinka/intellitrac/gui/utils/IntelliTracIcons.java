@@ -21,7 +21,7 @@ import javax.swing.*;
 /**
  * Holds icons used by the plugin.
  */
-public class IntelliTracIcons {
+public final class IntelliTracIcons {
 
   private static IntelliTracIcons instance;
 

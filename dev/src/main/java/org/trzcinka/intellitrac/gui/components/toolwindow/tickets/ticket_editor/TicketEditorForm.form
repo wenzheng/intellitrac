@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="rootComponent" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="500" height="646"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -28,7 +28,7 @@
           </hspacer>
         </children>
       </grid>
-      <grid id="94ee9" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="94ee9" layout-manager="GridLayoutManager" row-count="7" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -114,11 +114,6 @@
               </component>
             </children>
           </grid>
-          <vspacer id="f2ea3">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </vspacer>
           <grid id="60a6a" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
@@ -237,7 +232,7 @@
                   <component id="7cdec" class="javax.swing.JTextField" binding="keywordsTextField" default-binding="true">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="100" height="-1"/>
+                        <preferred-size width="70" height="-1"/>
                       </grid>
                     </constraints>
                     <properties>
@@ -256,7 +251,7 @@
                   <component id="807f" class="javax.swing.JTextField" binding="CCTextField" default-binding="true">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="100" height="-1"/>
+                        <preferred-size width="70" height="-1"/>
                       </grid>
                     </constraints>
                     <properties/>
@@ -265,8 +260,168 @@
               </grid>
             </children>
           </grid>
+          <component id="44ab7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="TODO: Attachments"/>
+            </properties>
+          </component>
+          <grid id="def50" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="etched" title-resource-bundle="bundle" title-key="tool_window.tickets.ticket_editor.description"/>
+            <children>
+              <scrollpane id="16135">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="a2e8c" class="javax.swing.JTextPane" binding="description">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="262ea" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="etched" title-resource-bundle="bundle" title-key="tool_window.tickets.ticket_editor.comments"/>
+            <children>
+              <scrollpane id="1770">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="bf801" class="javax.swing.JList" binding="comments">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="6626f" class="javax.swing.JButton" binding="addCommentButton" default-binding="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.comments.add_comment"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="6facd" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="etched" title-resource-bundle="bundle" title-key="tool_window.tickets.ticket_editor.actions"/>
+            <children>
+              <grid id="76592" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="4cd92" class="javax.swing.JRadioButton" binding="leaveRadioButton" default-binding="true">
+                    <constraints/>
+                    <properties>
+                      <selected value="true"/>
+                      <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.actions.leave"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="68489" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="a8ed5" class="javax.swing.JRadioButton" binding="resolveAsRadioButton" default-binding="true">
+                    <constraints/>
+                    <properties>
+                      <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.actions.resolve_as"/>
+                    </properties>
+                  </component>
+                  <component id="2b5ed" class="javax.swing.JComboBox" binding="resolutions">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <grid id="8a4ca" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="db4a1" class="javax.swing.JRadioButton" binding="reassignToRadioButton" default-binding="true">
+                    <constraints/>
+                    <properties>
+                      <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.actions.reassign_to"/>
+                    </properties>
+                  </component>
+                  <component id="912c3" class="javax.swing.JTextField" binding="reassignedUser">
+                    <constraints/>
+                    <properties>
+                      <columns value="20"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="894bb" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="ebf66" class="javax.swing.JRadioButton" binding="acceptRadioButton" default-binding="true">
+                    <constraints/>
+                    <properties>
+                      <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.actions.accept"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <component id="51429" class="javax.swing.JButton" binding="submitChangesButton" default-binding="true">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.submit_changes"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="actionsButtonGroup">
+      <member id="a8ed5"/>
+      <member id="4cd92"/>
+      <member id="db4a1"/>
+      <member id="ebf66"/>
+    </group>
+  </buttonGroups>
 </form>

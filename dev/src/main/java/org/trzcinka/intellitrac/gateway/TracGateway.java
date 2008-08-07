@@ -16,8 +16,8 @@
 
 package org.trzcinka.intellitrac.gateway;
 
-import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.dto.TracConfiguration;
 
 import java.net.MalformedURLException;
 import java.util.List;
@@ -33,7 +33,7 @@ public interface TracGateway {
    *
    * @param configuration configuration. Must be not null.
    * @throws ConnectionFailedException if there were problems during test.
-   * @throws MalformedURLException when the URL is malformed.
+   * @throws MalformedURLException     when the URL is malformed.
    */
   void testConnection(TracConfiguration configuration) throws ConnectionFailedException, MalformedURLException;
 
@@ -50,7 +50,15 @@ public interface TracGateway {
    * @return not null list of tickets.
    * @throws IllegalStateException     when there is no configuration set.
    * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
    */
-  List<Ticket> retrieveTickets(String query) throws ConnectionFailedException;
+  List<Ticket> retrieveTickets(String query) throws ConnectionFailedException, TracError;
+
+  /**
+   * @return list of component names.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  List<String> retrieveComponents() throws ConnectionFailedException, TracError;
 
 }
