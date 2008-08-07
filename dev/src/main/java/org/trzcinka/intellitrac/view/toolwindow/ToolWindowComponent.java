@@ -26,6 +26,7 @@ import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.view.utils.IntelliTracIcons;
 
 /**
@@ -42,6 +43,7 @@ public class ToolWindowComponent implements ProjectComponent {
 
   public ToolWindowComponent(Project project) {
     this.project = project;
+    ApplicationModel.getInstance().setProject(project);
   }
 
   public void initComponent() {
@@ -54,7 +56,7 @@ public class ToolWindowComponent implements ProjectComponent {
     toolWindow.setIcon(IntelliTracIcons.getInstance().getSmallIcon());
 
     ContentFactory contentFactory = PeerFactory.getInstance().getContentFactory();
-    ToolWindowForm toolWindowForm = new ToolWindowForm(project);
+    ToolWindowForm toolWindowForm = new ToolWindowForm();
     Content content = contentFactory.createContent(toolWindowForm.getRootComponent(), null, false);
 
     toolWindow.getContentManager().addContent(content);

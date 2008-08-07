@@ -16,7 +16,6 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
 
-import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
@@ -38,13 +37,11 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
   private JPanel rootComponent;
   private JTable ticketsList;
   private JButton editButton;
-  private ConstantToolbarForm constantToolbarForm;
   private TicketsListTableModel tableModel;
 
-  private Project project;
+  private ConstantToolbarForm constantToolbarForm;
 
-  public TicketsListForm(Project project) {
-    this.project = project;
+  public TicketsListForm() {
     ticketsModel.addStateListener(this);
     editButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -85,7 +82,7 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
   }
 
   private void createUIComponents() {
-    constantToolbarForm = new ConstantToolbarForm(project);
+    constantToolbarForm = new ConstantToolbarForm();
     tableModel = new TicketsListTableModel(new ArrayList<Ticket>(0));
     ticketsList = new JTable(tableModel);
   }

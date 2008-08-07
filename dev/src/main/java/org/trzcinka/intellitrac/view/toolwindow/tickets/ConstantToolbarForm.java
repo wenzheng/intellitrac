@@ -16,7 +16,6 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
-import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.model.TicketsState;
 import org.trzcinka.intellitrac.model.TicketsStateInfo;
 
@@ -27,15 +26,13 @@ import java.awt.event.ActionListener;
 public class ConstantToolbarForm extends BaseTicketsForm {
 
   private JPanel rootComponent;
+
   private JToolBar toolbar;
   private JButton newTicket;
   private JButton goHome;
   private JButton goBack;
 
-  private Project project;
-
-  public ConstantToolbarForm(Project project) {
-    this.project = project;
+  public ConstantToolbarForm() {
     goHome.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         TicketsStateInfo ticketsStateInfo = new TicketsStateInfo(TicketsState.REPORTS_LIST, null);
