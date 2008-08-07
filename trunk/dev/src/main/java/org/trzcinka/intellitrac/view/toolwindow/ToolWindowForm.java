@@ -16,8 +16,6 @@
 
 package org.trzcinka.intellitrac.view.toolwindow;
 
-import com.intellij.openapi.project.Project;
-import org.trzcinka.intellitrac.model.TicketsModel;
 import org.trzcinka.intellitrac.view.BaseForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.TicketsTabForm;
 
@@ -28,20 +26,20 @@ import javax.swing.*;
  */
 public class ToolWindowForm extends BaseForm {
 
-  private static TicketsModel ticketsModel = TicketsModel.getInstance();
-
   private JTabbedPane tabbedPane;
   private JPanel rootComponent;
-  private Project project;
 
-  public ToolWindowForm(Project project) {
-    this.project = project;
+  public ToolWindowForm() {
   }
 
   private void createUIComponents() {
     tabbedPane = new JTabbedPane();
-    TicketsTabForm ticketsTabForm = new TicketsTabForm(project);
+    TicketsTabForm ticketsTabForm = new TicketsTabForm();
     tabbedPane.addTab(bundle.getString("tool_window.tabs.tickets"), ticketsTabForm.getRootComponent());
+  }
+
+  public JComponent getRootComponent() {
+    return rootComponent;
   }
 
 }

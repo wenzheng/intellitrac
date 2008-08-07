@@ -16,24 +16,19 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.reports_list;
 
-import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.model.TicketsState;
 import org.trzcinka.intellitrac.model.TicketsStateChangeListener;
 import org.trzcinka.intellitrac.model.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.configuration.ReportsConfigurationComponent;
+import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.util.ResourceBundle;
 
-public class ReportsListForm implements TicketsStateChangeListener {
-
-  private static ApplicationModel applicationModel = ApplicationModel.getInstance();
-  private static final ResourceBundle BUNDLE = BundleLocator.getBundle();
+public class ReportsListForm extends BaseTicketsForm implements TicketsStateChangeListener {
 
   private JPanel ticketsContent;
   private JPanel rootComponent;
@@ -43,14 +38,13 @@ public class ReportsListForm implements TicketsStateChangeListener {
   private JButton editButton;
   private JButton removeButton;
   private JToolBar toolbar;
+
   private ConstantToolbarForm constantToolbarForm;
 
-  private Project project;
   private ReportsConfigurationComponent reportsConf;
 
-  public ReportsListForm(final Project project) {
-    this.project = project;
-    applicationModel.addStateListener(this);
+  public ReportsListForm() {
+    ticketsModel.addStateListener(this);
     editButton.addActionListener(new ActionListener() {
       /**
        * Invoked when an action occurs.
@@ -58,8 +52,8 @@ public class ReportsListForm implements TicketsStateChangeListener {
       public void actionPerformed(ActionEvent e) {
         Report selectedReport = (Report) reportsList.getSelectedValue();
         if (selectedReport != null) {
-          TicketsStateInfo infoTickets = new TicketsStateInfo(TicketsState.REPORT_EDITOR, selectedReport);
-          applicationModel.setCurrentState(infoTickets);
+          TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.REPORT_EDITOR, selectedReport);
+          ticketsModel.setCurrentState(stateInfo);
         }
       }
     });
@@ -67,8 +61,8 @@ public class ReportsListForm implements TicketsStateChangeListener {
       public void actionPerformed(ActionEvent e) {
         Report selectedReport = (Report) reportsList.getSelectedValue();
         if (selectedReport != null) {
-          String message = BUNDLE.getString("tool_window.tickets.reports_list.confirm_report_removal");
-          int answer = Messages.showYesNoDialog(project, message, BUNDLE.getString("dialogs.warning"), null);
+          String message = bundle.getString("tool_window.tickets.reports_list.confirm_report_removal");
+          int answer = Messages.showYesNoDialog(project, message, bundle.getString("dialogs.warning"), null);
           if (answer == 0) {
             reportsConf.removeReport(selectedReport);
           }
@@ -77,8 +71,8 @@ public class ReportsListForm implements TicketsStateChangeListener {
     });
     addButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        TicketsStateInfo infoTickets = new TicketsStateInfo(TicketsState.REPORT_EDITOR, null);
-        applicationModel.setCurrentState(infoTickets);
+        TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.REPORT_EDITOR, null);
+        ticketsModel.setCurrentState(stateInfo);
       }
     });
     openButton.addActionListener(new ActionListener() {
@@ -101,13 +95,13 @@ public class ReportsListForm implements TicketsStateChangeListener {
   private void openReport() {
     Report selectedReport = (Report) reportsList.getSelectedValue();
     if (selectedReport != null) {
-      TicketsStateInfo infoTickets = new TicketsStateInfo(TicketsState.TICKETS_LIST, selectedReport);
-      applicationModel.setCurrentState(infoTickets);
+      TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.TICKETS_LIST, selectedReport);
+      ticketsModel.setCurrentState(stateInfo);
     }
   }
 
   private void createUIComponents() {
-    constantToolbarForm = new ConstantToolbarForm(project);
+    constantToolbarForm = new ConstantToolbarForm();
     reportsConf = project.getComponent(ReportsConfigurationComponent.class);
     reportsList = new JList(reportsConf);
     reportsList.setCellRenderer(new ReportsListCellRenderer());

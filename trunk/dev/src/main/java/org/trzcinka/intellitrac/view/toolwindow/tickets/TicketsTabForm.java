@@ -16,7 +16,6 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
-import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.model.TicketsState;
 import org.trzcinka.intellitrac.model.TicketsStateChangeListener;
 import org.trzcinka.intellitrac.model.TicketsStateInfo;
@@ -38,10 +37,7 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
   private TicketsListForm ticketsListForm;
   private TicketEditorForm ticketEditorForm;
 
-  private Project project;
-
-  public TicketsTabForm(Project project) {
-    this.project = project;
+  public TicketsTabForm() {
     ticketsModel.addStateListener(this);
   }
 
@@ -53,10 +49,10 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
     cardLayout = new CardLayout();
     rootComponent = new JPanel(cardLayout);
 
-    reportsListForm = new ReportsListForm(project);
-    reportEditorForm = new ReportEditorForm(project);
-    ticketsListForm = new TicketsListForm(project);
-    ticketEditorForm = new TicketEditorForm(project);
+    reportsListForm = new ReportsListForm();
+    reportEditorForm = new ReportEditorForm();
+    ticketsListForm = new TicketsListForm();
+    ticketEditorForm = new TicketEditorForm();
 
     rootComponent.add(TicketsState.REPORTS_LIST.toString(), reportsListForm.getRootComponent());
     rootComponent.add(TicketsState.REPORT_EDITOR.toString(), reportEditorForm.getRootComponent());

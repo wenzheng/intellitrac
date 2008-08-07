@@ -16,7 +16,6 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
-import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
@@ -31,8 +30,6 @@ import javax.swing.*;
 import java.text.MessageFormat;
 
 public class TicketEditorForm extends BaseTicketsForm implements TicketsStateChangeListener {
-
-  private Project project;
 
   private JPanel rootComponent;
   private ConstantToolbarForm constantToolbarForm;
@@ -59,8 +56,7 @@ public class TicketEditorForm extends BaseTicketsForm implements TicketsStateCha
   private JButton submitChangesButton;
 
 
-  public TicketEditorForm(Project project) {
-    this.project = project;
+  public TicketEditorForm() {
   }
 
   private void loadReport(Object info) {
@@ -85,7 +81,7 @@ public class TicketEditorForm extends BaseTicketsForm implements TicketsStateCha
   }
 
   private void createUIComponents() {
-    constantToolbarForm = new ConstantToolbarForm(project);
+    constantToolbarForm = new ConstantToolbarForm();
   }
 
   public void stateChanged(TicketsStateInfo ticketsStateInfo) {

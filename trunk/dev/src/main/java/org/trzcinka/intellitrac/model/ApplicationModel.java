@@ -14,17 +14,33 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view;
+/**
+ *
+ * Date: 2008-08-08
+ *
+ * @author Michal Trzcinka
+ */
+package org.trzcinka.intellitrac.model;
 
 import com.intellij.openapi.project.Project;
-import org.trzcinka.intellitrac.BundleLocator;
-import org.trzcinka.intellitrac.model.ApplicationModel;
 
-import java.util.ResourceBundle;
+public class ApplicationModel {
+  private static ApplicationModel instance = new ApplicationModel();
 
-public abstract class BaseForm {
+  private Project project;
 
-  protected static ResourceBundle bundle = BundleLocator.getBundle();
-  protected static Project project = ApplicationModel.getInstance().getProject();
+  public static ApplicationModel getInstance() {
+    return instance;
+  }
 
+  private ApplicationModel() {
+  }
+
+  public Project getProject() {
+    return project;
+  }
+
+  public void setProject(Project project) {
+    this.project = project;
+  }
 }

@@ -16,7 +16,6 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.report_editor;
 
-import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.model.TicketsState;
 import org.trzcinka.intellitrac.model.TicketsStateChangeListener;
@@ -40,10 +39,7 @@ public class ReportEditorForm extends BaseTicketsForm implements TicketsStateCha
   private JButton okButton;
   private JButton cancelButton;
 
-  private Project project;
-
-  public ReportEditorForm(final Project project) {
-    this.project = project;
+  public ReportEditorForm() {
     ticketsModel.addStateListener(this);
     okButton.addActionListener(new ActionListener() {
       /**
