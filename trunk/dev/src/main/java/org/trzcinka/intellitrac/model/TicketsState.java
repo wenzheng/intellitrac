@@ -14,16 +14,13 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.model;
 
-import org.testng.annotations.Test;
+/**
+ * Enumerates possible GUI states of the tool window in tickets tab.
+ */
+public enum TicketsState {
 
-@Test
-public class BundleLocatorTest {
-
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
-  }
-
+  REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR
 
 }

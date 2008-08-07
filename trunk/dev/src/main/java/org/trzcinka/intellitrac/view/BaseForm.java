@@ -14,16 +14,14 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.view;
 
-import org.testng.annotations.Test;
+import org.trzcinka.intellitrac.BundleLocator;
 
-@Test
-public class BundleLocatorTest {
+import java.util.ResourceBundle;
 
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
-  }
+public abstract class BaseForm {
 
+  protected static ResourceBundle bundle = BundleLocator.getBundle();
 
 }

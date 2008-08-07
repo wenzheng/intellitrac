@@ -14,16 +14,18 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.model;
 
-import org.testng.annotations.Test;
+/**
+ * Classes implementing this interface should be able to react to GUI state changes properly.
+ */
+public interface TicketsStateChangeListener {
 
-@Test
-public class BundleLocatorTest {
-
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
-  }
-
+  /**
+   * Notifies about a change of state.
+   *
+   * @param ticketsStateInfo new state information.
+   */
+  void stateChanged(TicketsStateInfo ticketsStateInfo);
 
 }

@@ -14,16 +14,18 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.gateway.xmlrpc;
 
 import org.testng.annotations.Test;
+import org.trzcinka.intellitrac.view.configuration.ConfigurationComponent;
 
 @Test
-public class BundleLocatorTest {
+public class ConfigurationComponentTest {
 
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
+  public void testCreateComponent() {
+    //noinspection TypeMayBeWeakened
+    ConfigurationComponent component = new ConfigurationComponent();
+    assert component.createComponent() != null;
   }
-
 
 }

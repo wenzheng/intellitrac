@@ -14,16 +14,13 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
-import org.testng.annotations.Test;
+import org.trzcinka.intellitrac.model.TicketsModel;
+import org.trzcinka.intellitrac.view.BaseForm;
 
-@Test
-public class BundleLocatorTest {
+public abstract class BaseTicketsForm extends BaseForm {
 
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
-  }
-
+  protected static TicketsModel ticketsModel = TicketsModel.getInstance();
 
 }

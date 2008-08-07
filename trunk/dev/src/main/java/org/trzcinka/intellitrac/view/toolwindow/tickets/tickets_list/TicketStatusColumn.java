@@ -14,16 +14,23 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
 
-import org.testng.annotations.Test;
+import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.dto.Ticket;
 
-@Test
-public class BundleLocatorTest {
+public class TicketStatusColumn implements TicketsListColumn {
 
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
+  public Object getValue(Ticket ticket) {
+    return ticket.getStatus();
   }
 
+  public Class<?> getColumnClass() {
+    return String.class;
+  }
+
+  public String getColumnName() {
+    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.status");
+  }
 
 }
