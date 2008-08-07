@@ -74,7 +74,7 @@
                   </component>
                 </children>
               </toolbar>
-              <nested-form id="270c7" form-file="org/trzcinka/intellitrac/gui/components/toolwindow/tickets/ConstantToolbarForm.form" binding="constantToolbarForm" custom-create="true">
+              <nested-form id="270c7" form-file="org/trzcinka/intellitrac/view/toolwindow/tickets/ConstantToolbarForm.form" binding="constantToolbarForm" custom-create="true">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
