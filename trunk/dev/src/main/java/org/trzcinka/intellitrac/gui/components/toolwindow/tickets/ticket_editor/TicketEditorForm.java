@@ -17,13 +17,16 @@
 package org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ticket_editor;
 
 import com.intellij.openapi.project.Project;
-import com.l2fprod.common.swing.JTaskPane;
-import com.l2fprod.common.swing.JTaskPaneGroup;
+import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.gui.components.toolwindow.DataPresenter;
 import org.trzcinka.intellitrac.gui.components.toolwindow.StateListener;
 import org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm;
+import org.trzcinka.intellitrac.gui.utils.IntelliTracConfiguration;
 
 import javax.swing.*;
+import java.text.MessageFormat;
 
 public class TicketEditorForm implements DataPresenter {
   private Project project;
@@ -41,6 +44,17 @@ public class TicketEditorForm implements DataPresenter {
   private JComboBox versionComboBox;
   private JTextField keywordsTextField;
   private JTextField CCTextField;
+  private JTextPane description;
+  private JList comments;
+  private JButton addCommentButton;
+  private JRadioButton leaveRadioButton;
+  private JRadioButton resolveAsRadioButton;
+  private JComboBox resolutions;
+  private JRadioButton reassignToRadioButton;
+  private JTextField reassignedUser;
+  private JRadioButton acceptRadioButton;
+  private JButton submitChangesButton;
+
 
   public TicketEditorForm(Project project, StateListener stateListener) {
     this.project = project;
@@ -48,7 +62,26 @@ public class TicketEditorForm implements DataPresenter {
   }
 
   public void updateData(Object info) {
-    //TODO: Implement
+    if (info != null) {
+      loadReport(info);
+    }
+  }
+
+  private void loadReport(Object info) {
+    if (!(info instanceof Ticket)) {
+      throw new IllegalArgumentException();
+    }
+    Ticket ticket = (Ticket) info;
+    id.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
+    summary.setText(ticket.getSummary());
+    reporter.setText(ticket.getReporter());
+    owner.setText(ticket.getOwner());
+    try {
+      componentComboBox.setModel(new DefaultComboBoxModel(TracGatewayLocator.retrieveTracGateway().retrieveComponents().toArray()));
+    } catch (ConnectionFailedException e) {
+      TracGatewayLocator.handleConnectionProblem();
+    }
+
   }
 
   public JComponent getRootComponent() {
