@@ -57,6 +57,7 @@ public class TicketEditorForm extends BaseTicketsForm implements TicketsStateCha
 
 
   public TicketEditorForm() {
+    ticketsModel.addStateListener(this);
   }
 
   private void loadReport(Object info) {
