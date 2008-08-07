@@ -14,17 +14,23 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components;
+package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
 
-import org.testng.annotations.Test;
+import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.dto.Ticket;
 
-@Test
-public class ConfigurationComponentTest {
+public class TicketOwnerColumn implements TicketsListColumn {
 
-  public void testCreateComponent() {
-    //noinspection TypeMayBeWeakened
-    ConfigurationComponent component = new ConfigurationComponent();
-    assert component.createComponent() != null;
+  public Object getValue(Ticket ticket) {
+    return ticket.getOwner();
+  }
+
+  public Class<?> getColumnClass() {
+    return String.class;
+  }
+
+  public String getColumnName() {
+    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.owner");
   }
 
 }

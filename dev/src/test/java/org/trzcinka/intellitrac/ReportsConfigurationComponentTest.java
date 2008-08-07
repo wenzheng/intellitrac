@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.components;
+package org.trzcinka.intellitrac;
 
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 import org.trzcinka.intellitrac.dto.Report;
-import org.junit.Before;
+import org.trzcinka.intellitrac.view.configuration.ReportsConfigurationComponent;
 
 import java.util.ArrayList;
 import java.util.List;

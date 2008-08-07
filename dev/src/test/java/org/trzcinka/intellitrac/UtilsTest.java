@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.gui.utils;
+package org.trzcinka.intellitrac;
 
 import org.testng.annotations.Test;
+import org.trzcinka.intellitrac.view.utils.IntelliTracIcons;
+import org.trzcinka.intellitrac.view.utils.MouseCursors;
 
 @Test
 public class UtilsTest {
@@ -36,7 +38,7 @@ public class UtilsTest {
 
   public void testCursors() {
     assert MouseCursors.WAIT_CURSOR != null;
-    assert MouseCursors.WAIT_CURSOR.getName() != null; 
+    assert MouseCursors.WAIT_CURSOR.getName() != null;
   }
 
 }

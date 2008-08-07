@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.gui.utils;
 
-import org.testng.annotations.Test;
+import java.awt.*;
 
-@Test
-public class BundleLocatorTest {
+/**
+ * Holds mouse cursors used by the plugin.
+ */
+public class MouseCursors {
 
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
-  }
-
+  public static final Cursor WAIT_CURSOR = new Cursor(Cursor.WAIT_CURSOR);
 
 }

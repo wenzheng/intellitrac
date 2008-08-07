@@ -14,16 +14,8 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac;
+package org.trzcinka.intellitrac.model;
 
-import org.testng.annotations.Test;
-
-@Test
-public class BundleLocatorTest {
-
-  public void testGetBundle() {
-    assert BundleLocator.getBundle() != null;
-  }
-
+public class ConfigurationModel {
 
 }
