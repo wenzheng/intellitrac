@@ -14,21 +14,23 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.dto;
+package org.trzcinka.intellitrac.model.tickets.tickets_list;
 
-/**
- * Represents list of ticket ids.
- */
-public class TicketIdsList {
+import org.trzcinka.intellitrac.BundleLocator;
+import org.trzcinka.intellitrac.dto.Ticket;
 
-  private int[] list;
+public class TicketTypeColumn implements TicketsListColumn {
 
-  public void setTicketIdsList(int[] list) {
-    this.list = list;
+  public Object getValue(Ticket ticket) {
+    return ticket.getType();
   }
 
-  public int[] getTicketIdsList() {
-    return list;
+  public Class<?> getColumnClass() {
+    return String.class;
+  }
+
+  public String getColumnName() {
+    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.type");
   }
 
 }

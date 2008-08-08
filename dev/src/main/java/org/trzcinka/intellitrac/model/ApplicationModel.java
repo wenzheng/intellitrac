@@ -24,6 +24,9 @@ package org.trzcinka.intellitrac.model;
 
 import com.intellij.openapi.project.Project;
 
+/**
+ * Represents general application model. Currently just holds current project instance.
+ */
 public class ApplicationModel {
   private static ApplicationModel instance = new ApplicationModel();
 

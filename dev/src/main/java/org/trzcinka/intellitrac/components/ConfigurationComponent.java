@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.configuration;
+package org.trzcinka.intellitrac.components;
 
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.ProjectComponent;
@@ -29,14 +29,13 @@ import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.view.configuration.ConfigurationForm;
 import org.trzcinka.intellitrac.view.utils.IntelliTracIcons;
 
 import javax.swing.*;
 import java.net.MalformedURLException;
-import java.util.ResourceBundle;
 
 /**
  * Represents per-project plugin configuration.
@@ -49,8 +48,6 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
   private static Logger logger = Logger.getInstance(ConfigurationComponent.class.getName());
 
   static final String COMPONENT_NAME = "IntelliTrac.ConfigurationComponent";
-
-  private static ResourceBundle bundle = BundleLocator.getBundle();
 
   private ConfigurationForm form;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.configuration;
+package org.trzcinka.intellitrac.components;
 
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.components.ProjectComponent;
@@ -25,9 +25,11 @@ import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.ho.yaml.Yaml;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.dto.Report;
+import org.trzcinka.intellitrac.model.tickets.reports_list.ReportListHolder;
+import org.trzcinka.intellitrac.model.tickets.reports_list.ReportListListener;
 
-import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -35,7 +37,7 @@ import java.util.List;
  */
 @State(name = ReportsConfigurationComponent.COMPONENT_NAME,
   storages = @Storage(id = "Reports", file = "$PROJECT_FILE$"))
-public class ReportsConfigurationComponent extends AbstractListModel implements ProjectComponent, PersistentStateComponent<ReportsConfigurationComponent> {
+public class ReportsConfigurationComponent implements ProjectComponent, PersistentStateComponent<ReportsConfigurationComponent>, ReportListHolder {
 
   static final String COMPONENT_NAME = "IntelliTrac.ReportsConfigurationComponent";
 
@@ -45,8 +47,12 @@ public class ReportsConfigurationComponent extends AbstractListModel implements 
 
   private List<Report> reports;
 
+  private Collection<ReportListListener> listeners;
+
   public ReportsConfigurationComponent() {
+    listeners = new ArrayList<ReportListListener>();
     initializeDefaultReports();
+    notifyListeners();
   }
 
   private void initializeDefaultReports() {
@@ -76,20 +82,6 @@ public class ReportsConfigurationComponent extends AbstractListModel implements 
 
 
   /**
-   * {@inheritDoc}
-   */
-  public int getSize() {
-    return reports != null ? reports.size() : 0;
-  }
-
-  /**
-   * {@inheritDoc}
-   */
-  public Object getElementAt(int index) {
-    return reports.get(index);
-  }
-
-  /**
    * @return a component state. All properties and public fields are serialized. Only values, which differ
    *         from default (i.e. the value of newly instantiated class) are serialized.
    * @see com.intellij.util.xmlb.XmlSerializer
@@ -107,65 +99,16 @@ public class ReportsConfigurationComponent extends AbstractListModel implements 
    */
   public void loadState(ReportsConfigurationComponent state) {
     XmlSerializerUtil.copyBean(state, this);
+    notifyListeners();
   }
 
-  /**
-   * Saves a report - adds a new one if its ID is null, otherwise performs update.
-   *
-   * @param report must be not null.
-   */
-  public void saveReport(Report report) {
-    if (report.getId() != null) {
-      updateReport(report);
-    } else {
-      doSaveReport(report);
-    }
+  public void addReportListListener(ReportListListener listener) {
+    listeners.add(listener);
   }
 
-  private void doSaveReport(Report report) {
-    long id = retrieveNextReportId();
-    report.setId(id);
-    reports.add(report);
-    int index = reports.indexOf(report);
-    fireIntervalAdded(this, index, index);
-  }
-
-  private long retrieveNextReportId() {
-    long maxId = 1;
-    for (Report report : reports) {
-      if (report.getId() > maxId) {
-        maxId = report.getId();
-      }
-    }
-    return maxId + 1;
-  }
-
-  private void updateReport(Report report) {
-    for (int i = 0; i < reports.size(); i++) {
-      Report r = reports.get(i);
-      if (r.getId().equals(report.getId())) {
-        reports.set(i, report);
-        fireContentsChanged(this, i, i);
-      }
-    }
-  }
-
-  /**
-   * Removes given report.
-   *
-   * @param report must be not null.
-   */
-  public void removeReport(Report report) {
-    int index = -1;
-    for (int i = 0; i < reports.size(); i++) {
-      Report r = reports.get(i);
-      if (r == report) {
-        index = i;
-      }
-    }
-    if (index != -1) {
-      reports.remove(index);
-      fireIntervalRemoved(this, index, index);
+  private void notifyListeners() {
+    for (ReportListListener listener : listeners) {
+      listener.reportListChanged(reports);
     }
   }
 
@@ -180,15 +123,5 @@ public class ReportsConfigurationComponent extends AbstractListModel implements 
   public void setReports(List<Report> reports) {
     this.reports = reports;
   }
-
-  @Override
-  public boolean equals(Object obj) {
-    if (!(getClass().equals(obj.getClass()))) {
-      return false;
-    }
-    ReportsConfigurationComponent component = (ReportsConfigurationComponent) obj;
-    return reports.equals(component.getReports());
-  }
-
 
 }

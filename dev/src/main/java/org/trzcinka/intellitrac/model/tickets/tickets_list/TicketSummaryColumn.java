@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
+package org.trzcinka.intellitrac.model.tickets.tickets_list;
 
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.Ticket;
 
-public class TicketStatusColumn implements TicketsListColumn {
+public class TicketSummaryColumn implements TicketsListColumn {
 
   public Object getValue(Ticket ticket) {
-    return ticket.getStatus();
+    return ticket.getSummary();
   }
 
   public Class<?> getColumnClass() {
@@ -30,7 +30,7 @@ public class TicketStatusColumn implements TicketsListColumn {
   }
 
   public String getColumnName() {
-    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.status");
+    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.summary");
   }
 
 }

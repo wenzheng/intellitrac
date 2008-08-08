@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.toolwindow;
+package org.trzcinka.intellitrac.components;
 
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
@@ -27,12 +27,12 @@ import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.model.ApplicationModel;
+import org.trzcinka.intellitrac.model.tickets.TicketsModel;
+import org.trzcinka.intellitrac.view.toolwindow.ToolWindowForm;
 import org.trzcinka.intellitrac.view.utils.IntelliTracIcons;
 
 /**
  * Tool window component.
- *
- * @author Michal Trzcinka
  */
 public class ToolWindowComponent implements ProjectComponent {
   private static final String COMPONENT_NAME = BundleLocator.getBundle().getString("tool_window.title");
@@ -43,7 +43,12 @@ public class ToolWindowComponent implements ProjectComponent {
 
   public ToolWindowComponent(Project project) {
     this.project = project;
+    initializeModels(project);
+  }
+
+  private void initializeModels(Project project) {
     ApplicationModel.getInstance().setProject(project);
+    TicketsModel.getInstance().getReportsListModel().setReportListHolder(project.getComponent(ReportsConfigurationComponent.class));
   }
 
   public void initComponent() {

@@ -17,10 +17,9 @@
 package org.trzcinka.intellitrac.view.toolwindow.tickets.report_editor;
 
 import org.trzcinka.intellitrac.dto.Report;
-import org.trzcinka.intellitrac.model.TicketsState;
-import org.trzcinka.intellitrac.model.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.TicketsStateInfo;
-import org.trzcinka.intellitrac.view.configuration.ReportsConfigurationComponent;
+import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 
 import javax.swing.*;
@@ -46,10 +45,9 @@ public class ReportEditorForm extends BaseTicketsForm implements TicketsStateCha
        * Invoked when an action occurs.
        */
       public void actionPerformed(ActionEvent e) {
-        ReportsConfigurationComponent reportsConf = project.getComponent(ReportsConfigurationComponent.class);
         Report report = new Report();
         getData(report);
-        reportsConf.saveReport(report);
+        ticketsModel.getReportsListModel().saveReport(report);
         reportsListRedirect();
       }
     });

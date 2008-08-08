@@ -20,9 +20,9 @@ import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
-import org.trzcinka.intellitrac.model.TicketsState;
-import org.trzcinka.intellitrac.model.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.TicketsStateInfo;
+import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 

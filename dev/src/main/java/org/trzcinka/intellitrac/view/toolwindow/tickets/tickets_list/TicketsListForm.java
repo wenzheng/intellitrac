@@ -20,16 +20,15 @@ import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
-import org.trzcinka.intellitrac.model.TicketsState;
-import org.trzcinka.intellitrac.model.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.TicketsStateInfo;
+import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TicketsListForm extends BaseTicketsForm implements TicketsStateChangeListener {
@@ -37,7 +36,6 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
   private JPanel rootComponent;
   private JTable ticketsList;
   private JButton editButton;
-  private TicketsListTableModel tableModel;
 
   private ConstantToolbarForm constantToolbarForm;
 
@@ -47,7 +45,7 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
       public void actionPerformed(ActionEvent e) {
         int selectedRow = ticketsList.getSelectedRow();
         if (selectedRow != -1) {
-          Ticket ticket = tableModel.getTicket(selectedRow);
+          Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(selectedRow);
           TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.TICKET_EDITOR, ticket);
           ticketsModel.setCurrentState(stateInfo);
         }
@@ -68,7 +66,7 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
     Report report = (Report) info;
     try {
       List<Ticket> tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getProperQuery());
-      tableModel.updateTickets(tickets);
+      ticketsModel.getTicketsListTableModel().updateTickets(tickets);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
       TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.REPORTS_LIST, null);
@@ -83,7 +81,7 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
 
   private void createUIComponents() {
     constantToolbarForm = new ConstantToolbarForm();
-    tableModel = new TicketsListTableModel(new ArrayList<Ticket>(0));
-    ticketsList = new JTable(tableModel);
+    ticketsList = new JTable(ticketsModel.getTicketsListTableModel());
   }
+
 }

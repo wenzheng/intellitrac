@@ -14,23 +14,13 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
+package org.trzcinka.intellitrac.model.tickets;
 
-import org.trzcinka.intellitrac.BundleLocator;
-import org.trzcinka.intellitrac.dto.Ticket;
+/**
+ * Enumerates possible GUI states of the tool window in tickets tab.
+ */
+public enum TicketsState {
 
-public class TicketOwnerColumn implements TicketsListColumn {
-
-  public Object getValue(Ticket ticket) {
-    return ticket.getOwner();
-  }
-
-  public Class<?> getColumnClass() {
-    return String.class;
-  }
-
-  public String getColumnName() {
-    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.owner");
-  }
+  REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR
 
 }

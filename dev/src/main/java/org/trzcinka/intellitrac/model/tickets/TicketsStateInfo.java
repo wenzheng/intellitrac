@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.model;
+package org.trzcinka.intellitrac.model.tickets;
 
 /**
- * Whenever GUI state changes, this class provides additional information about it. For example, if
+ * Whenever GUI state changes in tickets tab, this class provides additional information about it. For example, if
  * a user decided to edit a ticket, the new StateInfo instance should be created with
  * TICKET_EDITOR as state and additional data in provided object (for example ticket ID to edit
  * a ticket).

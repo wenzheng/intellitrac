@@ -19,6 +19,9 @@ package org.trzcinka.intellitrac.gateway.xmlrpc;
 import java.lang.reflect.Array;
 
 
+/**
+ * Cast-related utility methods.
+ */
 public final class CastUtils {
 
   /**

@@ -14,23 +14,26 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
+package org.trzcinka.intellitrac.model.tickets.reports_list;
 
-import org.trzcinka.intellitrac.BundleLocator;
-import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.dto.Report;
 
-public class TicketNumberColumn implements TicketsListColumn {
+import java.util.List;
 
-  public Object getValue(Ticket ticket) {
-    return ticket.getId();
-  }
+/**
+ * Holds report list.
+ */
+public interface ReportListHolder {
 
-  public Class<?> getColumnClass() {
-    return Integer.class;
-  }
+  /**
+   * Adds a report list listener.
+   *
+   * @param listener not null listener.
+   */
+  void addReportListListener(ReportListListener listener);
 
-  public String getColumnName() {
-    return BundleLocator.getBundle().getString("tool_window.tickets.tickets_list.table_columns.id");
-  }
-
+  /**
+   * @return list of reports.
+   */
+  List<Report> getReports();
 }
