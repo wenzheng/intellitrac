@@ -21,9 +21,6 @@ import org.trzcinka.intellitrac.view.toolwindow.tickets.TicketsTabForm;
 
 import javax.swing.*;
 
-/**
- * Acts as a controller. Reacts to state changes by adjusting GUI.
- */
 public class ToolWindowForm extends BaseForm {
 
   private JTabbedPane tabbedPane;

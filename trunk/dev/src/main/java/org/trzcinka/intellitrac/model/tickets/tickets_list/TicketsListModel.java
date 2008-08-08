@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
+package org.trzcinka.intellitrac.model.tickets.tickets_list;
 
 import org.trzcinka.intellitrac.dto.Ticket;
 
@@ -24,9 +24,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Table model for tickets list.
+ * Table model for ticket list.
  */
-public class TicketsListTableModel extends AbstractTableModel {
+public class TicketsListModel extends AbstractTableModel {
   private static final int COLUMN_COUNT = 5;
 
   private static final int COLUMN_NUMBER = 0;
@@ -44,7 +44,7 @@ public class TicketsListTableModel extends AbstractTableModel {
    *
    * @param tickets not null.
    */
-  public TicketsListTableModel(List<Ticket> tickets) {
+  public TicketsListModel(List<Ticket> tickets) {
     this.tickets = tickets;
     setUpColumns();
 

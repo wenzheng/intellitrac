@@ -22,7 +22,7 @@ import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 
 /**
- * This class should be used to obtain access to config.properties file.
+ * This class should be used to obtain access to configuration file.
  */
 public final class IntelliTracConfiguration {
 

@@ -16,8 +16,8 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
-import org.trzcinka.intellitrac.model.TicketsState;
-import org.trzcinka.intellitrac.model.TicketsStateInfo;
+import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

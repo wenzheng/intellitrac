@@ -16,7 +16,7 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
-import org.trzcinka.intellitrac.model.TicketsModel;
+import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 import org.trzcinka.intellitrac.view.BaseForm;
 
 public abstract class BaseTicketsForm extends BaseForm {

@@ -38,6 +38,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * TracGateway implementation. Uses XML-RPC protocol to communicate with Trac.
+ */
 public class XmlRpcTracGateway implements TracGateway {
   private static final Object[] EMPTY_ARRAY = new Object[]{};
 

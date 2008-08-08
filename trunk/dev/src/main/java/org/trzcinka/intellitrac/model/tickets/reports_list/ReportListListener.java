@@ -14,8 +14,22 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.model;
+package org.trzcinka.intellitrac.model.tickets.reports_list;
 
-public class ConfigurationModel {
+import org.trzcinka.intellitrac.dto.Report;
+
+import java.util.List;
+
+/**
+ * Classes implementing this interface will be notified if report list changes.
+ */
+public interface ReportListListener {
+
+  /**
+   * Notifies that report list has changed.
+   *
+   * @param reportList report list.
+   */
+  void reportListChanged(List<Report> reportList);
 
 }

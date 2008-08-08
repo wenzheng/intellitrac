@@ -18,10 +18,9 @@ package org.trzcinka.intellitrac.view.toolwindow.tickets.reports_list;
 
 import com.intellij.openapi.ui.Messages;
 import org.trzcinka.intellitrac.dto.Report;
-import org.trzcinka.intellitrac.model.TicketsState;
-import org.trzcinka.intellitrac.model.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.TicketsStateInfo;
-import org.trzcinka.intellitrac.view.configuration.ReportsConfigurationComponent;
+import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
+import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
@@ -40,8 +39,6 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
   private JToolBar toolbar;
 
   private ConstantToolbarForm constantToolbarForm;
-
-  private ReportsConfigurationComponent reportsConf;
 
   public ReportsListForm() {
     ticketsModel.addStateListener(this);
@@ -64,7 +61,7 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
           String message = bundle.getString("tool_window.tickets.reports_list.confirm_report_removal");
           int answer = Messages.showYesNoDialog(project, message, bundle.getString("dialogs.warning"), null);
           if (answer == 0) {
-            reportsConf.removeReport(selectedReport);
+            ticketsModel.getReportsListModel().removeReport(selectedReport);
           }
         }
       }
@@ -102,8 +99,7 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
 
   private void createUIComponents() {
     constantToolbarForm = new ConstantToolbarForm();
-    reportsConf = project.getComponent(ReportsConfigurationComponent.class);
-    reportsList = new JList(reportsConf);
+    reportsList = new JList(ticketsModel.getReportsListModel());
     reportsList.setCellRenderer(new ReportsListCellRenderer());
     reportsList.getSelectionModel().setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
   }
@@ -113,6 +109,7 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
   }
 
   public void stateChanged(TicketsStateInfo ticketsStateInfo) {
+    //nothing to do here
   }
 
 }

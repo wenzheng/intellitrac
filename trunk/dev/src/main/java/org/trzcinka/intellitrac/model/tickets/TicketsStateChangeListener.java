@@ -14,35 +14,18 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
-
-import org.trzcinka.intellitrac.dto.Ticket;
+package org.trzcinka.intellitrac.model.tickets;
 
 /**
- * Represents single column in tickets list.
+ * Classes implementing this interface will be notified about state changes in tickets tab.
  */
-public interface TicketsListColumn {
+public interface TicketsStateChangeListener {
 
   /**
-   * Retrieves proper property of a ticket.
+   * Notifies about a change of state.
    *
-   * @param ticket ticket. Not null.
-   * @return property of a ticket.
+   * @param ticketsStateInfo new state information.
    */
-  Object getValue(Ticket ticket);
-
-  /**
-   * Retrieves this column class.
-   *
-   * @return Retrieves this column class.
-   */
-  Class<?> getColumnClass();
-
-  /**
-   * Retrieves column name.
-   *
-   * @return Retrieves column name.
-   */
-  String getColumnName();
+  void stateChanged(TicketsStateInfo ticketsStateInfo);
 
 }
