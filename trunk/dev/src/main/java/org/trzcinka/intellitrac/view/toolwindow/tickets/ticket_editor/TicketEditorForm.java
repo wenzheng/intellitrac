@@ -20,16 +20,14 @@ import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
-import org.trzcinka.intellitrac.model.tickets.TicketsState;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
+import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
 import java.text.MessageFormat;
 
-public class TicketEditorForm extends BaseTicketsForm implements TicketsStateChangeListener {
+public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketListener {
 
   private JPanel rootComponent;
   private ConstantToolbarForm constantToolbarForm;
@@ -57,24 +55,7 @@ public class TicketEditorForm extends BaseTicketsForm implements TicketsStateCha
 
 
   public TicketEditorForm() {
-    ticketsModel.addStateListener(this);
-  }
-
-  private void loadReport(Object info) {
-    if (!(info instanceof Ticket)) {
-      throw new IllegalArgumentException();
-    }
-    Ticket ticket = (Ticket) info;
-    id.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
-    summary.setText(ticket.getSummary());
-    reporter.setText(ticket.getReporter());
-    owner.setText(ticket.getOwner());
-    try {
-      componentComboBox.setModel(new DefaultComboBoxModel(TracGatewayLocator.retrieveTracGateway().retrieveComponents().toArray()));
-    } catch (ConnectionFailedException e) {
-      TracGatewayLocator.handleConnectionProblem();
-    }
-
+    ticketsModel.getCurrentTicketModel().addListener(this);
   }
 
   public JComponent getRootComponent() {
@@ -85,12 +66,21 @@ public class TicketEditorForm extends BaseTicketsForm implements TicketsStateCha
     constantToolbarForm = new ConstantToolbarForm();
   }
 
-  public void stateChanged(TicketsStateInfo ticketsStateInfo) {
-    if (ticketsStateInfo.getState() == TicketsState.TICKET_EDITOR) {
-      if (ticketsStateInfo.getInfo() != null) {
-        loadReport(ticketsStateInfo.getInfo());
-      }
+  public void currentTicketChanged(Ticket ticket) {
+    loadReport(ticket);
+  }
+
+  private void loadReport(Ticket ticket) {
+    id.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
+    summary.setText(ticket.getSummary());
+    reporter.setText(ticket.getReporter());
+    owner.setText(ticket.getOwner());
+    try {
+      componentComboBox.setModel(new DefaultComboBoxModel(TracGatewayLocator.retrieveTracGateway().retrieveComponents().toArray()));
+    } catch (ConnectionFailedException e) {
+      TracGatewayLocator.handleConnectionProblem();
     }
+
   }
 
 }

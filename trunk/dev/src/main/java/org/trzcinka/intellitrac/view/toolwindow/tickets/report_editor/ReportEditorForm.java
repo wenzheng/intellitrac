@@ -17,16 +17,15 @@
 package org.trzcinka.intellitrac.view.toolwindow.tickets.report_editor;
 
 import org.trzcinka.intellitrac.dto.Report;
+import org.trzcinka.intellitrac.model.tickets.CurrentReportListener;
 import org.trzcinka.intellitrac.model.tickets.TicketsState;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ReportEditorForm extends BaseTicketsForm implements TicketsStateChangeListener {
+public class ReportEditorForm extends BaseTicketsForm implements CurrentReportListener {
 
   private JPanel rootComponent;
 
@@ -39,7 +38,7 @@ public class ReportEditorForm extends BaseTicketsForm implements TicketsStateCha
   private JButton cancelButton;
 
   public ReportEditorForm() {
-    ticketsModel.addStateListener(this);
+    ticketsModel.getCurrentReportModel().addListener(this);
     okButton.addActionListener(new ActionListener() {
       /**
        * Invoked when an action occurs.
@@ -59,8 +58,8 @@ public class ReportEditorForm extends BaseTicketsForm implements TicketsStateCha
   }
 
   private void reportsListRedirect() {
-    TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.REPORTS_LIST, null);
-    ticketsModel.setCurrentState(stateInfo);
+    TicketsState state = TicketsState.REPORTS_LIST;
+    ticketsModel.setCurrentState(state);
   }
 
   private void setData(Report data) {
@@ -81,29 +80,8 @@ public class ReportEditorForm extends BaseTicketsForm implements TicketsStateCha
     return rootComponent;
   }
 
-  public void stateChanged(TicketsStateInfo ticketsStateInfo) {
-    if (ticketsStateInfo.getState() == TicketsState.REPORT_EDITOR) {
-      updateData(ticketsStateInfo.getInfo());
-    }
-  }
-
-  /**
-   * If the editor should edit a current report, info should contain a report. If the editor
-   * is to create a new one, info should be null.
-   *
-   * @param info info.
-   */
-  private void updateData(Object info) {
-    Report report;
-    if (info != null) {
-      if (!(info instanceof Report)) {
-        throw new IllegalArgumentException();
-      }
-      report = (Report) info;
-    } else {
-      report = new Report();
-    }
+  public void currentReportChanged(Report report) {
     setData(report);
-
   }
+
 }

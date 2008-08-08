@@ -19,15 +19,13 @@ package org.trzcinka.intellitrac.view.toolwindow.tickets.reports_list;
 import com.intellij.openapi.ui.Messages;
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.model.tickets.TicketsState;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
 import java.awt.event.*;
 
-public class ReportsListForm extends BaseTicketsForm implements TicketsStateChangeListener {
+public class ReportsListForm extends BaseTicketsForm {
 
   private JPanel ticketsContent;
   private JPanel rootComponent;
@@ -41,7 +39,6 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
   private ConstantToolbarForm constantToolbarForm;
 
   public ReportsListForm() {
-    ticketsModel.addStateListener(this);
     editButton.addActionListener(new ActionListener() {
       /**
        * Invoked when an action occurs.
@@ -49,7 +46,8 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
       public void actionPerformed(ActionEvent e) {
         Report selectedReport = (Report) reportsList.getSelectedValue();
         if (selectedReport != null) {
-          TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.REPORT_EDITOR, selectedReport);
+          TicketsState stateInfo = TicketsState.REPORT_EDITOR;
+          ticketsModel.getCurrentReportModel().setCurrentReport(selectedReport);
           ticketsModel.setCurrentState(stateInfo);
         }
       }
@@ -68,8 +66,9 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
     });
     addButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.REPORT_EDITOR, null);
-        ticketsModel.setCurrentState(stateInfo);
+        TicketsState state = TicketsState.REPORT_EDITOR;
+        ticketsModel.getCurrentReportModel().setCurrentReport(new Report());
+        ticketsModel.setCurrentState(state);
       }
     });
     openButton.addActionListener(new ActionListener() {
@@ -92,8 +91,8 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
   private void openReport() {
     Report selectedReport = (Report) reportsList.getSelectedValue();
     if (selectedReport != null) {
-      TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.TICKETS_LIST, selectedReport);
-      ticketsModel.setCurrentState(stateInfo);
+      ticketsModel.getCurrentReportModel().setCurrentReport(selectedReport);
+      ticketsModel.setCurrentState(TicketsState.TICKETS_LIST);
     }
   }
 
@@ -106,10 +105,6 @@ public class ReportsListForm extends BaseTicketsForm implements TicketsStateChan
 
   public JComponent getRootComponent() {
     return rootComponent;
-  }
-
-  public void stateChanged(TicketsStateInfo ticketsStateInfo) {
-    //nothing to do here
   }
 
 }

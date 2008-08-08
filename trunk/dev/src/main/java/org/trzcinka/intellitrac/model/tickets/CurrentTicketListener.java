@@ -16,16 +16,11 @@
 
 package org.trzcinka.intellitrac.model.tickets;
 
-/**
- * Classes implementing this interface will be notified about state changes in tickets tab.
- */
-public interface TicketsStateChangeListener {
+import org.trzcinka.intellitrac.dto.Ticket;
 
-  /**
-   * Notifies about a change of state.
-   *
-   * @param state new state information.
-   */
-  void stateChanged(TicketsState state);
+public interface CurrentTicketListener {
+
+  void currentTicketChanged(Ticket ticket);
 
 }
+

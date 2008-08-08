@@ -17,7 +17,9 @@
 package org.trzcinka.intellitrac.model.tickets;
 
 import org.trzcinka.intellitrac.dto.Ticket;
-import org.trzcinka.intellitrac.model.tickets.reports_list.ReportListModel;
+import org.trzcinka.intellitrac.model.tickets.report_editor.CurrentReportModel;
+import org.trzcinka.intellitrac.model.tickets.reports_list.ReportsListModel;
+import org.trzcinka.intellitrac.model.tickets.ticket_editor.CurrentTicketModel;
 import org.trzcinka.intellitrac.model.tickets.tickets_list.TicketsListModel;
 
 import java.util.ArrayList;
@@ -30,20 +32,25 @@ public class TicketsModel {
 
   private static TicketsModel instance;
 
-  private TicketsStateInfo currentTicketsState;
-  private TicketsStateInfo lastTicketsState;
+  private TicketsState currentTicketsState;
+  private TicketsState lastTicketsState;
 
-  private ReportListModel reportListModel;
+  private CurrentReportModel currentCurrentReportModel;
+  private CurrentTicketModel currentTicketModel;
+  private ReportsListModel reportsListModel;
   private TicketsListModel ticketsListModel;
 
   private Collection<TicketsStateChangeListener> ticketsStateChangeListeners;
 
   private TicketsModel() {
     ticketsStateChangeListeners = new ArrayList<TicketsStateChangeListener>();
-    currentTicketsState = new TicketsStateInfo(TicketsState.REPORTS_LIST, null);
+
+    currentTicketsState = TicketsState.REPORTS_LIST;
 
     ticketsListModel = new TicketsListModel(new ArrayList<Ticket>(0));
-    reportListModel = new ReportListModel();
+    reportsListModel = new ReportsListModel();
+    currentCurrentReportModel = new CurrentReportModel();
+    currentTicketModel = new CurrentTicketModel();
   }
 
   public static TicketsModel getInstance() {
@@ -58,7 +65,7 @@ public class TicketsModel {
    *
    * @param currentTicketsState not null state.
    */
-  public void setCurrentState(TicketsStateInfo currentTicketsState) {
+  public void setCurrentState(TicketsState currentTicketsState) {
     lastTicketsState = this.currentTicketsState;
     this.currentTicketsState = currentTicketsState;
     notifyListeners(currentTicketsState);
@@ -79,23 +86,31 @@ public class TicketsModel {
     return ticketsListModel;
   }
 
-  public ReportListModel getReportsListModel() {
-    return reportListModel;
+  public ReportsListModel getReportsListModel() {
+    return reportsListModel;
   }
 
-  private void notifyListeners(TicketsStateInfo ticketsStateInfo) {
+  public CurrentReportModel getCurrentReportModel() {
+    return currentCurrentReportModel;
+  }
+
+  public CurrentTicketModel getCurrentTicketModel() {
+    return currentTicketModel;
+  }
+
+  private void notifyListeners(TicketsState state) {
     for (TicketsStateChangeListener ticketsStateChangeListener : ticketsStateChangeListeners) {
-      ticketsStateChangeListener.stateChanged(ticketsStateInfo);
+      ticketsStateChangeListener.stateChanged(state);
     }
   }
 
   /**
    * Adds given object to the list of listeners. Listeners will be notified about state changes.
    *
-   * @param changeListenerTickets not null listener.
+   * @param ticketsStateChangeListener not null listener.
    */
-  public void addStateListener(TicketsStateChangeListener changeListenerTickets) {
-    ticketsStateChangeListeners.add(changeListenerTickets);
+  public void addStateListener(TicketsStateChangeListener ticketsStateChangeListener) {
+    ticketsStateChangeListeners.add(ticketsStateChangeListener);
   }
 
 }

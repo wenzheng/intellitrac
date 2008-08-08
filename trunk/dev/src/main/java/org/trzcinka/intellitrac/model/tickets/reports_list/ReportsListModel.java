@@ -26,11 +26,11 @@ import java.util.List;
  * Represents report list model. GUI objects should refer to this class to get/update data
  * concerning report list.
  */
-public class ReportListModel extends AbstractListModel implements ReportListListener {
+public class ReportsListModel extends AbstractListModel implements ReportsListListener {
 
   private List<Report> reports;
 
-  public ReportListModel() {
+  public ReportsListModel() {
     this.reports = new ArrayList<Report>();
   }
 
@@ -108,14 +108,14 @@ public class ReportListModel extends AbstractListModel implements ReportListList
     }
   }
 
-  public void reportListChanged(List<Report> reportList) {
+  public void reportsListChanged(List<Report> reportList) {
     this.reports = reportList;
     fireContentsChanged(this, 0, reportList.size() - 1);
   }
 
-  public void setReportListHolder(ReportListHolder reportListHolder) {
-    reportListHolder.addReportListListener(this);
-    reports = reportListHolder.getReports();
+  public void setReportListHolder(ReportsListHolder reportsListHolder) {
+    reportsListHolder.addReportsListListener(this);
+    reports = reportsListHolder.getReports();
   }
 
 }

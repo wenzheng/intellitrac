@@ -23,14 +23,14 @@ import java.util.List;
 /**
  * Holds report list.
  */
-public interface ReportListHolder {
+public interface ReportsListHolder {
 
   /**
    * Adds a report list listener.
    *
    * @param listener not null listener.
    */
-  void addReportListListener(ReportListListener listener);
+  void addReportsListListener(ReportsListListener listener);
 
   /**
    * @return list of reports.

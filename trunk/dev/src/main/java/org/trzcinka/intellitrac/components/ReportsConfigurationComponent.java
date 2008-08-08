@@ -25,8 +25,8 @@ import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.ho.yaml.Yaml;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.dto.Report;
-import org.trzcinka.intellitrac.model.tickets.reports_list.ReportListHolder;
-import org.trzcinka.intellitrac.model.tickets.reports_list.ReportListListener;
+import org.trzcinka.intellitrac.model.tickets.reports_list.ReportsListHolder;
+import org.trzcinka.intellitrac.model.tickets.reports_list.ReportsListListener;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -37,7 +37,7 @@ import java.util.List;
  */
 @State(name = ReportsConfigurationComponent.COMPONENT_NAME,
   storages = @Storage(id = "Reports", file = "$PROJECT_FILE$"))
-public class ReportsConfigurationComponent implements ProjectComponent, PersistentStateComponent<ReportsConfigurationComponent>, ReportListHolder {
+public class ReportsConfigurationComponent implements ProjectComponent, PersistentStateComponent<ReportsConfigurationComponent>, ReportsListHolder {
 
   static final String COMPONENT_NAME = "IntelliTrac.ReportsConfigurationComponent";
 
@@ -47,10 +47,10 @@ public class ReportsConfigurationComponent implements ProjectComponent, Persiste
 
   private List<Report> reports;
 
-  private Collection<ReportListListener> listeners;
+  private Collection<ReportsListListener> listeners;
 
   public ReportsConfigurationComponent() {
-    listeners = new ArrayList<ReportListListener>();
+    listeners = new ArrayList<ReportsListListener>();
     initializeDefaultReports();
     notifyListeners();
   }
@@ -102,13 +102,13 @@ public class ReportsConfigurationComponent implements ProjectComponent, Persiste
     notifyListeners();
   }
 
-  public void addReportListListener(ReportListListener listener) {
+  public void addReportsListListener(ReportsListListener listener) {
     listeners.add(listener);
   }
 
   private void notifyListeners() {
-    for (ReportListListener listener : listeners) {
-      listener.reportListChanged(reports);
+    for (ReportsListListener listener : listeners) {
+      listener.reportsListChanged(reports);
     }
   }
 

@@ -20,9 +20,8 @@ import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.model.tickets.CurrentReportListener;
 import org.trzcinka.intellitrac.model.tickets.TicketsState;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
-import org.trzcinka.intellitrac.model.tickets.TicketsStateInfo;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
@@ -31,7 +30,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
-public class TicketsListForm extends BaseTicketsForm implements TicketsStateChangeListener {
+public class TicketsListForm extends BaseTicketsForm implements CurrentReportListener {
 
   private JPanel rootComponent;
   private JTable ticketsList;
@@ -40,39 +39,17 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
   private ConstantToolbarForm constantToolbarForm;
 
   public TicketsListForm() {
-    ticketsModel.addStateListener(this);
+    ticketsModel.getCurrentReportModel().addListener(this);
     editButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         int selectedRow = ticketsList.getSelectedRow();
         if (selectedRow != -1) {
           Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(selectedRow);
-          TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.TICKET_EDITOR, ticket);
-          ticketsModel.setCurrentState(stateInfo);
+          ticketsModel.getCurrentTicketModel().setCurrentTicket(ticket);
+          ticketsModel.setCurrentState(TicketsState.TICKET_EDITOR);
         }
       }
     });
-  }
-
-  public void stateChanged(TicketsStateInfo ticketsStateInfo) {
-    if (ticketsStateInfo.getState() == TicketsState.TICKETS_LIST) {
-      updateData(ticketsStateInfo.getInfo());
-    }
-  }
-
-  private void updateData(Object info) {
-    if (!(info instanceof Report)) {
-      throw new IllegalArgumentException();
-    }
-    Report report = (Report) info;
-    try {
-      List<Ticket> tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getProperQuery());
-      ticketsModel.getTicketsListTableModel().updateTickets(tickets);
-    } catch (ConnectionFailedException e) {
-      TracGatewayLocator.handleConnectionProblem();
-      TicketsStateInfo stateInfo = new TicketsStateInfo(TicketsState.REPORTS_LIST, null);
-      ticketsModel.setCurrentState(stateInfo);
-    }
-
   }
 
   public JComponent getRootComponent() {
@@ -82,6 +59,16 @@ public class TicketsListForm extends BaseTicketsForm implements TicketsStateChan
   private void createUIComponents() {
     constantToolbarForm = new ConstantToolbarForm();
     ticketsList = new JTable(ticketsModel.getTicketsListTableModel());
+  }
+
+  public void currentReportChanged(Report report) {
+    try {
+      List<Ticket> tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getProperQuery());
+      ticketsModel.getTicketsListTableModel().updateTickets(tickets);
+    } catch (ConnectionFailedException e) {
+      TracGatewayLocator.handleConnectionProblem();
+      ticketsModel.setCurrentState(TicketsState.REPORTS_LIST);
+    }
   }
 
 }

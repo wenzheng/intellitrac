@@ -14,18 +14,22 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.model.tickets;
+package org.trzcinka.intellitrac.model.tickets.reports_list;
+
+import org.trzcinka.intellitrac.dto.Report;
+
+import java.util.List;
 
 /**
- * Classes implementing this interface will be notified about state changes in tickets tab.
+ * Classes implementing this interface will be notified if report list changes.
  */
-public interface TicketsStateChangeListener {
+public interface ReportsListListener {
 
   /**
-   * Notifies about a change of state.
+   * Notifies that report list has changed.
    *
-   * @param state new state information.
+   * @param reportList report list.
    */
-  void stateChanged(TicketsState state);
+  void reportsListChanged(List<Report> reportList);
 
 }
