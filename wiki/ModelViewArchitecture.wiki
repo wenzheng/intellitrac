@@ -1,0 +1,3 @@
+#summary Model-view architecture overview.
+
+http://intellitrac.googlecode.com/svn/trunk/doc/img/model-view_architecture.png
