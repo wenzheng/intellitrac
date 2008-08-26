@@ -53,6 +53,8 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
   private JRadioButton acceptRadioButton;
   private JButton submitChangesButton;
 
+  private DefaultComboBoxModel componentComboBoxModel;
+  private DefaultComboBoxModel priorityComboBoxModel;
 
   public TicketEditorForm() {
     ticketsModel.getCurrentTicketModel().addListener(this);
@@ -64,23 +66,31 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
 
   private void createUIComponents() {
     constantToolbarForm = new ConstantToolbarForm();
+    componentComboBoxModel = new DefaultComboBoxModel();
+    priorityComboBoxModel = new DefaultComboBoxModel();
+
+    componentComboBox = new JComboBox(componentComboBoxModel);
+    priorityComboBox = new JComboBox(priorityComboBoxModel);
   }
 
   public void currentTicketChanged(Ticket ticket) {
-    loadReport(ticket);
-  }
-
-  private void loadReport(Ticket ticket) {
     id.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
     summary.setText(ticket.getSummary());
     reporter.setText(ticket.getReporter());
     owner.setText(ticket.getOwner());
     try {
-      componentComboBox.setModel(new DefaultComboBoxModel(TracGatewayLocator.retrieveTracGateway().retrieveComponents().toArray()));
+      fillComboBox(componentComboBoxModel, TracGatewayLocator.retrieveTracGateway().retrieveComponents());
+      fillComboBox(priorityComboBoxModel, TracGatewayLocator.retrieveTracGateway().retrievePriorities());
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
     }
+  }
 
+  private void fillComboBox(DefaultComboBoxModel comboBoxModel, Iterable<String> elements) throws ConnectionFailedException {
+    comboBoxModel.removeAllElements();
+    for (String component : elements) {
+      comboBoxModel.addElement(component);
+    }
   }
 
 }

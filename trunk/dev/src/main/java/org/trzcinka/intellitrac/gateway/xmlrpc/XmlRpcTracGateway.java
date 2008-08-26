@@ -130,9 +130,17 @@ public class XmlRpcTracGateway implements TracGateway {
   }
 
   public List<String> retrieveComponents() throws ConnectionFailedException, TracError {
+    return retrieveStringsList("ticket.component.getAll");
+  }
+
+  public List<String> retrievePriorities() throws ConnectionFailedException, TracError {
+    return retrieveStringsList("ticket.priority.getAll");
+  }
+
+  private List<String> retrieveStringsList(String function) throws ConnectionFailedException {
     List<String> result = null;
     try {
-      Object response = retrieveClient().execute("ticket.component.getAll", EMPTY_ARRAY);
+      Object response = retrieveClient().execute(function, EMPTY_ARRAY);
       String[] array = CastUtils.castArray((Object[]) response, String.class);
       result = Arrays.asList(array);
     } catch (XmlRpcException e) {
@@ -142,7 +150,7 @@ public class XmlRpcTracGateway implements TracGateway {
   }
 
   private void handleException(XmlRpcException e) throws ConnectionFailedException {
-    if (e.getCause() instanceof ConnectException) {
+    if (e.getCause() != null && e.getCause() instanceof ConnectException) {
       throw new ConnectionFailedException(e);
     } else {
       throw new TracError(e);

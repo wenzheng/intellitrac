@@ -32,6 +32,8 @@ public class TicketsModel {
 
   private static TicketsModel instance;
 
+  private static final TicketsState INITIAL_STATE = TicketsState.REPORTS_LIST;
+
   private TicketsState currentTicketsState;
   private TicketsState lastTicketsState;
 
@@ -45,7 +47,7 @@ public class TicketsModel {
   private TicketsModel() {
     ticketsStateChangeListeners = new ArrayList<TicketsStateChangeListener>();
 
-    currentTicketsState = TicketsState.REPORTS_LIST;
+    currentTicketsState = INITIAL_STATE;
 
     ticketsListModel = new TicketsListModel(new ArrayList<Ticket>(0));
     reportsListModel = new ReportsListModel();
