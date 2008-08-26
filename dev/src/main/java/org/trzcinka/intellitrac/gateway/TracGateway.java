@@ -61,4 +61,11 @@ public interface TracGateway {
    */
   List<String> retrieveComponents() throws ConnectionFailedException, TracError;
 
+  /**
+   * @return list of priorities names.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  List<String> retrievePriorities() throws ConnectionFailedException, TracError;
+
 }

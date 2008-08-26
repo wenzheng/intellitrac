@@ -6,20 +6,6 @@
   <component name="BuildJarProjectSettings">
     <option name="BUILD_JARS_ON_MAKE" value="false" />
   </component>
-  <component name="CCaseConfig">
-    <option name="checkoutReserved" value="false" />
-    <option name="markExternalChangeAsUpToDate" value="true" />
-    <option name="checkInUseHijack" value="true" />
-    <option name="useUcmModel" value="true" />
-    <option name="isOffline" value="false" />
-    <option name="synchOutside" value="false" />
-    <option name="isHistoryResticted" value="true" />
-    <option name="useIdenticalSwitch" value="true" />
-    <option name="synchActivitiesOnRefresh" value="true" />
-    <option name="lastScr" value="" />
-    <option name="scrTextFileName" value="" />
-    <option name="historyRevisionsNumber" value="4" />
-  </component>
   <component name="CodeStyleProjectProfileManger">
     <option name="PROJECT_PROFILE" />
     <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
@@ -303,6 +289,9 @@
   <component name="RubyDocSettings">
     <RUBY_DOC NAME="DEFAULTS" VALUE="TRUE" />
     <RUBY_DOC NAME="NUMBER" VALUE="0" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myVersion" value="123" />
   </component>
   <component name="TeamCityRootDirectoryHolder">
     <option name="myRelativeRootDirectory" />

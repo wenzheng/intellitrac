@@ -22,8 +22,35 @@ import org.testng.annotations.Test;
 public class TicketsModelTest {
 
   public void testStateChanges() {
-    assert true;
-    //TODO
+    TicketsModel model = TicketsModel.getInstance();
+    SimpleTicketsStateChangeListener listener = new SimpleTicketsStateChangeListener();
+    model.addStateListener(listener);
+
+    model.setCurrentState(TicketsState.TICKETS_LIST);
+    assert listener.getState() == TicketsState.TICKETS_LIST;
+
+    model.setCurrentState(TicketsState.TICKET_EDITOR);
+    assert listener.getState() == TicketsState.TICKET_EDITOR;
+
+    model.goBack();
+    assert listener.getState() == TicketsState.TICKETS_LIST;
+
+    model.goBack();
+    assert listener.getState() == TicketsState.TICKETS_LIST;
+  }
+
+
+  class SimpleTicketsStateChangeListener implements TicketsStateChangeListener {
+
+    private TicketsState state;
+
+    public void stateChanged(TicketsState state) {
+      this.state = state;
+    }
+
+    public TicketsState getState() {
+      return state;
+    }
   }
 
 }

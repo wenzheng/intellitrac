@@ -139,7 +139,7 @@
                       <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.attributes.component"/>
                     </properties>
                   </component>
-                  <component id="c73d0" class="javax.swing.JComboBox" binding="componentComboBox">
+                  <component id="c73d0" class="javax.swing.JComboBox" binding="componentComboBox" custom-create="true">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -154,7 +154,7 @@
                       <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.attributes.priority"/>
                     </properties>
                   </component>
-                  <component id="f4cd5" class="javax.swing.JComboBox" binding="priorityComboBox" default-binding="true">
+                  <component id="f4cd5" class="javax.swing.JComboBox" binding="priorityComboBox" custom-create="true" default-binding="true">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
