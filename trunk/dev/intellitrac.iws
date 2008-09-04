@@ -44,12 +44,9 @@
     <list default="true" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/IntelliTracConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/IntelliTracConfiguration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.ipr" afterPath="$PROJECT_DIR$/intellitrac.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/TicketsModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/TicketsModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/tickets_list/TicketsListModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/tickets_list/TicketsListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/model/tickets/TicketsModelTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/trzcinka/intellitrac/model/tickets/TicketsModelTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" />
     </list>
     <ignored path="intellitrac.iws" />
@@ -124,8 +121,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -143,19 +140,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TicketEditorForm.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TicketEditorForm.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="43" selection-start="3358" selection-end="3358" vertical-scroll-proportion="0.7054085">
+            <state line="30" column="13" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.11499436">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TracGatewayLocator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java">
+      <file leaf-file-name="IntelliTracConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/IntelliTracConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.33256617">
+            <state line="14" column="45" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,16 +161,25 @@
       <file leaf-file-name="TracGateway.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="80" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.5972851">
+            <state line="89" column="15" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.8736142">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XmlRpcTracGateway.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="XmlRpcTracGateway.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="13" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.17307693">
+            <state line="145" column="46" selection-start="5393" selection-end="5393" vertical-scroll-proportion="0.47782704">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TracGatewayLocator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="28" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.24915445">
               <folding />
             </state>
           </provider>
@@ -183,24 +189,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrentTicketModel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/ticket_editor/CurrentTicketModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="14" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.6730769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConstantToolbarForm.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ConstantToolbarForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="45" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.53846157">
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -313,8 +301,8 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -346,18 +334,6 @@
     <option name="showLabels" value="true" />
   </component>
   <component name="RunManager" selected="Plugin.Plugin">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="intellitrac" />
-      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
-      <option name="PROGRAM_PARAMETERS" />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -373,6 +349,40 @@
       <method>
         <option name="Make" value="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="intellitrac" />
+      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
+      <option name="PROGRAM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
@@ -414,28 +424,6 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <envs />
-      <method>
-        <option name="Make" value="true" />
-      </method>
     </configuration>
     <configuration default="false" name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="intellitrac" />
@@ -548,10 +536,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1582" height="1058" extended-state="6" />
+    <frame x="-4" y="-4" width="1608" height="1058" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29040566" order="3" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29011133" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25548387" order="1" />
       <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967743" order="4" />
@@ -560,10 +548,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="10" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13225806" order="4" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939634" order="0" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" order="0" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32368702" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17772055" order="6" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17747217" order="6" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2808146" order="1" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30868167" order="3" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="17" />
@@ -591,7 +579,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -649,13 +637,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/TicketsStateChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="57" selection-start="930" selection-end="930" vertical-scroll-proportion="0.26923078">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/tickets_list/TicketsListForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="62" selection-start="2062" selection-end="2062" vertical-scroll-proportion="0.48076922">
@@ -712,49 +693,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ConstantToolbarForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="45" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.8278261">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/ticket_editor/CurrentTicketModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="14" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.6730769">
+        <state line="42" column="57" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.47304347">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ConstantToolbarForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/IntelliTracConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="45" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.53846157">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="43" selection-start="3358" selection-end="3358" vertical-scroll-proportion="0.7054085">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.33256617">
+        <state line="14" column="45" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="80" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.5972851">
+        <state line="89" column="15" selection-start="3370" selection-end="3370" vertical-scroll-proportion="0.8736142">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="13" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.17307693">
+        <state line="145" column="46" selection-start="5393" selection-end="5393" vertical-scroll-proportion="0.47782704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="28" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.24915445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="13" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.11499436">
           <folding />
         </state>
       </provider>
