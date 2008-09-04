@@ -44,7 +44,7 @@
             <properties/>
             <border type="etched" title-resource-bundle="bundle" title-key="tool_window.tickets.ticket_editor.summary"/>
             <children>
-              <component id="665d" class="javax.swing.JTextField" binding="summary">
+              <component id="665d" class="javax.swing.JTextField" binding="summaryTextField">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                     <preferred-size width="150" height="-1"/>
@@ -73,7 +73,7 @@
                           <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.summary.reported_by"/>
                         </properties>
                       </component>
-                      <component id="bea7c" class="javax.swing.JLabel" binding="reporter">
+                      <component id="bea7c" class="javax.swing.JLabel" binding="reporterLabel">
                         <constraints/>
                         <properties>
                           <text value="reporter"/>
@@ -94,7 +94,7 @@
                           <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.summary.owned_by"/>
                         </properties>
                       </component>
-                      <component id="e7f8" class="javax.swing.JLabel" binding="owner">
+                      <component id="e7f8" class="javax.swing.JLabel" binding="ownerLabel">
                         <constraints/>
                         <properties>
                           <text value="owner"/>
@@ -104,7 +104,7 @@
                   </grid>
                 </children>
               </grid>
-              <component id="b9527" class="javax.swing.JLabel" binding="id">
+              <component id="b9527" class="javax.swing.JLabel" binding="idLabel">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -169,7 +169,7 @@
                       <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.attributes.type"/>
                     </properties>
                   </component>
-                  <component id="c7486" class="javax.swing.JComboBox" binding="typeComboBox" default-binding="true">
+                  <component id="c7486" class="javax.swing.JComboBox" binding="typeComboBox" custom-create="true" default-binding="true">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -184,7 +184,7 @@
                       <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.attributes.milestone"/>
                     </properties>
                   </component>
-                  <component id="4d6a4" class="javax.swing.JComboBox" binding="milestoneComboBox" default-binding="true">
+                  <component id="4d6a4" class="javax.swing.JComboBox" binding="milestoneComboBox" custom-create="true" default-binding="true">
                     <constraints>
                       <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -214,7 +214,7 @@
                       <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
-                  <component id="6352b" class="javax.swing.JComboBox" binding="versionComboBox" default-binding="true">
+                  <component id="6352b" class="javax.swing.JComboBox" binding="versionComboBox" custom-create="true" default-binding="true">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -248,7 +248,7 @@
                       <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.attributes.cc"/>
                     </properties>
                   </component>
-                  <component id="807f" class="javax.swing.JTextField" binding="CCTextField" default-binding="true">
+                  <component id="807f" class="javax.swing.JTextField" binding="ccTextField" default-binding="true">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="70" height="-1"/>
@@ -283,7 +283,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="a2e8c" class="javax.swing.JTextPane" binding="description">
+                  <component id="a2e8c" class="javax.swing.JTextPane" binding="descriptionTextPane">
                     <constraints/>
                     <properties/>
                   </component>

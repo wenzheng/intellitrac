@@ -22,7 +22,8 @@ import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 
 /**
- * This class should be used to obtain access to configuration file.
+ * This class should be used to obtain access to general configuration file.
+ * General configuration file contains global IntelliTrac settings, editable only by IntelliTrac developers, and is transparent to users.
  */
 public final class IntelliTracConfiguration {
 

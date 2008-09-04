@@ -68,4 +68,25 @@ public interface TracGateway {
    */
   List<String> retrievePriorities() throws ConnectionFailedException, TracError;
 
+  /**
+   * @return list of types names.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  List<String> retrieveTypes() throws ConnectionFailedException, TracError;
+
+  /**
+   * @return list of milestones names.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  List<String> retrieveMilestones() throws ConnectionFailedException, TracError;
+
+  /**
+   * @return list of versions names.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  List<String> retrieveVersions() throws ConnectionFailedException, TracError;
+
 }

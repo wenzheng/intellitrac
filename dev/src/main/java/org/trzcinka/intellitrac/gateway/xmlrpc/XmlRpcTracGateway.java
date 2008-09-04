@@ -106,9 +106,6 @@ public class XmlRpcTracGateway implements TracGateway {
     configurationSet = true;
   }
 
-  /**
-   * {@inheritDoc}
-   */
   public List<Ticket> retrieveTickets(String query) throws ConnectionFailedException, TracError {
     List<Ticket> result = null;
     try {
@@ -135,6 +132,18 @@ public class XmlRpcTracGateway implements TracGateway {
 
   public List<String> retrievePriorities() throws ConnectionFailedException, TracError {
     return retrieveStringsList("ticket.priority.getAll");
+  }
+
+  public List<String> retrieveTypes() throws ConnectionFailedException, TracError {
+    return retrieveStringsList("ticket.type.getAll");
+  }
+
+  public List<String> retrieveMilestones() throws ConnectionFailedException, TracError {
+    return retrieveStringsList("ticket.milestone.getAll");
+  }
+
+  public List<String> retrieveVersions() throws ConnectionFailedException, TracError {
+    return retrieveStringsList("ticket.version.getAll");
   }
 
   private List<String> retrieveStringsList(String function) throws ConnectionFailedException {
