@@ -17,6 +17,7 @@
 package org.trzcinka.intellitrac.dto;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Represents a ticket.
@@ -39,7 +40,8 @@ public class Ticket {
   private String description;
   private String priority;
   private String owner;
-  private String carbonCopy;
+  private String cc;
+  private List<TicketChange> changes;
 
   public Integer getId() {
     return id;
@@ -161,11 +163,20 @@ public class Ticket {
     this.priority = priority;
   }
 
-  public String getCarbonCopy() {
-    return carbonCopy;
+  public String getCc() {
+    return cc;
   }
 
-  public void setCarbonCopy(String carbonCopy) {
-    this.carbonCopy = carbonCopy;
+  public void setCc(String cc) {
+    this.cc = cc;
   }
+
+  public List<TicketChange> getChanges() {
+    return changes;
+  }
+
+  public void setChanges(List<TicketChange> changes) {
+    this.changes = changes;
+  }
+
 }

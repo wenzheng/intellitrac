@@ -17,15 +17,19 @@
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.dto.TicketChange;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
+import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.MessageFormat;
 
 public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketListener {
@@ -44,8 +48,7 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
   private JTextField keywordsTextField;
   private JTextField ccTextField;
   private JTextPane descriptionTextPane;
-  private JList comments;
-  private JButton addCommentButton;
+  private JList changes;
   private JRadioButton leaveRadioButton;
   private JRadioButton resolveAsRadioButton;
   private JComboBox resolutions;
@@ -53,15 +56,25 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
   private JTextField reassignedUser;
   private JRadioButton acceptRadioButton;
   private JButton submitChangesButton;
+  private JTextPane commentTextPane;
 
   private DefaultComboBoxModel componentComboBoxModel;
   private DefaultComboBoxModel priorityComboBoxModel;
   private DefaultComboBoxModel typeComboBoxModel;
   private DefaultComboBoxModel milestoneComboBoxModel;
   private DefaultComboBoxModel versionComboBoxModel;
+  private DefaultListModel changesModel;
+
+  private final TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
 
   public TicketEditorForm() {
     ticketsModel.getCurrentTicketModel().addListener(this);
+    submitChangesButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Ticket t = new Ticket();
+
+      }
+    });
   }
 
   public JComponent getRootComponent() {
@@ -75,12 +88,16 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
     typeComboBoxModel = new DefaultComboBoxModel();
     milestoneComboBoxModel = new DefaultComboBoxModel();
     versionComboBoxModel = new DefaultComboBoxModel();
+    changesModel = new DefaultListModel();
 
     componentComboBox = new JComboBox(componentComboBoxModel);
     priorityComboBox = new JComboBox(priorityComboBoxModel);
     typeComboBox = new JComboBox(typeComboBoxModel);
     milestoneComboBox = new JComboBox(milestoneComboBoxModel);
     versionComboBox = new JComboBox(versionComboBoxModel);
+    changes = new JList(changesModel);
+    changes.setCellRenderer(new TicketChangesListCellRenderer());
+
   }
 
   public void currentTicketChanged(Ticket ticket) {
@@ -89,10 +106,15 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
     reporterLabel.setText(ticket.getReporter());
     ownerLabel.setText(ticket.getOwner());
     keywordsTextField.setText(ticket.getKeywords());
-    ccTextField.setText(ticket.getCarbonCopy());
+    ccTextField.setText(ticket.getCc());
     descriptionTextPane.setText(ticket.getDescription());
+
+    changesModel.removeAllElements();
+    for (TicketChange ticketChange : ticket.getChanges()) {
+      changesModel.addElement(ticketChange);
+    }
+
     try {
-      TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
       fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), ticket.getComponent());
       fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), ticket.getPriority());
       fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), ticket.getType());
@@ -101,6 +123,22 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
     }
+  }
+
+  /**
+   * @return Returns ticket instance for this form.
+   */
+  private Ticket createTicket() {
+    Ticket result = TicketsModel.getInstance().getCurrentTicketModel().getCurrentTicket();
+    result.setSummary(summaryTextField.getText());
+    result.setComponent((String) componentComboBoxModel.getSelectedItem());
+    result.setPriority((String) priorityComboBoxModel.getSelectedItem());
+    result.setType((String) milestoneComboBoxModel.getSelectedItem());
+    result.setVersion((String) versionComboBoxModel.getSelectedItem());
+    result.setKeywords(keywordsTextField.getText());
+    result.setCc(ccTextField.getText());
+
+    return result;
   }
 
   private void fillComboBox(DefaultComboBoxModel comboBoxModel, Iterable<String> elements, Object selected) throws ConnectionFailedException {
