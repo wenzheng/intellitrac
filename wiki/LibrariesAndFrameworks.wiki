@@ -2,6 +2,8 @@
 
  * Apache XML-RPC (http://ws.apache.org/xmlrpc) - used for communication with Trac via XML-RPC protocol.
 
- * JYAML for YAML-based configuration (instead of XML-based)
+ * JYAML for YAML-based configuration (instead of XML-based).
 
  * TestNG 5.8
+
+ * Java Wikipedia API (http://www.matheclipse.org/en/Java_Wikipedia_API#Wikipedia_text_to_HTML_Example) - used for HTML-TracWiki conversion.
