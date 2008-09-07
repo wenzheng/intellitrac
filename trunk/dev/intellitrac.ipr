@@ -514,6 +514,7 @@
         <root url="jar://$PROJECT_DIR$/lib/src/xmlrpc-server-3.1-sources.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/src/commons-lang-2.4-sources.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/src/src_openapi.zip!/" />
+        <root url="file://$PROJECT_DIR$/lib/src/bliki" />
       </SOURCES>
       <jarDirectory url="file://$PROJECT_DIR$/lib/jar" recursive="false" />
     </library>

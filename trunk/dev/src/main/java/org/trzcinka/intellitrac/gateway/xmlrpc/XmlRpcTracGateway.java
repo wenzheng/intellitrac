@@ -26,6 +26,7 @@ import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.dto.TicketChange;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracError;
@@ -123,7 +124,22 @@ public class XmlRpcTracGateway implements TracGateway {
 
   private Ticket retrieveTicket(int ticketId) throws XmlRpcException, ConnectionFailedException {
     Object response = retrieveClient().execute("ticket.get", new Object[]{ticketId});
-    return new TicketAdapter(response);
+    Ticket ticket = new TicketAdapter(response);
+    List<TicketChange> changes = retrieveTicketChanges(ticketId);
+    ticket.setChanges(changes);
+    return ticket;
+  }
+
+  private List<TicketChange> retrieveTicketChanges(int ticketId) throws ConnectionFailedException, XmlRpcException {
+    Object[] responses = (Object[]) retrieveClient().execute("ticket.changeLog", new Object[]{ticketId});
+    List<TicketChange> result = new ArrayList<TicketChange>(responses.length);
+    for (Object response : responses) {
+      TicketChangeAdapter change = new TicketChangeAdapter((Object[]) response);
+      if (!(TicketChangeAdapter.COMMENT.equals(change.getField()) && StringUtils.isEmpty(change.getNewValue()))) {
+        result.add(change);
+      }
+    }
+    return result;
   }
 
   public List<String> retrieveComponents() throws ConnectionFailedException, TracError {
