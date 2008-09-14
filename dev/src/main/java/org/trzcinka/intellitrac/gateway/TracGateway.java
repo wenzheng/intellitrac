@@ -55,39 +55,65 @@ public interface TracGateway {
   List<Ticket> retrieveTickets(String query) throws ConnectionFailedException, TracError;
 
   /**
-   * @return list of component names.
+   * @return list of components' names.
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
   List<String> retrieveComponents() throws ConnectionFailedException, TracError;
 
   /**
-   * @return list of priorities names.
+   * @return list of priorities' names.
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
   List<String> retrievePriorities() throws ConnectionFailedException, TracError;
 
   /**
-   * @return list of types names.
+   * @return list of types' names.
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
   List<String> retrieveTypes() throws ConnectionFailedException, TracError;
 
   /**
-   * @return list of milestones names.
+   * @return list of milestones' names.
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
   List<String> retrieveMilestones() throws ConnectionFailedException, TracError;
 
   /**
-   * @return list of versions names.
+   * @return list of versions' names.
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
   List<String> retrieveVersions() throws ConnectionFailedException, TracError;
 
+  /**
+   * @return list of resolutions' names.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  Iterable<String> retrieveResolutions() throws ConnectionFailedException, TracError;
+
+  /**
+   * Creates a new ticket (if id is null) or updates it.
+   *
+   * @param ticket  not null ticket.
+   * @param comment not null comment. If you do not want to add a comment, use
+   *                {@link #saveTicket(Ticket)}.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  void updateTicket(Ticket ticket, String comment) throws ConnectionFailedException, TracError;
+
+  /**
+   * Creates a new ticket (if id is null) or updates it.
+   *
+   * @param ticket not null ticket.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  void saveTicket(Ticket ticket) throws ConnectionFailedException, TracError;
 
 }

@@ -51,7 +51,7 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
   private JList changes;
   private JRadioButton leaveRadioButton;
   private JRadioButton resolveAsRadioButton;
-  private JComboBox resolutions;
+  private JComboBox resolutionsComboBox;
   private JRadioButton reassignToRadioButton;
   private JTextField reassignedUser;
   private JRadioButton acceptRadioButton;
@@ -63,6 +63,7 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
   private DefaultComboBoxModel typeComboBoxModel;
   private DefaultComboBoxModel milestoneComboBoxModel;
   private DefaultComboBoxModel versionComboBoxModel;
+  private DefaultComboBoxModel resolutionsComboBoxModel;
   private DefaultListModel changesModel;
 
   private final TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
@@ -71,7 +72,26 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
     ticketsModel.getCurrentTicketModel().addListener(this);
     submitChangesButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        Ticket t = new Ticket();
+        Ticket t = createTicket();
+
+        if (resolveAsRadioButton.isSelected()) {
+          t.setResolution((String) resolutionsComboBoxModel.getSelectedItem());
+        } else if (reassignToRadioButton.isSelected()) {
+          t.setOwner(reassignedUser.getText());
+        } else if (acceptRadioButton.isSelected()) {
+          t.setStatus("accepted"); //TODO: hardcoding
+        }
+
+
+        try {
+          if (t.isNew()) {
+            gateway.saveTicket(t);
+          } else {
+            gateway.updateTicket(t, commentTextPane.getText());
+          }
+        } catch (ConnectionFailedException e1) {
+          TracGatewayLocator.handleConnectionProblem();
+        }
 
       }
     });
@@ -88,6 +108,7 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
     typeComboBoxModel = new DefaultComboBoxModel();
     milestoneComboBoxModel = new DefaultComboBoxModel();
     versionComboBoxModel = new DefaultComboBoxModel();
+    resolutionsComboBoxModel = new DefaultComboBoxModel();
     changesModel = new DefaultListModel();
 
     componentComboBox = new JComboBox(componentComboBoxModel);
@@ -95,6 +116,8 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
     typeComboBox = new JComboBox(typeComboBoxModel);
     milestoneComboBox = new JComboBox(milestoneComboBoxModel);
     versionComboBox = new JComboBox(versionComboBoxModel);
+    resolutionsComboBox = new JComboBox(resolutionsComboBoxModel);
+
     changes = new JList(changesModel);
     changes.setCellRenderer(new TicketChangesListCellRenderer());
 
@@ -120,6 +143,7 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
       fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), ticket.getType());
       fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), ticket.getMilestone());
       fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), ticket.getVersion());
+      fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), ticket.getResolution());
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
     }

@@ -17,11 +17,11 @@
 package org.trzcinka.intellitrac;
 
 import org.testng.annotations.Test;
-import org.trzcinka.intellitrac.view.utils.IntelliTracIcons;
-import org.trzcinka.intellitrac.view.utils.MouseCursors;
+import org.trzcinka.intellitrac.view.view_utils.IntelliTracIcons;
+import org.trzcinka.intellitrac.view.view_utils.MouseCursors;
 
 @Test
-public class UtilsTest {
+public class ViewUtilsTest {
 
   public void testIcons() {
     IntelliTracIcons icons = IntelliTracIcons.getInstance();

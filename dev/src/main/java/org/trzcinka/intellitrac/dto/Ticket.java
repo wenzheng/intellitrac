@@ -179,4 +179,7 @@ public class Ticket {
     this.changes = changes;
   }
 
+  public boolean isNew() {
+    return id == null;
+  }
 }

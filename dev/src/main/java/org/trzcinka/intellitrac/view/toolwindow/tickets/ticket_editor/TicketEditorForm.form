@@ -351,7 +351,7 @@
                       <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.actions.resolve_as"/>
                     </properties>
                   </component>
-                  <component id="2b5ed" class="javax.swing.JComboBox" binding="resolutions">
+                  <component id="2b5ed" class="javax.swing.JComboBox" binding="resolutionsComboBox" custom-create="true">
                     <constraints/>
                     <properties/>
                   </component>

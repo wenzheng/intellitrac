@@ -23,7 +23,7 @@ import org.trzcinka.intellitrac.dto.TracConfigurationBean;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
-import org.trzcinka.intellitrac.view.utils.MouseCursors;
+import org.trzcinka.intellitrac.view.view_utils.MouseCursors;
 
 import javax.swing.*;
 import java.awt.*;
