@@ -6,7 +6,6 @@
 IntelliTrac is an IntelliJ IDEA plugin (aimed at version 7) that enables tight integration with Trac, a popular project management system. Its main aim is to facilitate Trac support, i.e. enabling users to interface with Trac environments from within IDE (no need to use Trac web browser interface).
 The first version of the plugin will offer rather modest functionality:
  * managing tickets (opening, closing, editing etc.)
- * managing wiki
 
 = Trac integration =
 
