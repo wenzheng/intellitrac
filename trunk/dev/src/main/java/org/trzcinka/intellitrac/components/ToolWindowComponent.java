@@ -29,7 +29,7 @@ import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 import org.trzcinka.intellitrac.view.toolwindow.ToolWindowForm;
-import org.trzcinka.intellitrac.view.utils.IntelliTracIcons;
+import org.trzcinka.intellitrac.view.view_utils.IntelliTracIcons;
 
 /**
  * Tool window component.

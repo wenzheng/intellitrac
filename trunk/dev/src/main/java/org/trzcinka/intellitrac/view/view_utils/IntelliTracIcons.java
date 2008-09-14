@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.utils;
+package org.trzcinka.intellitrac.view.view_utils;
 
 import javax.swing.*;
 

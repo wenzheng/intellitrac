@@ -162,6 +162,26 @@ public class XmlRpcTracGateway implements TracGateway {
     return retrieveStringsList("ticket.version.getAll");
   }
 
+  public Iterable<String> retrieveResolutions() throws ConnectionFailedException, TracError {
+    return retrieveStringsList("ticket.resolution.getAll");
+  }
+
+  public void updateTicket(Ticket ticket, String comment) throws ConnectionFailedException, TracError {
+    try {
+      retrieveClient().execute("ticket.update", (Object[]) TicketAdapter.unadaptEditedTicket(ticket, comment));
+    } catch (XmlRpcException e) {
+      handleException(e);
+    }
+  }
+
+  public void saveTicket(Ticket ticket) throws ConnectionFailedException, TracError {
+    try {
+      retrieveClient().execute("ticket.create", (Object[]) TicketAdapter.unadaptNewTicket(ticket));
+    } catch (XmlRpcException e) {
+      handleException(e);
+    }
+  }
+
   private List<String> retrieveStringsList(String function) throws ConnectionFailedException {
     List<String> result = null;
     try {

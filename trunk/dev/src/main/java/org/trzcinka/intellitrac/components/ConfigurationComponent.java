@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.view.configuration.ConfigurationForm;
-import org.trzcinka.intellitrac.view.utils.IntelliTracIcons;
+import org.trzcinka.intellitrac.view.view_utils.IntelliTracIcons;
 
 import javax.swing.*;
 import java.net.MalformedURLException;
