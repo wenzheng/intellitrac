@@ -17,60 +17,36 @@
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
 import org.trzcinka.intellitrac.dto.Ticket;
-import org.trzcinka.intellitrac.dto.TicketChange;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
-import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
-import org.trzcinka.intellitrac.model.tickets.TicketsModel;
-import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
-import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.MessageFormat;
 
-public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketListener {
+public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTicketListener {
 
-  private JPanel rootComponent;
-  private ConstantToolbarForm constantToolbarForm;
-  private JTextField summaryTextField;
-  private JComboBox componentComboBox;
-  private JComboBox priorityComboBox;
-  private JLabel reporterLabel;
-  private JLabel idLabel;
-  private JLabel ownerLabel;
-  private JComboBox typeComboBox;
-  private JComboBox milestoneComboBox;
-  private JComboBox versionComboBox;
-  private JTextField keywordsTextField;
-  private JTextField ccTextField;
-  private JTextPane descriptionTextPane;
-  private JList changes;
-  private JRadioButton leaveRadioButton;
-  private JRadioButton resolveAsRadioButton;
-  private JComboBox resolutionsComboBox;
-  private JRadioButton reassignToRadioButton;
-  private JTextField reassignedUser;
-  private JRadioButton acceptRadioButton;
-  private JButton submitChangesButton;
-  private JTextPane commentTextPane;
+  public void currentTicketChanged(Ticket ticket) {
+    idLabel.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
+    summaryTextField.setText(ticket.getSummary());
+    reporterLabel.setText(ticket.getReporter());
+    ownerLabel.setText(ticket.getOwner());
+    keywordsTextField.setText(ticket.getKeywords());
+    ccTextField.setText(ticket.getCc());
+    descriptionTextPane.setText(ticket.getDescription());
 
-  private DefaultComboBoxModel componentComboBoxModel;
-  private DefaultComboBoxModel priorityComboBoxModel;
-  private DefaultComboBoxModel typeComboBoxModel;
-  private DefaultComboBoxModel milestoneComboBoxModel;
-  private DefaultComboBoxModel versionComboBoxModel;
-  private DefaultComboBoxModel resolutionsComboBoxModel;
-  private DefaultListModel changesModel;
+    actionsPanel.setVisible(true);
+    assignToLabel.setVisible(false);
+    assignToTextField.setVisible(false);
+    ownersInfoPanel.setVisible(false);
 
-  private final TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
+    fillCombosAndChanges(ticket);
+  }
 
-  public TicketEditorForm() {
-    ticketsModel.getCurrentTicketModel().addListener(this);
-    submitChangesButton.addActionListener(new ActionListener() {
+  ActionListener retrieveSubmitButtonActionListener() {
+    return new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         Ticket t = createTicket();
 
@@ -82,95 +58,13 @@ public class TicketEditorForm extends BaseTicketsForm implements CurrentTicketLi
           t.setStatus("accepted"); //TODO: hardcoding
         }
 
-
         try {
-          if (t.isNew()) {
-            gateway.saveTicket(t);
-          } else {
-            gateway.updateTicket(t, commentTextPane.getText());
-          }
+          gateway.updateTicket(t, commentTextPane.getText());
         } catch (ConnectionFailedException e1) {
           TracGatewayLocator.handleConnectionProblem();
         }
 
       }
-    });
+    };
   }
-
-  public JComponent getRootComponent() {
-    return rootComponent;
-  }
-
-  private void createUIComponents() {
-    constantToolbarForm = new ConstantToolbarForm();
-    componentComboBoxModel = new DefaultComboBoxModel();
-    priorityComboBoxModel = new DefaultComboBoxModel();
-    typeComboBoxModel = new DefaultComboBoxModel();
-    milestoneComboBoxModel = new DefaultComboBoxModel();
-    versionComboBoxModel = new DefaultComboBoxModel();
-    resolutionsComboBoxModel = new DefaultComboBoxModel();
-    changesModel = new DefaultListModel();
-
-    componentComboBox = new JComboBox(componentComboBoxModel);
-    priorityComboBox = new JComboBox(priorityComboBoxModel);
-    typeComboBox = new JComboBox(typeComboBoxModel);
-    milestoneComboBox = new JComboBox(milestoneComboBoxModel);
-    versionComboBox = new JComboBox(versionComboBoxModel);
-    resolutionsComboBox = new JComboBox(resolutionsComboBoxModel);
-
-    changes = new JList(changesModel);
-    changes.setCellRenderer(new TicketChangesListCellRenderer());
-
-  }
-
-  public void currentTicketChanged(Ticket ticket) {
-    idLabel.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
-    summaryTextField.setText(ticket.getSummary());
-    reporterLabel.setText(ticket.getReporter());
-    ownerLabel.setText(ticket.getOwner());
-    keywordsTextField.setText(ticket.getKeywords());
-    ccTextField.setText(ticket.getCc());
-    descriptionTextPane.setText(ticket.getDescription());
-
-    changesModel.removeAllElements();
-    for (TicketChange ticketChange : ticket.getChanges()) {
-      changesModel.addElement(ticketChange);
-    }
-
-    try {
-      fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), ticket.getComponent());
-      fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), ticket.getPriority());
-      fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), ticket.getType());
-      fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), ticket.getMilestone());
-      fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), ticket.getVersion());
-      fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), ticket.getResolution());
-    } catch (ConnectionFailedException e) {
-      TracGatewayLocator.handleConnectionProblem();
-    }
-  }
-
-  /**
-   * @return Returns ticket instance for this form.
-   */
-  private Ticket createTicket() {
-    Ticket result = TicketsModel.getInstance().getCurrentTicketModel().getCurrentTicket();
-    result.setSummary(summaryTextField.getText());
-    result.setComponent((String) componentComboBoxModel.getSelectedItem());
-    result.setPriority((String) priorityComboBoxModel.getSelectedItem());
-    result.setType((String) milestoneComboBoxModel.getSelectedItem());
-    result.setVersion((String) versionComboBoxModel.getSelectedItem());
-    result.setKeywords(keywordsTextField.getText());
-    result.setCc(ccTextField.getText());
-
-    return result;
-  }
-
-  private void fillComboBox(DefaultComboBoxModel comboBoxModel, Iterable<String> elements, Object selected) throws ConnectionFailedException {
-    comboBoxModel.removeAllElements();
-    for (String component : elements) {
-      comboBoxModel.addElement(component);
-    }
-    comboBoxModel.setSelectedItem(selected);
-  }
-
 }

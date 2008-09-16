@@ -17,7 +17,7 @@
 package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
 import org.trzcinka.intellitrac.dto.Ticket;
-import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.State;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -35,7 +35,7 @@ public class ConstantToolbarForm extends BaseTicketsForm {
   public ConstantToolbarForm() {
     goHome.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        ticketsModel.setCurrentState(TicketsState.REPORTS_LIST);
+        ticketsModel.setCurrentState(State.REPORTS_LIST);
       }
     });
     goBack.addActionListener(new ActionListener() {
@@ -46,7 +46,7 @@ public class ConstantToolbarForm extends BaseTicketsForm {
     newTicket.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         ticketsModel.getCurrentTicketModel().setCurrentTicket(new Ticket());
-        ticketsModel.setCurrentState(TicketsState.TICKET_EDITOR);
+        ticketsModel.setCurrentState(State.TICKET_CREATOR);
       }
     });
   }

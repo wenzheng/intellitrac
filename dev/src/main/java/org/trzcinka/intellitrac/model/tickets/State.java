@@ -19,8 +19,8 @@ package org.trzcinka.intellitrac.model.tickets;
 /**
  * Enumerates possible GUI states of the tool window in tickets tab.
  */
-public enum TicketsState {
+public enum State {
 
-  REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR
+  REPORTS_LIST, REPORT_EDITOR, TICKETS_LIST, TICKET_EDITOR, TICKET_CREATOR
 
 }

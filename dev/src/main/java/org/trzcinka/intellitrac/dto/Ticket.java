@@ -16,6 +16,7 @@
 
 package org.trzcinka.intellitrac.dto;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class Ticket {
   private String priority;
   private String owner;
   private String cc;
-  private List<TicketChange> changes;
+  private List<TicketChange> changes = new ArrayList<TicketChange>();
 
   public Integer getId() {
     return id;

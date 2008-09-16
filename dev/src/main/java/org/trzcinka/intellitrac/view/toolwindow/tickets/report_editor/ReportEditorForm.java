@@ -18,7 +18,7 @@ package org.trzcinka.intellitrac.view.toolwindow.tickets.report_editor;
 
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.model.tickets.CurrentReportListener;
-import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.State;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 
 import javax.swing.*;
@@ -58,7 +58,7 @@ public class ReportEditorForm extends BaseTicketsForm implements CurrentReportLi
   }
 
   private void reportsListRedirect() {
-    TicketsState state = TicketsState.REPORTS_LIST;
+    State state = State.REPORTS_LIST;
     ticketsModel.setCurrentState(state);
   }
 

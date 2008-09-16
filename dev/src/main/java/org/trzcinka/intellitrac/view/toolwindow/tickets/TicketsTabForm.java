@@ -16,10 +16,11 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
-import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.State;
 import org.trzcinka.intellitrac.model.tickets.TicketsStateChangeListener;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.report_editor.ReportEditorForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.reports_list.ReportsListForm;
+import org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor.TicketCreatorForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor.TicketEditorForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list.TicketsListForm;
 
@@ -35,6 +36,7 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
   private ReportEditorForm reportEditorForm;
   private TicketsListForm ticketsListForm;
   private TicketEditorForm ticketEditorForm;
+  private TicketCreatorForm ticketCreatorForm;
 
   public TicketsTabForm() {
     ticketsModel.addStateListener(this);
@@ -52,14 +54,16 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
     reportEditorForm = new ReportEditorForm();
     ticketsListForm = new TicketsListForm();
     ticketEditorForm = new TicketEditorForm();
+    ticketCreatorForm = new TicketCreatorForm();
 
-    rootComponent.add(TicketsState.REPORTS_LIST.toString(), reportsListForm.getRootComponent());
-    rootComponent.add(TicketsState.REPORT_EDITOR.toString(), reportEditorForm.getRootComponent());
-    rootComponent.add(TicketsState.TICKETS_LIST.toString(), ticketsListForm.getRootComponent());
-    rootComponent.add(TicketsState.TICKET_EDITOR.toString(), ticketEditorForm.getRootComponent());
+    rootComponent.add(State.REPORTS_LIST.toString(), reportsListForm.getRootComponent());
+    rootComponent.add(State.REPORT_EDITOR.toString(), reportEditorForm.getRootComponent());
+    rootComponent.add(State.TICKETS_LIST.toString(), ticketsListForm.getRootComponent());
+    rootComponent.add(State.TICKET_EDITOR.toString(), ticketEditorForm.getRootComponent());
+    rootComponent.add(State.TICKET_CREATOR.toString(), ticketCreatorForm.getRootComponent());
   }
 
-  public void stateChanged(TicketsState state) {
+  public void stateChanged(State state) {
     cardLayout.show(rootComponent, state.toString());
   }
 

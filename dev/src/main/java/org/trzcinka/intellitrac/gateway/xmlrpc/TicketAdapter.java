@@ -54,12 +54,18 @@ public class TicketAdapter extends Ticket {
     }
   }
 
-  public static Object unadaptNewTicket(Ticket adapter) {
+  /**
+   * Convets given ticket into a format proper for XML-RPC Trac communication.
+   *
+   * @param ticket ticket.
+   * @return .
+   */
+  public static Object unadaptNewTicket(Ticket ticket) {
     Object[] result = new Object[3];
-    result[0] = adapter.getSummary();
-    result[1] = adapter.getDescription();
+    result[0] = ticket.getSummary();
+    result[1] = ticket.getDescription();
     try {
-      result[2] = BeanUtils.describe(adapter);
+      result[2] = describe(ticket);
     } catch (Exception e) {
       logger.error("Could not convert Ticket instance to a format apprioriate for Trac communication", e);
       throw new TracError(e);
@@ -68,12 +74,18 @@ public class TicketAdapter extends Ticket {
     return result;
   }
 
-  public static Object unadaptEditedTicket(Ticket adapter, String comment) {
+  /**
+   * Convets given ticket into a format proper for XML-RPC Trac communication.
+   *
+   * @param ticket ticket.
+   * @return .
+   */
+  public static Object unadaptEditedTicket(Ticket ticket, String comment) {
     Object[] result = new Object[3];
-    result[0] = adapter.getId();
+    result[0] = ticket.getId();
     result[1] = comment;
     try {
-      result[2] = describe(adapter);
+      result[2] = describe(ticket);
     } catch (Exception e) {
       logger.error("Could not convert Ticket instance to a format apprioriate for Trac communication", e);
       throw new TracError(e);
@@ -82,13 +94,24 @@ public class TicketAdapter extends Ticket {
     return result;
   }
 
-  private static Object describe(Ticket adapter) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+  /**
+   * Transforms given ticket into a properties map. Properties with null values aren't put into the map.
+   *
+   * @param ticket ticket.
+   * @return map.
+   * @throws InvocationTargetException
+   * @throws NoSuchMethodException
+   * @throws IllegalAccessException
+   */
+  private static Map<String, Object> describe(Ticket ticket) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
     final String[] SERIALIZED_PROPERTIES = {"summary", "keywords", "status", "resolution", "type", "version", "reporter", "milestone", "component", "description", "priority", "owner", "cc"};
     Map<String, Object> result = new HashMap<String, Object>(SERIALIZED_PROPERTIES.length);
     for (String PROPERTY : SERIALIZED_PROPERTIES) {
       String key = StringConversionUtils.toUnderscore(PROPERTY);
-      Object value = PropertyUtils.getProperty(adapter, PROPERTY);
-      result.put(key, value);
+      Object value = PropertyUtils.getProperty(ticket, PROPERTY);
+      if (value != null) {
+        result.put(key, value);
+      }
     }
     return result;
   }

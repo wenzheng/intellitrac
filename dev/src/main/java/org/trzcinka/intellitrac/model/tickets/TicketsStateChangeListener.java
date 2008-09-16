@@ -26,6 +26,6 @@ public interface TicketsStateChangeListener {
    *
    * @param state new state information.
    */
-  void stateChanged(TicketsState state);
+  void stateChanged(State state);
 
 }
