@@ -26,29 +26,29 @@ public class TicketsModelTest {
     SimpleTicketsStateChangeListener listener = new SimpleTicketsStateChangeListener();
     model.addStateListener(listener);
 
-    model.setCurrentState(TicketsState.TICKETS_LIST);
-    assert listener.getState() == TicketsState.TICKETS_LIST;
+    model.setCurrentState(State.TICKETS_LIST);
+    assert listener.getState() == State.TICKETS_LIST;
 
-    model.setCurrentState(TicketsState.TICKET_EDITOR);
-    assert listener.getState() == TicketsState.TICKET_EDITOR;
-
-    model.goBack();
-    assert listener.getState() == TicketsState.TICKETS_LIST;
+    model.setCurrentState(State.TICKET_EDITOR);
+    assert listener.getState() == State.TICKET_EDITOR;
 
     model.goBack();
-    assert listener.getState() == TicketsState.TICKETS_LIST;
+    assert listener.getState() == State.TICKETS_LIST;
+
+    model.goBack();
+    assert listener.getState() == State.TICKETS_LIST;
   }
 
 
   class SimpleTicketsStateChangeListener implements TicketsStateChangeListener {
 
-    private TicketsState state;
+    private State state;
 
-    public void stateChanged(TicketsState state) {
+    public void stateChanged(State state) {
       this.state = state;
     }
 
-    public TicketsState getState() {
+    public State getState() {
       return state;
     }
   }

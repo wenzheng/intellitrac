@@ -18,7 +18,7 @@ package org.trzcinka.intellitrac.view.toolwindow.tickets.reports_list;
 
 import com.intellij.openapi.ui.Messages;
 import org.trzcinka.intellitrac.dto.Report;
-import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.State;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
@@ -46,7 +46,7 @@ public class ReportsListForm extends BaseTicketsForm {
       public void actionPerformed(ActionEvent e) {
         Report selectedReport = (Report) reportsList.getSelectedValue();
         if (selectedReport != null) {
-          TicketsState stateInfo = TicketsState.REPORT_EDITOR;
+          State stateInfo = State.REPORT_EDITOR;
           ticketsModel.getCurrentReportModel().setCurrentReport(selectedReport);
           ticketsModel.setCurrentState(stateInfo);
         }
@@ -66,7 +66,7 @@ public class ReportsListForm extends BaseTicketsForm {
     });
     addButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        TicketsState state = TicketsState.REPORT_EDITOR;
+        State state = State.REPORT_EDITOR;
         ticketsModel.getCurrentReportModel().setCurrentReport(new Report());
         ticketsModel.setCurrentState(state);
       }
@@ -92,7 +92,7 @@ public class ReportsListForm extends BaseTicketsForm {
     Report selectedReport = (Report) reportsList.getSelectedValue();
     if (selectedReport != null) {
       ticketsModel.getCurrentReportModel().setCurrentReport(selectedReport);
-      ticketsModel.setCurrentState(TicketsState.TICKETS_LIST);
+      ticketsModel.setCurrentState(State.TICKETS_LIST);
     }
   }
 

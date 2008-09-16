@@ -21,7 +21,7 @@ import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.tickets.CurrentReportListener;
-import org.trzcinka.intellitrac.model.tickets.TicketsState;
+import org.trzcinka.intellitrac.model.tickets.State;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
@@ -46,7 +46,7 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
         if (selectedRow != -1) {
           Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(selectedRow);
           ticketsModel.getCurrentTicketModel().setCurrentTicket(ticket);
-          ticketsModel.setCurrentState(TicketsState.TICKET_EDITOR);
+          ticketsModel.setCurrentState(State.TICKET_EDITOR);
         }
       }
     });
@@ -67,7 +67,7 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
       ticketsModel.getTicketsListTableModel().updateTickets(tickets);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
-      ticketsModel.setCurrentState(TicketsState.REPORTS_LIST);
+      ticketsModel.setCurrentState(State.REPORTS_LIST);
     }
   }
 

@@ -32,10 +32,10 @@ public class TicketsModel {
 
   private static TicketsModel instance;
 
-  private static final TicketsState INITIAL_STATE = TicketsState.REPORTS_LIST;
+  private static final State INITIAL_STATE = State.REPORTS_LIST;
 
-  private TicketsState currentTicketsState;
-  private TicketsState lastTicketsState;
+  private State currentState;
+  private State lastState;
 
   private CurrentReportModel currentCurrentReportModel;
   private CurrentTicketModel currentTicketModel;
@@ -47,7 +47,7 @@ public class TicketsModel {
   private TicketsModel() {
     ticketsStateChangeListeners = new ArrayList<TicketsStateChangeListener>();
 
-    currentTicketsState = INITIAL_STATE;
+    currentState = INITIAL_STATE;
 
     ticketsListModel = new TicketsListModel(new ArrayList<Ticket>(0));
     reportsListModel = new ReportsListModel();
@@ -65,23 +65,23 @@ public class TicketsModel {
   /**
    * Sets current state. Notifies its listeners about the change.
    *
-   * @param currentTicketsState not null state.
+   * @param currentState not null state.
    */
-  public void setCurrentState(TicketsState currentTicketsState) {
-    lastTicketsState = this.currentTicketsState;
-    this.currentTicketsState = currentTicketsState;
-    notifyListeners(currentTicketsState);
+  public void setCurrentState(State currentState) {
+    lastState = this.currentState;
+    this.currentState = currentState;
+    notifyListeners(currentState);
   }
 
   /**
    * Returns previous state or does nothing if there is no previous state. Notifies its listeners about the change.
    */
   public void goBack() {
-    currentTicketsState = lastTicketsState;
-    if (lastTicketsState != null) {
-      setCurrentState(lastTicketsState);
+    currentState = lastState;
+    if (lastState != null) {
+      setCurrentState(lastState);
     }
-    lastTicketsState = null;
+    lastState = null;
   }
 
   public TicketsListModel getTicketsListTableModel() {
@@ -100,7 +100,7 @@ public class TicketsModel {
     return currentTicketModel;
   }
 
-  private void notifyListeners(TicketsState state) {
+  private void notifyListeners(State state) {
     for (TicketsStateChangeListener ticketsStateChangeListener : ticketsStateChangeListeners) {
       ticketsStateChangeListener.stateChanged(state);
     }
