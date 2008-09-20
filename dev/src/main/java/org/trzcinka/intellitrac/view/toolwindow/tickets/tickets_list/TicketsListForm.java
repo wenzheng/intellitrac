@@ -28,6 +28,8 @@ import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.List;
 
 public class TicketsListForm extends BaseTicketsForm implements CurrentReportListener {
@@ -42,14 +44,26 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
     ticketsModel.getCurrentReportModel().addListener(this);
     editButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        int selectedRow = ticketsList.getSelectedRow();
-        if (selectedRow != -1) {
-          Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(selectedRow);
-          ticketsModel.getCurrentTicketModel().setCurrentTicket(ticket);
-          ticketsModel.setCurrentState(State.TICKET_EDITOR);
+        openTicketEditor();
+      }
+    });
+    ticketsList.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+        if (e.getClickCount() == 2) {
+          openTicketEditor();
         }
       }
     });
+  }
+
+  private void openTicketEditor() {
+    int selectedRow = ticketsList.getSelectedRow();
+    if (selectedRow != -1) {
+      Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(selectedRow);
+      ticketsModel.getCurrentTicketModel().setCurrentTicket(ticket);
+      ticketsModel.setCurrentState(State.TICKET_EDITOR);
+    }
   }
 
   public JComponent getRootComponent() {
