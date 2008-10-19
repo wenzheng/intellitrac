@@ -25,6 +25,7 @@ import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
+import org.trzcinka.intellitrac.dto.Attachment;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.dto.TicketChange;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
@@ -125,8 +126,8 @@ public class XmlRpcTracGateway implements TracGateway {
   private Ticket retrieveTicket(int ticketId) throws XmlRpcException, ConnectionFailedException {
     Object response = retrieveClient().execute("ticket.get", new Object[]{ticketId});
     Ticket ticket = new TicketAdapter(response);
-    List<TicketChange> changes = retrieveTicketChanges(ticketId);
-    ticket.setChanges(changes);
+    ticket.setChanges(retrieveTicketChanges(ticketId));
+    ticket.setAttachments(retrieveAttachments(ticketId));
     return ticket;
   }
 
@@ -162,7 +163,7 @@ public class XmlRpcTracGateway implements TracGateway {
     return retrieveStringsList("ticket.version.getAll");
   }
 
-  public Iterable<String> retrieveResolutions() throws ConnectionFailedException, TracError {
+  public List<String> retrieveResolutions() throws ConnectionFailedException, TracError {
     return retrieveStringsList("ticket.resolution.getAll");
   }
 
@@ -182,10 +183,25 @@ public class XmlRpcTracGateway implements TracGateway {
     }
   }
 
-  private List<String> retrieveStringsList(String function) throws ConnectionFailedException {
+  private List<Attachment> retrieveAttachments(int ticketId) throws ConnectionFailedException, TracError {
+    List<Attachment> result = new ArrayList<Attachment>();
+    try {
+      Object response = retrieveClient().execute("ticket.listAttachments", new Object[]{ticketId});
+      Object[] array = (Object[]) response;
+      for (Object o : array) {
+        Attachment attachment = new AttachmentAdapter(o);
+        result.add(attachment);
+      }
+    } catch (XmlRpcException e) {
+      handleException(e);
+    }
+    return result;
+  }
+
+  private List<String> retrieveStringsList(String functionName) throws ConnectionFailedException {
     List<String> result = null;
     try {
-      Object response = retrieveClient().execute(function, EMPTY_ARRAY);
+      Object response = retrieveClient().execute(functionName, EMPTY_ARRAY);
       String[] array = CastUtils.castArray((Object[]) response, String.class);
       result = Arrays.asList(array);
     } catch (XmlRpcException e) {

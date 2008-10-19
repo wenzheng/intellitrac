@@ -45,7 +45,7 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   protected JTextField keywordsTextField;
   protected JTextField ccTextField;
   protected JTextPane descriptionTextPane;
-  private JList changes;
+  private JList changesList;
   private JRadioButton leaveRadioButton;
   protected JRadioButton resolveAsRadioButton;
   private JComboBox resolutionsComboBox;
@@ -58,6 +58,9 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   protected JTextField assignToTextField;
   protected JLabel assignToLabel;
   protected JPanel ownersInfoPanel;
+  protected JPanel attachmentsPanel;
+  private JList attachmentsList;
+  private JScrollPane attachmentsListScroll;
 
   protected DefaultComboBoxModel componentComboBoxModel;
   protected DefaultComboBoxModel priorityComboBoxModel;
@@ -65,7 +68,8 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   protected DefaultComboBoxModel milestoneComboBoxModel;
   protected DefaultComboBoxModel versionComboBoxModel;
   protected DefaultComboBoxModel resolutionsComboBoxModel;
-  protected DefaultListModel changesModel;
+  protected DefaultListModel changesListModel;
+  protected DefaultListModel attachmentsListModel;
 
   protected final TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
 
@@ -88,7 +92,8 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     milestoneComboBoxModel = new DefaultComboBoxModel();
     versionComboBoxModel = new DefaultComboBoxModel();
     resolutionsComboBoxModel = new DefaultComboBoxModel();
-    changesModel = new DefaultListModel();
+    changesListModel = new DefaultListModel();
+    attachmentsListModel = new DefaultListModel();
 
     componentComboBox = new JComboBox(componentComboBoxModel);
     priorityComboBox = new JComboBox(priorityComboBoxModel);
@@ -97,9 +102,11 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     versionComboBox = new JComboBox(versionComboBoxModel);
     resolutionsComboBox = new JComboBox(resolutionsComboBoxModel);
 
-    changes = new JList(changesModel);
-    changes.setCellRenderer(new TicketChangesListCellRenderer());
+    changesList = new JList(changesListModel);
+    changesList.setCellRenderer(new TicketChangesListCellRenderer());
 
+    attachmentsList = new JList(attachmentsListModel);
+    attachmentsList.setCellRenderer(new AttachmentsListCellRenderer());
   }
 
   /**
@@ -143,9 +150,9 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   }
 
   protected void fillCombosAndChanges(Ticket ticket) {
-    changesModel.removeAllElements();
+    changesListModel.removeAllElements();
     for (TicketChange ticketChange : ticket.getChanges()) {
-      changesModel.addElement(ticketChange);
+      changesListModel.addElement(ticketChange);
     }
 
     try {

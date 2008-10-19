@@ -43,6 +43,7 @@ public class Ticket {
   private String owner;
   private String cc;
   private List<TicketChange> changes = new ArrayList<TicketChange>();
+  private List<Attachment> attachments = new ArrayList<Attachment>();
 
   public Integer getId() {
     return id;
@@ -182,5 +183,13 @@ public class Ticket {
 
   public boolean isNew() {
     return id == null;
+  }
+
+  public List<Attachment> getAttachments() {
+    return attachments;
+  }
+
+  public void setAttachments(List<Attachment> attachments) {
+    this.attachments = attachments;
   }
 }
