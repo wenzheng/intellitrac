@@ -16,6 +16,7 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
+import org.trzcinka.intellitrac.dto.Attachment;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
@@ -41,6 +42,12 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
     assignToLabel.setVisible(false);
     assignToTextField.setVisible(false);
     ownersInfoPanel.setVisible(false);
+    attachmentsPanel.setVisible(true);
+
+    attachmentsListModel.removeAllElements();
+    for (Attachment attachment : ticket.getAttachments()) {
+      attachmentsListModel.addElement(attachment);
+    }
 
     fillCombosAndChanges(ticket);
   }

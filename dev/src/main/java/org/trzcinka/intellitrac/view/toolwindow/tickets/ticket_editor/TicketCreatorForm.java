@@ -55,6 +55,7 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     assignToTextField.setVisible(true);
     assignToLabel.setVisible(true);
     ownersInfoPanel.setVisible(false);
+    attachmentsPanel.setVisible(false);
 
     fillCombosAndChanges(ticket);
   }

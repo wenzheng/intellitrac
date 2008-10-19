@@ -94,7 +94,7 @@ public interface TracGateway {
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
-  Iterable<String> retrieveResolutions() throws ConnectionFailedException, TracError;
+  List<String> retrieveResolutions() throws ConnectionFailedException, TracError;
 
   /**
    * Creates a new ticket (if id is null) or updates it.
