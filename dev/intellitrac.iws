@@ -42,15 +42,282 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesListCellRenderer.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesListCellRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/docbook/DocbookGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/PostfixOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/SymbolNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/util" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/AbstractHTMLToWiki.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/PDFWikiModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Padleft.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/IWikiModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/SourceTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/AbstractCPPBasedCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/MethodException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/TableOfContentTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/TemplateParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/CSharpCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/dump/PrintArticle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jar/commons-beanutils-1.7.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/WPTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Time.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/util/Console.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/BrTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/SubtractOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/dump/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/WPATag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/WikiTagNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/ITextConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/TagInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/IParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/WPBoldItalicTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IBooleanBoolean2Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Fullurl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Expr.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/Console.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/creator/WikiDB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/TracModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/DlTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/PrettyXmlSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/WPPreTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/UC.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javadoc/commons-io-1.4-javadoc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/AbstractTemplateFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/Category.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/Reference.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/ContentToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/OpenCloseTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/ITemplateFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/creator/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/ImgTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/DoctypeToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/HtmlCleaner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/ReferencesTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/TracParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/AttachmentsListCellRenderer.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/AttachmentsListCellRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/INoBodyParsingTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/Parser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/PDFConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/TableTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/ITagInfoProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/operators.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IDouble1Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IBooleanDouble2Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/HTML2WikiConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/TrTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/pdf/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/IEventListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/HtmlUtilities.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/DdTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/jspwiki/TdJSPWikiTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WikiTextReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/SemanticAttribute.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/Messages_en.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WikipediaParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/BBCodeModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/RefTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/DivideOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WPListElement.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/util" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/NodeAttribute.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/creator/ImageData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/XMLCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/docbook/IgnoreDtdEntityResolver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/Connector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/creator/DocumentCreator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/dump/IArticleFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.ipr" afterPath="$PROJECT_DIR$/intellitrac.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/creator" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/AbstractWikiModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/HTMLConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/commons-io-1.4-sources.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/FloatNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/If.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/NS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/util/AbstractHtmlExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/DoubleEvaluator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/AbstractHTMLTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/IHTMLToWiki.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/latex.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/ThTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/ToGoogleCode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/jspwiki/ThJSPWikiTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/ASTNodeFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/ToWikipedia.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/HrTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javadoc/commons-beanutils-1.7.0-javadoc.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/AttachmentDescriptionPopup.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/UnexpectedAnswerException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/MediaWikiComm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/PreTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/XMLUserParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/jspwiki/TrJSPWikiTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/JavaScriptCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/commons-beanutils-1.7.0-sources.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/Page.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/TableGCTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/GroovyCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/SyntaxError.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/IBodyTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/PTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/docbook/HtmlToDocbookContentHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.form" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WikipediaScanner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/XmlSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jar/bliki-3.0.8.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IDoubleValue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/docbook" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Ifexpr.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/Encoder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/ThGCTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IDouble0Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/WPParagraphTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/NoOutputTag.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/APIWikiModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/Messages_de.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/Revision.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/jspwiki" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/latex/PropertyManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/StringNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/CommandLine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/ToMoinMoin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/ATag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/MagicWord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/JavaCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WPCell.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/FunctionNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/FractionNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/util/HtmlForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Switch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/util/HtmlFormExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/Operator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/TdTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Padright.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/dump/WikiArticle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/BaseToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Ifexist.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IDouble2Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/dump/WikiXMLParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/AttachmentsListCellRenderer.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/AttachmentsListCellRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/util/DivErrorboxExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/creator/TopicData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/AbstractXMLParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/ListGCTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Localurl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/PrefixOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/LC.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/InfixOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/pdf/PDFGenerator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/HtmlTokenizer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/AbstractParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/PHPCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/ImageFormat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/HTMLEndTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/Util.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/Messages.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/MathTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/Link.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/XMLPagesParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/jspwiki/ToJSPWiki.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/TagStack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/LCFirst.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/TdGCTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/docbook/FormattingXMLStreamWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/docbook/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/PreMinusOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/IntegerNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/LaTeXConverter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/NetworkException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator/PrePlusOperator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/CommentToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/latex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/NowikiTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/util/GenerateOperatorArrays.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/SourceCodeFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/HTMLTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/URLEncode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/AbstractTracModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WPTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/Ifeq.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/SimpleXmlSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/UCFirst.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jar/commons-io-1.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/Configuration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WPRow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/IParserFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/ToTrac.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/ListTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IDoubleFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/TagToken.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/AbstractNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/SpecialEntities.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/dump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/DefaultEventListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/WikiModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/util/package.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/IConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/DtTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode/TrGCTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code/ABAPCodeFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/HTMLBlockTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/CompactXmlSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/IBooleanBoolean1Function.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model/SemanticRelation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/WPList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/ASTNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/HTMLTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/ATag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval/DoubleNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util/Attribute.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast/NumberNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/HtmlTagProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/EndTagToken.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/Scanner.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter/StringPair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/TagNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/OpenCloseHTMLTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia/CaptionTag.java" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,8 +391,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -201,6 +468,542 @@
           <option name="myItemId" value="intellitrac" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar!\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar!\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar!\java\awt" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Libraries" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="&lt; IDEA 7757 &gt;" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar!\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar!\java\awt" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\bin\jdk1.6.0_07\jre\lib\rt.jar!\java\awt\event" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\resources" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow\tickets\ticket_editor" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow\tickets" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\toolwindow\tickets\ticket_editor" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="BaseTicketEditorForm" />
+          <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\components" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\lib" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\lib\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\lib" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\lib\src" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\lib\src\bliki" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="PsiDirectory:C:\dev\projects\intellitrac\dev\lib" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
@@ -251,8 +1054,8 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -487,7 +1290,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="76" y="-4" width="1608" height="1058" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2743078" order="3" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="8" />
@@ -498,14 +1301,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="10" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="7" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13096774" order="4" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28580645" order="0" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29225805" order="0" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30546623" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24082421" order="6" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2808146" order="1" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30653805" order="3" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="17" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" order="11" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="11" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35612902" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
@@ -529,7 +1332,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring finished" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -587,85 +1390,113 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/dev/bin/jdk1.6.0_07/src.zip!/javax/swing/text/JTextComponent.java">
+    <entry file="jar://C:/dev/bin/jdk1.6.0_07/src.zip!/java/awt/event/InputEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="48" selection-start="11595" selection-end="11595" vertical-scroll-proportion="0.33259425">
+        <state line="319" column="8" selection-start="9352" selection-end="9352" vertical-scroll-proportion="0.35144123">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/dev/bin/jdk1.6.0_07/src.zip!/javax/swing/JTextArea.java">
+    <entry file="jar://C:/dev/bin/jdk1.6.0_07/src.zip!/java/awt/event/MouseEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="36" selection-start="4523" selection-end="4523" vertical-scroll-proportion="0.33259425">
+        <state line="158" column="38" selection-start="7544" selection-end="7544" vertical-scroll-proportion="0.22505543">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/dev/bin/jdk1.6.0_07/src.zip!/javax/swing/JOptionPane.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/reports_list/ReportsListCellRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="853" column="25" selection-start="37539" selection-end="37579" vertical-scroll-proportion="0.421646">
+        <state line="36" column="16" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.3580931">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/AttachmentDescriptionPopup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="39" selection-start="818" selection-end="818" vertical-scroll-proportion="0.20731707">
+        <state line="28" column="20" selection-start="880" selection-end="880" vertical-scroll-proportion="0.26385808">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="628" selection-end="628" vertical-scroll-proportion="0.33924612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="49" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.50163937">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/AttachmentsListCellRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="13" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.32459018">
+        <state line="44" column="53" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.5654102">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/dev/bin/jdk1.6.0_07/src.zip!/java/awt/Container.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/TicketAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="358" column="26" selection-start="12807" selection-end="12807" vertical-scroll-proportion="0.56845754">
+        <state line="109" column="41" selection-start="3718" selection-end="3718" vertical-scroll-proportion="0.69334835">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/dev/bin/jdk1.6.0_07/src.zip!/javax/swing/JDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/utils/StringConversionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="13" selection-start="3102" selection-end="3102" vertical-scroll-proportion="0.33275563">
+        <state line="25" column="29" selection-start="797" selection-end="797" vertical-scroll-proportion="0.20731707">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/bliki/latex.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="7" selection-start="1532" selection-end="1532" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="29" selection-start="3095" selection-end="3095" vertical-scroll-proportion="0.4737705">
+        <state line="85" column="70" selection-start="3474" selection-end="3474" vertical-scroll-proportion="0.25081968">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/components/ReportsConfigurationComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0852459">
+        <state line="61" column="123" selection-start="2404" selection-end="2521" vertical-scroll-proportion="0.32786885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="23" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.8639344">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="18" selection-start="2489" selection-end="2489" vertical-scroll-proportion="0.5672131">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bundle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="39" selection-start="888" selection-end="927" vertical-scroll-proportion="0.73770493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="26" selection-start="1120" selection-end="1120" vertical-scroll-proportion="0.4737705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="24" selection-start="4833" selection-end="4833" vertical-scroll-proportion="1.2836065">
           <folding />
         </state>
       </provider>
@@ -673,36 +1504,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2475" selection-end="2475" vertical-scroll-proportion="0.8596187">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesListCellRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="89" selection-start="2289" selection-end="2289" vertical-scroll-proportion="0.73656845">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/bundle.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="76" selection-start="2775" selection-end="2775" vertical-scroll-proportion="0.35008666">
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>

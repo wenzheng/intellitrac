@@ -116,4 +116,13 @@ public interface TracGateway {
    */
   void saveTicket(Ticket ticket) throws ConnectionFailedException, TracError;
 
+  /**
+   * @param ticketId ticket id.
+   * @param fileName attachment name.
+   * @return attachment.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  byte[] retrieveAttachment(int ticketId, String fileName) throws ConnectionFailedException, TracError;
+
 }

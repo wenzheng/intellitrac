@@ -16,7 +16,6 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
-import org.apache.commons.lang.StringUtils;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.Attachment;
 
@@ -42,30 +41,20 @@ public class AttachmentsListCellRenderer implements ListCellRenderer {
     }
     Attachment attachment = (Attachment) value;
 
-    JPanel panel = new JPanel();
-
-    BoxLayout mainLayout = new BoxLayout(panel, BoxLayout.Y_AXIS);
-
-    panel.setLayout(mainLayout);
+    final JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+    panel.setBackground(isSelected ? Color.LIGHT_GRAY : Color.WHITE);
     if (cellHasFocus) {
       panel.requestFocus();
     }
 
-    JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-    topPanel.setBackground(Color.WHITE);
-
     JLabel fileName = new JLabel(attachment.getFileName());
-    topPanel.add(fileName);
+    panel.add(fileName);
 
     String additionalTextString = MessageFormat.format(BundleLocator.getBundle().getString("tool_window.tickets.ticket_editor.attachments.attachment_info"), attachment.getSize(), attachment.getAuthor());
-    if (!(StringUtils.isEmpty(attachment.getDescription()))) {
-      additionalTextString += (MessageFormat.format("({0})", BundleLocator.getBundle().getString("tool_window.tickets.ticket_editor.attachments.click_to_show_description")));
-    }
 
     JLabel additionalText = new JLabel(additionalTextString);
 
-    topPanel.add(additionalText);
-    panel.add(topPanel);
+    panel.add(additionalText);
 
     return panel;
   }
