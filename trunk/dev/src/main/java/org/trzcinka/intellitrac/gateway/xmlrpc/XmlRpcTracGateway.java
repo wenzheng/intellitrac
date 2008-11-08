@@ -183,6 +183,16 @@ public class XmlRpcTracGateway implements TracGateway {
     }
   }
 
+  public byte[] retrieveAttachment(int ticketId, String fileName) throws ConnectionFailedException, TracError {
+    byte[] result = null;
+    try {
+      result = (byte[]) retrieveClient().execute("ticket.getAttachment", new Object[]{ticketId, fileName});
+    } catch (XmlRpcException e) {
+      handleException(e);
+    }
+    return result;
+  }
+
   private List<Attachment> retrieveAttachments(int ticketId) throws ConnectionFailedException, TracError {
     List<Attachment> result = new ArrayList<Attachment>();
     try {

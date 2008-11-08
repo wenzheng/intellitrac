@@ -16,6 +16,8 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
+import com.intellij.openapi.diagnostic.Logger;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.trzcinka.intellitrac.dto.Attachment;
 import org.trzcinka.intellitrac.dto.Ticket;
@@ -28,13 +30,18 @@ import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.MessageFormat;
 
 public abstract class BaseTicketEditorForm extends BaseTicketsForm implements CurrentTicketListener {
+
+  private static Logger logger = Logger.getInstance(BaseTicketEditorForm.class.getName());
 
   private JPanel rootComponent;
   private ConstantToolbarForm constantToolbarForm;
@@ -65,6 +72,8 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   protected JPanel attachmentsPanel;
   private JList attachmentsList;
   private JButton changeHistoryButton;
+  private JButton downloadButton;
+  private JButton showDescriptionButton;
   private JScrollPane attachmentsListScroll;
 
   protected DefaultComboBoxModel componentComboBoxModel;
@@ -80,24 +89,57 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   public BaseTicketEditorForm() {
     ticketsModel.getCurrentTicketModel().addListener(this);
     submitChangesButton.addActionListener(retrieveSubmitButtonActionListener());
-    attachmentsList.addMouseListener(new MouseAdapter() {
-      @Override
-      public void mouseClicked(MouseEvent e) {
-        Attachment selected = (Attachment) attachmentsList.getSelectedValue();
-        if (!StringUtils.isEmpty(selected.getDescription())) {
-          JOptionPane popup = new AttachmentDescriptionPopup(selected.getDescription());
-          JDialog dialog = popup.createDialog(null, MessageFormat.format(bundle.getString("tool_window.tickets.ticket_editor.attachments.popup_title"), selected.getFileName()));
-          dialog.setVisible(true);
-          dialog.dispose();
-        }
-      }
-    });
     changeHistoryButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         TicketChangesHistoryPopup dialog = new TicketChangesHistoryPopup(ticketsModel.getCurrentTicketModel().getCurrentTicket().getChanges());
         dialog.pack();
         dialog.setVisible(true);
         dialog.dispose();
+      }
+    });
+    downloadButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Attachment attachment = (Attachment) attachmentsList.getSelectedValue();
+        if (attachment != null) {
+          try {
+            byte[] body = gateway.retrieveAttachment(ticketsModel.getCurrentTicketModel().getCurrentTicket().getId(), attachment.getFileName());
+            JFileChooser fc = new JFileChooser();
+            int save = fc.showSaveDialog(rootComponent);
+            if (save == JFileChooser.APPROVE_OPTION) {
+              File file = fc.getSelectedFile();
+              IOUtils.write(body, new FileOutputStream(file));
+            }
+          } catch (ConnectionFailedException e1) {
+            TracGatewayLocator.handleConnectionProblem();
+          } catch (IOException e1) {
+            logger.error("Could not save file", e1);
+          }
+        }
+      }
+    });
+    showDescriptionButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Attachment attachment = (Attachment) attachmentsList.getSelectedValue();
+        if (attachment != null) {
+          JOptionPane popup = new AttachmentDescriptionPopup(attachment.getDescription());
+          JDialog dialog = popup.createDialog(null, MessageFormat.format(bundle.getString("tool_window.tickets.ticket_editor.attachments.popup_title"), attachment.getFileName()));
+          dialog.setVisible(true);
+          dialog.dispose();
+        }
+      }
+    });
+    attachmentsList.addListSelectionListener(new ListSelectionListener() {
+      public void valueChanged(ListSelectionEvent e) {
+        Attachment selected = (Attachment) attachmentsList.getSelectedValue();
+        if (selected == null) {
+          downloadButton.setEnabled(false);
+          showDescriptionButton.setEnabled(false);
+        } else {
+          downloadButton.setEnabled(true);
+          if (!(StringUtils.isEmpty(selected.getDescription()))) {
+            showDescriptionButton.setEnabled(true);
+          }
+        }
       }
     });
   }
