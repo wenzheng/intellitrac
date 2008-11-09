@@ -507,6 +507,7 @@
         <root url="jar://$PROJECT_DIR$/lib/javadoc/xmlrpc-common-3.1-javadoc.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/javadoc/commons-beanutils-1.7.0-javadoc.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/javadoc/commons-io-1.4-javadoc.jar!/" />
+        <root url="file://$PROJECT_DIR$/lib/javadoc/httpclient-3.1" />
       </JAVADOC>
       <SOURCES>
         <root url="jar://$PROJECT_DIR$/lib/src/commons-codec-1.3-sources.jar!/" />
@@ -518,6 +519,7 @@
         <root url="jar://$PROJECT_DIR$/lib/src/src_openapi.zip!/" />
         <root url="file://$PROJECT_DIR$/lib/src/bliki" />
         <root url="jar://$PROJECT_DIR$/lib/src/commons-io-1.4-sources.jar!/" />
+        <root url="file://$PROJECT_DIR$/lib/src/httpclient-3.1/java" />
       </SOURCES>
       <jarDirectory url="file://$PROJECT_DIR$/lib/jar" recursive="false" />
     </library>
