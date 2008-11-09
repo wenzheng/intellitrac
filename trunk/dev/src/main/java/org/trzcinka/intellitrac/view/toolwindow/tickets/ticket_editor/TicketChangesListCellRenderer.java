@@ -19,6 +19,7 @@ package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.TicketChange;
 import org.trzcinka.intellitrac.utils.MimeTypes;
+import org.trzcinka.intellitrac.view.view_utils.ListCellRendererUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,21 +30,15 @@ import java.util.ResourceBundle;
 
 public class TicketChangesListCellRenderer extends JEditorPane implements ListCellRenderer {
 
-  private Color backgroundColor;
-
   public TicketChangesListCellRenderer() {
-    backgroundColor = getBackground();
     setContentType(MimeTypes.TEXT_HTML);
     setEditable(false);
     putClientProperty(HONOR_DISPLAY_PROPERTIES, true);
   }
 
   public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-    if (cellHasFocus) {
-      requestFocus();
-    }
-    setBackground(isSelected ? getSelectionColor() : backgroundColor);
 
+    ListCellRendererUtils.applyDefaultDisplaySettings(list, index, isSelected, cellHasFocus, this);
     if (!(value instanceof TicketChange)) {
       throw new IllegalArgumentException("value must be TicketChange instance");
     }

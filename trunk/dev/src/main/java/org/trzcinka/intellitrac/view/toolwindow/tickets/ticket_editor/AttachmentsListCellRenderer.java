@@ -16,8 +16,10 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
+import org.apache.commons.io.FileUtils;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.Attachment;
+import org.trzcinka.intellitrac.view.view_utils.ListCellRendererUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,6 +36,7 @@ import java.text.MessageFormat;
 
 public class AttachmentsListCellRenderer implements ListCellRenderer {
 
+
   public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
 
     if (!(value instanceof Attachment)) {
@@ -42,18 +45,15 @@ public class AttachmentsListCellRenderer implements ListCellRenderer {
     Attachment attachment = (Attachment) value;
 
     final JPanel panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-    panel.setBackground(isSelected ? Color.LIGHT_GRAY : Color.WHITE);
-    if (cellHasFocus) {
-      panel.requestFocus();
-    }
+    ListCellRendererUtils.applyDefaultDisplaySettings(list, index, isSelected, cellHasFocus, panel);
 
     JLabel fileName = new JLabel(attachment.getFileName());
+    fileName.setForeground(panel.getForeground());
     panel.add(fileName);
 
-    String additionalTextString = MessageFormat.format(BundleLocator.getBundle().getString("tool_window.tickets.ticket_editor.attachments.attachment_info"), attachment.getSize(), attachment.getAuthor());
-
+    String additionalTextString = MessageFormat.format(BundleLocator.getBundle().getString("tool_window.tickets.ticket_editor.attachments.attachment_info"), FileUtils.byteCountToDisplaySize(attachment.getSize()), attachment.getAuthor());
     JLabel additionalText = new JLabel(additionalTextString);
-
+    additionalText.setForeground(panel.getForeground());
     panel.add(additionalText);
 
     return panel;

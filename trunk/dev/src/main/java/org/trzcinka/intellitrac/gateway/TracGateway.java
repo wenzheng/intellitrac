@@ -19,6 +19,7 @@ package org.trzcinka.intellitrac.gateway;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.dto.TracConfiguration;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.util.List;
 
@@ -125,4 +126,15 @@ public interface TracGateway {
    */
   byte[] retrieveAttachment(int ticketId, String fileName) throws ConnectionFailedException, TracError;
 
+  /**
+   * Saves given attachment.
+   *
+   * @param ticketId    ticket id.
+   * @param attachment  attachment file.
+   * @param description description.
+   * @param replace     if true and an attachment with given name already exists it will be overwritten.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  void saveAttachment(int ticketId, File attachment, String description, boolean replace) throws ConnectionFailedException, TracError;
 }

@@ -16,10 +16,13 @@
 
 package org.trzcinka.intellitrac.gateway.xmlrpc;
 
+import com.intellij.openapi.diagnostic.Logger;
+import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.httpclient.Credentials;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.auth.AuthScope;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.xmlrpc.XmlRpcException;
 import org.apache.xmlrpc.client.XmlRpcClient;
@@ -33,6 +36,8 @@ import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracError;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.ConnectException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -44,6 +49,8 @@ import java.util.List;
  * TracGateway implementation. Uses XML-RPC protocol to communicate with Trac.
  */
 public class XmlRpcTracGateway implements TracGateway {
+  private static final Logger logger = Logger.getInstance(XmlRpcTracGateway.class.getName());
+
   private static final Object[] EMPTY_ARRAY = new Object[]{};
 
   private static TracGateway instance;
@@ -76,14 +83,15 @@ public class XmlRpcTracGateway implements TracGateway {
 
   private XmlRpcClient prepareClient(TracConfiguration configuration) throws MalformedURLException {
     XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-
     config.setServerURL(new URL(StringUtils.removeEnd(configuration.getTracUrl(), "/") + "/login/xmlrpc"));
+
     XmlRpcClient xmlRpcClient = new XmlRpcClient();
     xmlRpcClient.setConfig(config);
     XmlRpcCommonsTransportFactory transportFactory = new XmlRpcCommonsTransportFactory(xmlRpcClient);
     Credentials credentials = new UsernamePasswordCredentials(configuration.getLogin(), configuration.getPassword());
     HttpClient httpClient = new HttpClient();
     httpClient.getState().setCredentials(AuthScope.ANY, credentials);
+
     transportFactory.setHttpClient(httpClient);
     xmlRpcClient.setTransportFactory(transportFactory);
     return xmlRpcClient;
@@ -191,6 +199,22 @@ public class XmlRpcTracGateway implements TracGateway {
       handleException(e);
     }
     return result;
+  }
+
+  public void saveAttachment(int ticketId, File attachment, String description, boolean replace) throws ConnectionFailedException, TracError {
+    byte[] data;
+    try {
+      data = FileUtils.readFileToByteArray(attachment);
+    } catch (IOException e) {
+      logger.error("Couldn't get data from file", e);
+
+      throw new TracError(e);
+    }
+    try {
+      retrieveClient().execute("ticket.putAttachment", new Object[]{ticketId, attachment.getName(), description, Base64.encodeBase64(data), replace});
+    } catch (XmlRpcException e) {
+      handleException(e);
+    }
   }
 
   private List<Attachment> retrieveAttachments(int ticketId) throws ConnectionFailedException, TracError {

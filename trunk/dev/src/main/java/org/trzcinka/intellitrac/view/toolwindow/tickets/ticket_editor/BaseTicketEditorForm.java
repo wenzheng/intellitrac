@@ -74,6 +74,7 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   private JButton changeHistoryButton;
   private JButton downloadButton;
   private JButton showDescriptionButton;
+  private JButton newAttachmentButton;
   private JScrollPane attachmentsListScroll;
 
   protected DefaultComboBoxModel componentComboBoxModel;
@@ -104,7 +105,10 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
           try {
             byte[] body = gateway.retrieveAttachment(ticketsModel.getCurrentTicketModel().getCurrentTicket().getId(), attachment.getFileName());
             JFileChooser fc = new JFileChooser();
+            File dir = fc.getCurrentDirectory();
+            fc.setSelectedFile(new File(dir, attachment.getFileName()));
             int save = fc.showSaveDialog(rootComponent);
+
             if (save == JFileChooser.APPROVE_OPTION) {
               File file = fc.getSelectedFile();
               IOUtils.write(body, new FileOutputStream(file));
@@ -140,6 +144,14 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
             showDescriptionButton.setEnabled(true);
           }
         }
+      }
+    });
+    newAttachmentButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        NewAttachmentPopup dialog = new NewAttachmentPopup(ticketsModel.getCurrentTicketModel().getCurrentTicket().getId());
+        dialog.pack();
+        dialog.setVisible(true);
+        dialog.dispose();
       }
     });
   }

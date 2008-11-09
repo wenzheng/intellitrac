@@ -455,11 +455,14 @@
                       <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.attachments.show_description"/>
                     </properties>
                   </component>
-                  <hspacer id="97a10">
+                  <component id="4bb95" class="javax.swing.JButton" binding="newAttachmentButton" default-binding="true">
                     <constraints>
-                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
-                  </hspacer>
+                    <properties>
+                      <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.attachments.new_attachment"/>
+                    </properties>
+                  </component>
                 </children>
               </grid>
             </children>
