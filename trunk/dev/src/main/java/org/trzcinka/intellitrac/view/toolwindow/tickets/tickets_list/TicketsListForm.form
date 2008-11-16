@@ -38,12 +38,14 @@
             <properties>
               <floatable value="false"/>
             </properties>
-            <border type="none"/>
+            <border type="etched"/>
             <children>
               <component id="cc19" class="javax.swing.JButton" binding="editButton" default-binding="true">
                 <constraints/>
                 <properties>
-                  <text value="Edit"/>
+                  <icon value="images/edit_ticket.png"/>
+                  <text resource-bundle="bundle" key="tool_window.tickets.tickets_list.toolbar.edit"/>
+                  <toolTipText resource-bundle="bundle" key="tool_window.tickets.tickets_list.toolbar.edit.tooltip"/>
                 </properties>
               </component>
             </children>
