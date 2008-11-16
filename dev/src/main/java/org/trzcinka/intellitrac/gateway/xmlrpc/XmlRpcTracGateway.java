@@ -17,7 +17,6 @@
 package org.trzcinka.intellitrac.gateway.xmlrpc;
 
 import com.intellij.openapi.diagnostic.Logger;
-import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.httpclient.Credentials;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
@@ -211,7 +210,7 @@ public class XmlRpcTracGateway implements TracGateway {
       throw new TracError(e);
     }
     try {
-      retrieveClient().execute("ticket.putAttachment", new Object[]{ticketId, attachment.getName(), description, Base64.encodeBase64(data), replace});
+      retrieveClient().execute("ticket.putAttachment", new Object[]{ticketId, attachment.getName(), description, data, replace});
     } catch (XmlRpcException e) {
       handleException(e);
     }

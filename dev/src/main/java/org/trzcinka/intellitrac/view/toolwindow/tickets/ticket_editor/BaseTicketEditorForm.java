@@ -37,6 +37,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.text.MessageFormat;
 
 public abstract class BaseTicketEditorForm extends BaseTicketsForm implements CurrentTicketListener {
@@ -101,6 +102,7 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     downloadButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         Attachment attachment = (Attachment) attachmentsList.getSelectedValue();
+        OutputStream stream = null;
         if (attachment != null) {
           try {
             byte[] body = gateway.retrieveAttachment(ticketsModel.getCurrentTicketModel().getCurrentTicket().getId(), attachment.getFileName());
@@ -111,12 +113,15 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
 
             if (save == JFileChooser.APPROVE_OPTION) {
               File file = fc.getSelectedFile();
-              IOUtils.write(body, new FileOutputStream(file));
+              stream = new FileOutputStream(file);
+              IOUtils.write(body, stream);
             }
           } catch (ConnectionFailedException e1) {
             TracGatewayLocator.handleConnectionProblem();
           } catch (IOException e1) {
             logger.error("Could not save file", e1);
+          } finally {
+            IOUtils.closeQuietly(stream);
           }
         }
       }
