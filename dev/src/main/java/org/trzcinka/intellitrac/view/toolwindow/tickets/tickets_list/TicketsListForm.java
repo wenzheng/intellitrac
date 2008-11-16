@@ -30,6 +30,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Collections;
 import java.util.List;
 
 public class TicketsListForm extends BaseTicketsForm implements CurrentReportListener {
@@ -77,7 +78,12 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
 
   public void currentReportChanged(Report report) {
     try {
-      List<Ticket> tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getProperQuery());
+      List<Ticket> tickets;
+      if (report.isNew()) {
+        tickets = Collections.EMPTY_LIST;
+      } else {
+        tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getProperQuery());
+      }
       ticketsModel.getTicketsListTableModel().updateTickets(tickets);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();

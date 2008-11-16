@@ -59,11 +59,11 @@ public class ConfigurationForm {
           TracConfiguration configuration = new TracConfigurationBean();
           getData(configuration);
           gateway.testConnection(configuration);
-          Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_success"), bundle.getString("dialogs.success"), null);
+          Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_success"), bundle.getString("dialogs.success"), Messages.getInformationIcon());
         } catch (ConnectionFailedException exception) {
-          Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), null);
+          Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), Messages.getErrorIcon());
         } catch (MalformedURLException e1) {
-          Messages.showMessageDialog(bundle.getString("configuration.dialogs.malformed_url"), bundle.getString("dialogs.error"), null);
+          Messages.showMessageDialog(bundle.getString("configuration.dialogs.malformed_url"), bundle.getString("dialogs.error"), Messages.getErrorIcon());
         } finally {
           parent.setCursor(oldCursor);
         }
