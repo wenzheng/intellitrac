@@ -137,4 +137,5 @@ public interface TracGateway {
    * @throws TracError                 if there were unknown Trac problems.
    */
   void saveAttachment(int ticketId, File attachment, String description, boolean replace) throws ConnectionFailedException, TracError;
+
 }

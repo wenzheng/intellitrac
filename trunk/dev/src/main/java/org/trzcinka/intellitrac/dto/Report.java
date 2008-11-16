@@ -92,4 +92,7 @@ public class Report {
     return StringUtils.remove(query, "\n");
   }
 
+  public boolean isNew() {
+    return id == null && description == null && query == null && name == null;
+  }
 }

@@ -57,7 +57,7 @@ public class ReportsListForm extends BaseTicketsForm {
         Report selectedReport = (Report) reportsList.getSelectedValue();
         if (selectedReport != null) {
           String message = bundle.getString("tool_window.tickets.reports_list.confirm_report_removal");
-          int answer = Messages.showYesNoDialog(project, message, bundle.getString("dialogs.warning"), null);
+          int answer = Messages.showYesNoDialog(project, message, bundle.getString("dialogs.warning"), Messages.getQuestionIcon());
           if (answer == 0) {
             ticketsModel.getReportsListModel().removeReport(selectedReport);
           }
