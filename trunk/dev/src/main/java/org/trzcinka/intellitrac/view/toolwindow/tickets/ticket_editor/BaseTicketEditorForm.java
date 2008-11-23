@@ -64,7 +64,7 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   protected JRadioButton reassignToRadioButton;
   protected JTextField reassignedUser;
   protected JRadioButton acceptRadioButton;
-  private JButton submitChangesButton;
+  protected JButton submitChangesButton;
   protected JTextPane commentTextPane;
   protected JPanel actionsPanel;
   protected JTextField assignToTextField;

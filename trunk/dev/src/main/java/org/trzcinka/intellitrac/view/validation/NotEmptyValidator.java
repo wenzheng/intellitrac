@@ -23,7 +23,7 @@ import javax.swing.*;
 import javax.swing.text.JTextComponent;
 
 /**
- * todo class description
+ * Validator that checks if given text component is not empty.
  * <p/>
  * Created on: 2008-11-16 22:33:33 <br/>
  * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>

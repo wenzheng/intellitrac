@@ -16,6 +16,7 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
+import com.intellij.openapi.diagnostic.Logger;
 import org.trzcinka.intellitrac.dto.Attachment;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
@@ -29,6 +30,8 @@ import java.text.MessageFormat;
 
 public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTicketListener {
 
+  private static Logger log = Logger.getInstance(TicketEditorForm.class.getName());
+
   public void currentTicketChanged(Ticket ticket) {
     idLabel.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
     summaryTextField.setText(ticket.getSummary());
@@ -39,6 +42,7 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
     descriptionTextPane.setText(ticket.getDescription());
 
     changeHistoryButton.setVisible(true);
+
     actionsPanel.setVisible(true);
     assignToLabel.setVisible(false);
     assignToTextField.setVisible(false);
@@ -71,7 +75,7 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
         } catch (ConnectionFailedException e1) {
           TracGatewayLocator.handleConnectionProblem();
         }
-
+        
       }
     };
   }

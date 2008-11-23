@@ -16,7 +16,7 @@
 
 package org.trzcinka.intellitrac.view.validation;
 
-import org.trzcinka.intellitrac.view.view_utils.IntelliTracIcons;
+import com.intellij.openapi.diagnostic.Logger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +24,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 /**
- * todo class description
+ * Base class for validators.
  * <p/>
  * Created on: 2008-11-16 22:31:29 <br/>
  * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
@@ -33,14 +33,17 @@ import java.awt.event.KeyListener;
  */
 
 public abstract class Validator extends InputVerifier implements KeyListener {
+
+  private static Logger log = Logger.getInstance(Validator.class.getName());
+
   private JDialog popup;
   private JLabel messageLabel;
-  private JLabel image;
   private Point point;
   private Dimension cDim;
   private Color color;
 
   private GroupValidator groupValidator;
+  private Component validatedComponent;
 
   /**
    * @param groupValidator     may be null. Group validator will receive notifications on validation status (e.g. a parent form may need it to disable OK button).
@@ -48,12 +51,13 @@ public abstract class Validator extends InputVerifier implements KeyListener {
    * @param message            A message to be displayed in the popup help tip if validation fails.
    */
 
-  public Validator(GroupValidator groupValidator, JComponent validatedComponent, String message) {
+  public Validator(GroupValidator groupValidator, Component validatedComponent, String message) {
     this.groupValidator = groupValidator;
+    this.validatedComponent = validatedComponent;
+
     color = new Color(243, 255, 159);
     validatedComponent.addKeyListener(this);
-    messageLabel = new JLabel(message + " ");
-    image = new JLabel(IntelliTracIcons.getInstance().getSmallIcon());
+    messageLabel = new JLabel(message);
     popup = new JDialog();
     initComponents();
   }
@@ -78,6 +82,7 @@ public abstract class Validator extends InputVerifier implements KeyListener {
    */
 
   public boolean verify(JComponent c) {
+
     if (!validationCriteria(c)) {
 
       groupValidator.validationFailed(this);
@@ -116,7 +121,7 @@ public abstract class Validator extends InputVerifier implements KeyListener {
    */
 
   public void keyPressed(KeyEvent e) {
-    popup.setVisible(false);
+    validationDisposed();
   }
 
   /**
@@ -137,8 +142,13 @@ public abstract class Validator extends InputVerifier implements KeyListener {
     popup.getContentPane().setLayout(new FlowLayout());
     popup.setUndecorated(true);
     popup.getContentPane().setBackground(color);
-    popup.getContentPane().add(image);
     popup.getContentPane().add(messageLabel);
     popup.setFocusableWindowState(false);
   }
+
+  public void validationDisposed() {
+    validatedComponent.setBackground(UIManager.getColor("TextField.background"));
+    popup.setVisible(false);
+  }
+
 }

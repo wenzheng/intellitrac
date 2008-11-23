@@ -51,7 +51,7 @@
               <component id="a4a73" class="javax.swing.JLabel">
                 <constraints/>
                 <properties>
-                  <text value="Filter:"/>
+                  <text resource-bundle="bundle" key="tool_window.tickets.tickets_list.toolbar.filter"/>
                 </properties>
               </component>
               <component id="3ba9f" class="javax.swing.JComboBox" binding="filterColumnsComboBox" custom-create="true">
