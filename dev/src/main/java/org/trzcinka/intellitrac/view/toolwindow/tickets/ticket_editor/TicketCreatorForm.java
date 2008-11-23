@@ -36,7 +36,6 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
         } catch (ConnectionFailedException e1) {
           TracGatewayLocator.handleConnectionProblem();
         }
-
       }
     };
   }

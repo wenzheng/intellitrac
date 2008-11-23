@@ -47,7 +47,10 @@ public class ReportEditorForm extends BaseTicketsForm implements CurrentReportLi
   private JButton okButton;
   private JButton cancelButton;
 
-  Map<Validator, Boolean> validators;
+  private Validator nameValidator;
+  private Validator queryValidator;
+  private Validator descriptionValidator;
+  private Map<Validator, Boolean> validators;
 
   public ReportEditorForm() {
     ticketsModel.getCurrentReportModel().addListener(this);
@@ -81,7 +84,15 @@ public class ReportEditorForm extends BaseTicketsForm implements CurrentReportLi
     });
   }
 
+  private void disposeValidators() {
+    nameValidator.validationDisposed();
+    queryValidator.validationDisposed();
+    descriptionValidator.validationDisposed();
+  }
+
   private void reportsListRedirect() {
+    disposeValidators();
+    unsetInputVerifiers();
     State state = State.REPORTS_LIST;
     ticketsModel.setCurrentState(state);
   }
@@ -106,28 +117,57 @@ public class ReportEditorForm extends BaseTicketsForm implements CurrentReportLi
 
   public void currentReportChanged(Report report) {
     setData(report);
+    setInputVerifiers();
+    if (report.isNew()) {
+      falsifyValidators();
+    } else {
+      truifyValidators();
+    }
   }
 
   private void createUIComponents() {
     name = new JTextField();
-    NotEmptyValidator nameValidator = new NotEmptyValidator(this, name, bundle.getString("tool_window.tickets.report_editor.validation.not_empty.name"));
-    name.setInputVerifier(nameValidator);
+    nameValidator = new NotEmptyValidator(this, name, bundle.getString("tool_window.tickets.report_editor.validation.not_empty.name"));
+
 
     query = new JTextArea();
-    NotEmptyValidator queryValidator = new NotEmptyValidator(this, query, bundle.getString("tool_window.tickets.report_editor.validation.not_empty.query"));
-    query.setInputVerifier(queryValidator);
+    queryValidator = new NotEmptyValidator(this, query, bundle.getString("tool_window.tickets.report_editor.validation.not_empty.query"));
 
     description = new JTextField();
-    NotEmptyValidator descriptionValidator = new NotEmptyValidator(this, description, bundle.getString("tool_window.tickets.report_editor.validation.not_empty.description"));
-    description.setInputVerifier(descriptionValidator);
+    descriptionValidator = new NotEmptyValidator(this, description, bundle.getString("tool_window.tickets.report_editor.validation.not_empty.description"));
+
+    setInputVerifiers();
 
     validators = new HashMap<Validator, Boolean>();
+    okButton = new JButton();
+
+    falsifyValidators();
+  }
+
+  private void setInputVerifiers() {
+    name.setInputVerifier(nameValidator);
+    query.setInputVerifier(queryValidator);
+    description.setInputVerifier(descriptionValidator);
+  }
+
+  private void unsetInputVerifiers() {
+    name.setInputVerifier(null);
+    query.setInputVerifier(null);
+    description.setInputVerifier(null);
+  }
+
+  private void falsifyValidators() {
     validators.put(nameValidator, false);
     validators.put(queryValidator, false);
     validators.put(descriptionValidator, false);
-
-    okButton = new JButton();
     okButton.setEnabled(false);
+  }
+
+  private void truifyValidators() {
+    validators.put(nameValidator, true);
+    validators.put(queryValidator, true);
+    validators.put(descriptionValidator, true);
+    okButton.setEnabled(true);
   }
 
   public void validationFailed(Validator validator) {
