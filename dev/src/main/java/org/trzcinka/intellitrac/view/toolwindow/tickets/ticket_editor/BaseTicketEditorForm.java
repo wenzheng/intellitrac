@@ -72,7 +72,7 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   protected JPanel ownersInfoPanel;
   protected JPanel attachmentsPanel;
   private JList attachmentsList;
-  private JButton changeHistoryButton;
+  JButton changeHistoryButton;
   private JButton downloadButton;
   private JButton showDescriptionButton;
   private JButton newAttachmentButton;

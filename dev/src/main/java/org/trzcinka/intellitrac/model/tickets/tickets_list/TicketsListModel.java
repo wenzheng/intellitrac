@@ -29,6 +29,7 @@ import java.util.Map;
 public class TicketsListModel extends AbstractTableModel {
   private static final int COLUMN_COUNT = 5;
 
+  //note: these numbers must match order in FilterColumnsComboModel 
   private static final int COLUMN_NUMBER = 0;
   private static final int COLUMN_SUMMARY = 1;
   private static final int COLUMN_TYPE = 2;

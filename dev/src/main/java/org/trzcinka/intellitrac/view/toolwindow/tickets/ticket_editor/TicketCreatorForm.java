@@ -51,6 +51,7 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     descriptionTextPane.setText(StringUtils.EMPTY);
     commentTextPane.setText(StringUtils.EMPTY);
 
+    changeHistoryButton.setVisible(false);
     actionsPanel.setVisible(false);
     assignToTextField.setVisible(true);
     assignToLabel.setVisible(true);

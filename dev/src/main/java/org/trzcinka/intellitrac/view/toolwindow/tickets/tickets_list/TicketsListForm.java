@@ -22,10 +22,15 @@ import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.tickets.CurrentReportListener;
 import org.trzcinka.intellitrac.model.tickets.State;
+import org.trzcinka.intellitrac.model.tickets.tickets_list.FilterColumnsComboModel;
+import org.trzcinka.intellitrac.model.tickets.tickets_list.TicketsListModel;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.table.TableRowSorter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -40,6 +45,11 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
   private JButton editButton;
 
   private ConstantToolbarForm constantToolbarForm;
+  private JComboBox filterColumnsComboBox;
+  private JTextField filterStringTextField;
+
+  private FilterColumnsComboModel filterColumnsModel;
+  private TableRowSorter<TicketsListModel> sorter;
 
   public TicketsListForm() {
     ticketsModel.getCurrentReportModel().addListener(this);
@@ -73,8 +83,45 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
 
   private void createUIComponents() {
     constantToolbarForm = new ConstantToolbarForm();
+    sorter = new TableRowSorter<TicketsListModel>(ticketsModel.getTicketsListTableModel());
     ticketsList = new JTable(ticketsModel.getTicketsListTableModel());
+    ticketsList.setRowSorter(sorter);
+    filterColumnsModel = new FilterColumnsComboModel();
+    filterColumnsComboBox = new JComboBox(filterColumnsModel);
+    filterColumnsComboBox.setSelectedIndex(0);
+    filterColumnsComboBox.setRenderer(new FilterColumnsComboRenderer());
+    filterStringTextField = new JTextField();
+    filterStringTextField.getDocument().addDocumentListener(
+      new DocumentListener() {
+        public void changedUpdate(DocumentEvent e) {
+          newFilter();
+        }
+
+        public void insertUpdate(DocumentEvent e) {
+          newFilter();
+        }
+
+        public void removeUpdate(DocumentEvent e) {
+          newFilter();
+        }
+      });
   }
+
+  /**
+   * Update the row filter regular expression from the expression in
+   * the text box.
+   */
+  private void newFilter() {
+    RowFilter<TicketsListModel, Object> rf;
+    //If current expression doesn't parse, don't update.
+    try {
+      rf = RowFilter.regexFilter(filterStringTextField.getText(), filterColumnsComboBox.getSelectedIndex());
+    } catch (java.util.regex.PatternSyntaxException e) {
+      return;
+    }
+    sorter.setRowFilter(rf);
+  }
+
 
   public void currentReportChanged(Report report) {
     try {
