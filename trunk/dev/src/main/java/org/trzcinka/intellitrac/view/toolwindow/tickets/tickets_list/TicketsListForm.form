@@ -48,6 +48,20 @@
                   <toolTipText resource-bundle="bundle" key="tool_window.tickets.tickets_list.toolbar.edit.tooltip"/>
                 </properties>
               </component>
+              <component id="a4a73" class="javax.swing.JLabel">
+                <constraints/>
+                <properties>
+                  <text value="Filter:"/>
+                </properties>
+              </component>
+              <component id="3ba9f" class="javax.swing.JComboBox" binding="filterColumnsComboBox" custom-create="true">
+                <constraints/>
+                <properties/>
+              </component>
+              <component id="643d7" class="javax.swing.JTextField" binding="filterStringTextField" custom-create="true">
+                <constraints/>
+                <properties/>
+              </component>
             </children>
           </toolbar>
           <nested-form id="f18c3" form-file="org/trzcinka/intellitrac/view/toolwindow/tickets/ConstantToolbarForm.form" binding="constantToolbarForm" custom-create="true">

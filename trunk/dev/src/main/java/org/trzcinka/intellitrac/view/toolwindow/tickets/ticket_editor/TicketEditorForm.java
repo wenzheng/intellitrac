@@ -38,6 +38,7 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
     ccTextField.setText(ticket.getCc());
     descriptionTextPane.setText(ticket.getDescription());
 
+    changeHistoryButton.setVisible(true);
     actionsPanel.setVisible(true);
     assignToLabel.setVisible(false);
     assignToTextField.setVisible(false);
