@@ -25,6 +25,7 @@ import org.trzcinka.intellitrac.model.ApplicationModel;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -43,7 +44,8 @@ public class TicketChangesHistoryPopup extends JDialog {
   private List<TicketChange> changes;
 
 
-  public TicketChangesHistoryPopup(List<TicketChange> changes) {
+  public TicketChangesHistoryPopup(Window window, List<TicketChange> changes) {
+    super(window);
     this.changes = changes;
     setContentPane(contentPane);
     setModal(true);

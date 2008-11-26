@@ -33,6 +33,7 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
   private static Logger log = Logger.getInstance(TicketEditorForm.class.getName());
 
   public void currentTicketChanged(Ticket ticket) {
+    synchronizeButton.setVisible(true);
     idLabel.setText(MessageFormat.format(IntelliTracConfiguration.getInstance().getConfiguration().getString("ticket_id_format"), ticket.getId()));
     summaryTextField.setText(ticket.getSummary());
     reporterLabel.setText(ticket.getReporter());
@@ -48,6 +49,8 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
     assignToTextField.setVisible(false);
     ownersInfoPanel.setVisible(false);
     attachmentsPanel.setVisible(true);
+    commentPanel.setVisible(true);
+
 
     attachmentsListModel.removeAllElements();
     for (Attachment attachment : ticket.getAttachments()) {
@@ -75,8 +78,14 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
         } catch (ConnectionFailedException e1) {
           TracGatewayLocator.handleConnectionProblem();
         }
-        
+
+        showDoneLabel();
       }
+
+
     };
+
+
   }
+
 }

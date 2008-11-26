@@ -21,6 +21,7 @@ import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 
@@ -36,7 +37,8 @@ public class NewAttachmentPopup extends JDialog {
   private File selectedFile;
   private Integer ticketId;
 
-  public NewAttachmentPopup(Integer id) {
+  public NewAttachmentPopup(Window parent, Integer id) {
+    super(parent);
     ticketId = id;
     setContentPane(contentPane);
     setModal(true);

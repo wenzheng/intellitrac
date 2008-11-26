@@ -20,6 +20,7 @@ import org.apache.commons.lang.StringUtils;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.model.tickets.State;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,15 +33,20 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
         Ticket t = createTicket();
 
         try {
-          gateway.saveTicket(t);
+          Integer id = gateway.saveTicket(t);
+          ticketsModel.getCurrentTicketModel().setCurrentTicket(gateway.retrieveTicket(id));
+          ticketsModel.setCurrentState(State.TICKET_EDITOR);
+          showDoneLabel();
         } catch (ConnectionFailedException e1) {
           TracGatewayLocator.handleConnectionProblem();
         }
+
       }
     };
   }
 
   public void currentTicketChanged(Ticket ticket) {
+    synchronizeButton.setVisible(false);
     idLabel.setText(StringUtils.EMPTY);
     summaryTextField.setText(StringUtils.EMPTY);
     reporterLabel.setText(StringUtils.EMPTY);
@@ -56,6 +62,7 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     assignToLabel.setVisible(true);
     ownersInfoPanel.setVisible(false);
     attachmentsPanel.setVisible(false);
+    commentPanel.setVisible(false);
 
     fillCombosAndChanges(ticket);
   }

@@ -21,11 +21,27 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
           </nested-form>
-          <hspacer id="d2b64">
+          <toolbar id="88b59">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="20"/>
+              </grid>
             </constraints>
-          </hspacer>
+            <properties>
+              <floatable value="false"/>
+            </properties>
+            <border type="etched"/>
+            <children>
+              <component id="5209e" class="javax.swing.JButton" binding="synchronizeButton">
+                <constraints/>
+                <properties>
+                  <icon value="images/synchronize_ticket.png"/>
+                  <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.toolbar.synchronize"/>
+                  <toolTipText resource-bundle="bundle" key="tool_window.tickets.ticket_editor.toolbar.synchronize.tooltip"/>
+                </properties>
+              </component>
+            </children>
+          </toolbar>
         </children>
       </grid>
       <grid id="94ee9" layout-manager="GridLayoutManager" row-count="8" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -385,7 +401,7 @@
               <text resource-bundle="bundle" key="tool_window.tickets.ticket_editor.submit_changes"/>
             </properties>
           </component>
-          <grid id="43a34" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="43a34" binding="commentPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
