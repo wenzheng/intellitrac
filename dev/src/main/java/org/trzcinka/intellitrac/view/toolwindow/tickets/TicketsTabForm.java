@@ -31,6 +31,8 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
 
   private CardLayout cardLayout;
   private JPanel rootComponent;
+  private JLabel headerLabel;
+  private JPanel contentPanel;
 
   private ReportsListForm reportsListForm;
   private ReportEditorForm reportEditorForm;
@@ -48,7 +50,7 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
 
   private void createUIComponents() {
     cardLayout = new CardLayout();
-    rootComponent = new JPanel(cardLayout);
+    contentPanel = new JPanel(cardLayout);
 
     reportsListForm = new ReportsListForm();
     reportEditorForm = new ReportEditorForm();
@@ -56,15 +58,17 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
     ticketEditorForm = new TicketEditorForm();
     ticketCreatorForm = new TicketCreatorForm();
 
-    rootComponent.add(State.REPORTS_LIST.toString(), reportsListForm.getRootComponent());
-    rootComponent.add(State.REPORT_EDITOR.toString(), reportEditorForm.getRootComponent());
-    rootComponent.add(State.TICKETS_LIST.toString(), ticketsListForm.getRootComponent());
-    rootComponent.add(State.TICKET_EDITOR.toString(), ticketEditorForm.getRootComponent());
-    rootComponent.add(State.TICKET_CREATOR.toString(), ticketCreatorForm.getRootComponent());
+    contentPanel.add(State.REPORTS_LIST.toString(), reportsListForm.getRootComponent());
+    contentPanel.add(State.REPORT_EDITOR.toString(), reportEditorForm.getRootComponent());
+    contentPanel.add(State.TICKETS_LIST.toString(), ticketsListForm.getRootComponent());
+    contentPanel.add(State.TICKET_EDITOR.toString(), ticketEditorForm.getRootComponent());
+    contentPanel.add(State.TICKET_CREATOR.toString(), ticketCreatorForm.getRootComponent());
   }
 
   public void stateChanged(State state) {
-    cardLayout.show(rootComponent, state.toString());
+    cardLayout.show(contentPanel, state.toString());
+    String headerKey = "tool_window.tickets.header." + state.toString().toLowerCase();
+    headerLabel.setText(bundle.getString(headerKey));
   }
 
 }

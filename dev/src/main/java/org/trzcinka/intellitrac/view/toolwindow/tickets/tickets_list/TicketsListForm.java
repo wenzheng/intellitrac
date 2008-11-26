@@ -69,7 +69,7 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
   }
 
   private void openTicketEditor() {
-    int selectedRow = ticketsList.getSelectedRow();
+    int selectedRow = ticketsList.convertRowIndexToModel(ticketsList.getSelectedRow());
     if (selectedRow != -1) {
       Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(selectedRow);
       ticketsModel.getCurrentTicketModel().setCurrentTicket(ticket);

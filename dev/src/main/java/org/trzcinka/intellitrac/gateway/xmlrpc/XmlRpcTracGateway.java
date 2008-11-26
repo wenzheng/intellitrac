@@ -130,11 +130,16 @@ public class XmlRpcTracGateway implements TracGateway {
     return result;
   }
 
-  private Ticket retrieveTicket(int ticketId) throws XmlRpcException, ConnectionFailedException {
-    Object response = retrieveClient().execute("ticket.get", new Object[]{ticketId});
-    Ticket ticket = new TicketAdapter(response);
-    ticket.setChanges(retrieveTicketChanges(ticketId));
-    ticket.setAttachments(retrieveAttachments(ticketId));
+  public Ticket retrieveTicket(int ticketId) throws ConnectionFailedException, TracError {
+    Ticket ticket = null;
+    try {
+      Object response = retrieveClient().execute("ticket.get", new Object[]{ticketId});
+      ticket = new TicketAdapter(response);
+      ticket.setChanges(retrieveTicketChanges(ticketId));
+      ticket.setAttachments(retrieveAttachments(ticketId));
+    } catch (XmlRpcException e) {
+      handleException(e);
+    }
     return ticket;
   }
 
@@ -182,12 +187,14 @@ public class XmlRpcTracGateway implements TracGateway {
     }
   }
 
-  public void saveTicket(Ticket ticket) throws ConnectionFailedException, TracError {
+  public Integer saveTicket(Ticket ticket) throws ConnectionFailedException, TracError {
+    Integer result = null;
     try {
-      retrieveClient().execute("ticket.create", (Object[]) TicketAdapter.unadaptNewTicket(ticket));
+      result = (Integer) retrieveClient().execute("ticket.create", (Object[]) TicketAdapter.unadaptNewTicket(ticket));
     } catch (XmlRpcException e) {
       handleException(e);
     }
+    return result;
   }
 
   public byte[] retrieveAttachment(int ticketId, String fileName) throws ConnectionFailedException, TracError {

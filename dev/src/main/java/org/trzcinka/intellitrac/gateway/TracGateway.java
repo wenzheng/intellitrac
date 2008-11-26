@@ -49,11 +49,18 @@ public interface TracGateway {
   /**
    * @param query query. Must be not null.
    * @return not null list of tickets.
-   * @throws IllegalStateException     when there is no configuration set.
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
   List<Ticket> retrieveTickets(String query) throws ConnectionFailedException, TracError;
+
+  /**
+   * @param ticketId ticket id.
+   * @return ticket by id.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  Ticket retrieveTicket(int ticketId) throws ConnectionFailedException, TracError;
 
   /**
    * @return list of components' names.
@@ -98,7 +105,7 @@ public interface TracGateway {
   List<String> retrieveResolutions() throws ConnectionFailedException, TracError;
 
   /**
-   * Creates a new ticket (if id is null) or updates it.
+   * Updates given ticket.
    *
    * @param ticket  not null ticket.
    * @param comment not null comment. If you do not want to add a comment, use
@@ -109,13 +116,14 @@ public interface TracGateway {
   void updateTicket(Ticket ticket, String comment) throws ConnectionFailedException, TracError;
 
   /**
-   * Creates a new ticket (if id is null) or updates it.
+   * Creates a new ticket.
    *
    * @param ticket not null ticket.
+   * @return ticket id.
    * @throws ConnectionFailedException if there were connection problems.
    * @throws TracError                 if there were unknown Trac problems.
    */
-  void saveTicket(Ticket ticket) throws ConnectionFailedException, TracError;
+  Integer saveTicket(Ticket ticket) throws ConnectionFailedException, TracError;
 
   /**
    * @param ticketId ticket id.

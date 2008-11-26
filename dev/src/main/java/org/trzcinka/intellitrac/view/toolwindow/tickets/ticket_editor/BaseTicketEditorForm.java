@@ -24,6 +24,7 @@ import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
 import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
@@ -32,6 +33,7 @@ import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -76,6 +78,8 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   private JButton downloadButton;
   private JButton showDescriptionButton;
   private JButton newAttachmentButton;
+  protected JPanel commentPanel;
+  protected JButton synchronizeButton;
   private JScrollPane attachmentsListScroll;
 
   protected DefaultComboBoxModel componentComboBoxModel;
@@ -93,8 +97,10 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     submitChangesButton.addActionListener(retrieveSubmitButtonActionListener());
     changeHistoryButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        TicketChangesHistoryPopup dialog = new TicketChangesHistoryPopup(ticketsModel.getCurrentTicketModel().getCurrentTicket().getChanges());
+        Window window = SwingUtilities.getWindowAncestor(rootComponent);
+        TicketChangesHistoryPopup dialog = new TicketChangesHistoryPopup(window, ticketsModel.getCurrentTicketModel().getCurrentTicket().getChanges());
         dialog.pack();
+        dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
         dialog.dispose();
       }
@@ -153,10 +159,24 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     });
     newAttachmentButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        NewAttachmentPopup dialog = new NewAttachmentPopup(ticketsModel.getCurrentTicketModel().getCurrentTicket().getId());
+        Window window = SwingUtilities.getWindowAncestor(rootComponent);
+        NewAttachmentPopup dialog = new NewAttachmentPopup(window, ticketsModel.getCurrentTicketModel().getCurrentTicket().getId());
         dialog.pack();
+        dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
         dialog.dispose();
+      }
+    });
+    synchronizeButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        int id = ticketsModel.getCurrentTicketModel().getCurrentTicket().getId();
+        try {
+          Ticket t = gateway.retrieveTicket(id);
+          currentTicketChanged(t);
+        } catch (ConnectionFailedException e1) {
+          TracGatewayLocator.handleConnectionProblem();
+        }
+
       }
     });
   }
@@ -239,5 +259,19 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
     }
+  }
+
+  protected final void showDoneLabel() {
+    final String lastText = submitChangesButton.getText();
+    submitChangesButton.setText(bundle.getString("tool_window.tickets.ticket_editor.submit_changes.done"));
+    int delay = IntelliTracConfiguration.getInstance().getConfiguration().getInt("submit_button_done_delay");
+    Timer t = new Timer(delay, new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        submitChangesButton.setText(lastText);
+      }
+    });
+    t.setRepeats(false);
+    t.start();
+
   }
 }
