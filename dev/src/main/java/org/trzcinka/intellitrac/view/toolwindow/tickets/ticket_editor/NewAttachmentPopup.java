@@ -79,6 +79,7 @@ public class NewAttachmentPopup extends JDialog {
           selectedFile = fc.getSelectedFile();
           fileName.setText(selectedFile.getName());
           buttonOK.setEnabled(true);
+          pack();
         }
       }
     });
