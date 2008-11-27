@@ -165,20 +165,24 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
         dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
         dialog.dispose();
+        synchronizeTicket();
       }
     });
     synchronizeButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        int id = ticketsModel.getCurrentTicketModel().getCurrentTicket().getId();
-        try {
-          Ticket t = gateway.retrieveTicket(id);
-          currentTicketChanged(t);
-        } catch (ConnectionFailedException e1) {
-          TracGatewayLocator.handleConnectionProblem();
-        }
-
+        synchronizeTicket();
       }
     });
+  }
+
+  private void synchronizeTicket() {
+    int id = ticketsModel.getCurrentTicketModel().getCurrentTicket().getId();
+    try {
+      Ticket t = gateway.retrieveTicket(id);
+      currentTicketChanged(t);
+    } catch (ConnectionFailedException e1) {
+      TracGatewayLocator.handleConnectionProblem();
+    }
   }
 
   abstract ActionListener retrieveSubmitButtonActionListener();

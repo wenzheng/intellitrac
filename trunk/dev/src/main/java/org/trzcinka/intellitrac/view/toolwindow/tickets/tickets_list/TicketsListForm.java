@@ -16,6 +16,7 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.tickets_list;
 
+import org.apache.commons.lang.StringUtils;
 import org.trzcinka.intellitrac.dto.Report;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
@@ -47,6 +48,7 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
   private ConstantToolbarForm constantToolbarForm;
   private JComboBox filterColumnsComboBox;
   private JTextField filterStringTextField;
+  private JButton synchronizeButton;
 
   private FilterColumnsComboModel filterColumnsModel;
   private TableRowSorter<TicketsListModel> sorter;
@@ -66,12 +68,23 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
         }
       }
     });
+    synchronizeButton.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        synchronizeTicketsList();
+      }
+    });
+  }
+
+  private void synchronizeTicketsList() {
+    ticketsModel.getCurrentReportModel().setCurrentReport(ticketsModel.getCurrentReportModel().getCurrentReport());
   }
 
   private void openTicketEditor() {
-    int selectedRow = ticketsList.convertRowIndexToModel(ticketsList.getSelectedRow());
+    int selectedRow = ticketsList.getSelectedRow();
+
     if (selectedRow != -1) {
-      Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(selectedRow);
+      int convertedRow = ticketsList.convertRowIndexToModel(ticketsList.getSelectedRow());
+      Ticket ticket = ticketsModel.getTicketsListTableModel().getTicket(convertedRow);
       ticketsModel.getCurrentTicketModel().setCurrentTicket(ticket);
       ticketsModel.setCurrentState(State.TICKET_EDITOR);
     }
@@ -132,6 +145,7 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
         tickets = TracGatewayLocator.retrieveTracGateway().retrieveTickets(report.getProperQuery());
       }
       ticketsModel.getTicketsListTableModel().updateTickets(tickets);
+      filterStringTextField.setText(StringUtils.EMPTY);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
       ticketsModel.setCurrentState(State.REPORTS_LIST);
