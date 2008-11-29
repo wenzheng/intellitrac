@@ -6,6 +6,8 @@
   <vendor>Michal Trzcinka</vendor>
   <idea-version since-build="3000"/>
 
+  <!--<resource-bundle>bundle.properties</resource-bundle>-->
+
   <project-components>
     <component>
       <implementation-class>org.trzcinka.intellitrac.components.ToolWindowComponent
@@ -19,5 +21,20 @@
       </implementation-class>
     </component>
   </project-components>
+
+  <actions>
+    <group text="Send code pointer to Trac ticket"
+           id="IntelliTracActionGroup" popup="true">
+      <add-to-group anchor="last" group-id="EditorPopupMenu"/>
+      <separator/>
+      <action id="IntelliTrac.SendCodePointerToDescriptionAction"
+              class="org.trzcinka.intellitrac.view.actions.SendCodePointerToDescriptionAction" text="qwe"/>
+
+      <action id="IntelliTrac.SendCodePointerToCommentAction"
+              class="org.trzcinka.intellitrac.view.actions.SendCodePointerToCommentAction" text="qwe"/>
+    </group>
+
+
+  </actions>
 
 </idea-plugin>

@@ -49,6 +49,7 @@ public class ToolWindowComponent implements ProjectComponent {
   private void initializeModels(Project project) {
     ApplicationModel.getInstance().setProject(project);
     TicketsModel.getInstance().getReportsListModel().setReportListHolder(project.getComponent(ReportsConfigurationComponent.class));
+
   }
 
   public void initComponent() {
