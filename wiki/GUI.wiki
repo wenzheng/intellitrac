@@ -56,9 +56,21 @@ Analogous to the web ticket editor.
 
 This panel will be accessible by clicking "IntelliTrac settings" in Project settings. It will be just a form with following fields:
 
- * Trac URL - text field - direct URL to the Trac project (concrete project, e.g. http://my-track.com/project).
- * Login
- * Password
- * Test connection
+ * Connection 
+   * Trac URL - text field - direct URL to the Trac project (concrete project, e.g.          http://my-track.com/project).
+   * Login
+   * Password
+   * button Test connection
+ * Default values
+   * Component
+   * Priority
+   * Type
+   * Milestone
+   * Version
+ * Ticket templates
+   * list of editable ticket templates
+ * Send code pointer templates
+   * with selection
+   * only caret
 
 OK and Cancel buttons underneath.
