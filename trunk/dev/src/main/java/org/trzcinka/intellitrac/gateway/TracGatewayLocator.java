@@ -34,7 +34,7 @@ public class TracGatewayLocator {
   }
 
   public static void handleConnectionProblem() {
-    Messages.showMessageDialog(bundle.getString("configuration.dialogs.connection_failed"), bundle.getString("dialogs.error"), Messages.getErrorIcon());
+    Messages.showMessageDialog(bundle.getString("configuration.connection.dialogs.connection_failed"), bundle.getString("dialogs.error"), Messages.getErrorIcon());
   }
 
 }

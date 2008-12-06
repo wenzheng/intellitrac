@@ -19,7 +19,7 @@ package org.trzcinka.intellitrac.dto;
 /**
  * Simple JavaBean representing IntelliTrac configuration.
  */
-public class TracConfigurationBean implements TracConfiguration {
+public class ConnectionSettings {
 
   private String tracUrl;
   private String login;
@@ -47,6 +47,10 @@ public class TracConfigurationBean implements TracConfiguration {
 
   public void setPassword(String password) {
     this.password = password;
+  }
+
+  public boolean empty() {
+    return tracUrl == null && login == null && password == null;
   }
 
 }

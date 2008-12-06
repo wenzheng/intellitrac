@@ -29,6 +29,7 @@ import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
 import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
+import static org.trzcinka.intellitrac.view.view_utils.FormUtils.fillComboBox;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -230,36 +231,15 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     return result;
   }
 
-  /**
-   * Fills given comboBoxModel with provided elements.
-   *
-   * @param comboBoxModel not null comboBoxModel.
-   * @param elements      not null elements.
-   * @param selected      element to select. If null, the first element will be selected.
-   * @throws ConnectionFailedException in case of connection problems.
-   */
-  private void fillComboBox(DefaultComboBoxModel comboBoxModel, Iterable<String> elements, Object selected) throws ConnectionFailedException {
-    comboBoxModel.removeAllElements();
-    boolean empty = true;
-    for (String component : elements) {
-      comboBoxModel.addElement(component);
-      empty = false;
-    }
-    if (selected != null) {
-      comboBoxModel.setSelectedItem(selected);
-    } else if (!empty) {
-      comboBoxModel.setSelectedItem(comboBoxModel.getElementAt(0));
-    }
-  }
 
   protected void fillCombosAndChanges(Ticket ticket) {
     try {
-      fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), ticket.getComponent());
-      fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), ticket.getPriority());
-      fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), ticket.getType());
-      fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), ticket.getMilestone());
-      fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), ticket.getVersion());
-      fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), ticket.getResolution());
+      fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), ticket.getComponent(), true);
+      fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), ticket.getPriority(), true);
+      fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), ticket.getType(), true);
+      fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), ticket.getMilestone(), true);
+      fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), ticket.getVersion(), true);
+      fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), ticket.getResolution(), true);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
     }

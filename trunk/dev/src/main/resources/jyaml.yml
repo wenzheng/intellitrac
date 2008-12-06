@@ -1,6 +1,8 @@
 minimalOutput: true
-indentAmount: "    "
+indentAmount: "  "
 suppressWarnings: true
 encoding: "UTF-8"
 transfers:
   report: org.trzcinka.intellitrac.dto.Report
+  template: org.trzcinka.intellitrac.dto.Template
+  send_code_pointer_settings: org.trzcinka.intellitrac.dto.SendCodePointerSettings

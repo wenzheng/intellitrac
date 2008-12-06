@@ -1,0 +1,9 @@
+---
+selectionTemplate: !template
+  name: Selection template
+  content: >
+             [[BR]]${filename}:${line}: {{{ ${selection} }}}[[BR]]
+noSelectionTemplate: !template
+  name: No selection template
+  content: >
+             [[BR]]${filename}:${line}[[BR]]
