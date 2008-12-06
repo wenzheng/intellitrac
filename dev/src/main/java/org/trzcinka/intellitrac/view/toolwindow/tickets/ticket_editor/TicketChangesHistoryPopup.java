@@ -33,7 +33,7 @@ import java.util.List;
 public class TicketChangesHistoryPopup extends JDialog {
   private static final ListCellRenderer CELL_RENDERER = new TicketChangesListCellRenderer();
 
-  private static String tracUrl = ApplicationModel.getInstance().getProject().getComponent(ConfigurationComponent.class).getTracUrl();
+  private static String tracUrl = ApplicationModel.getInstance().getProject().getComponent(ConfigurationComponent.class).getConnectionSettings().getTracUrl();
   private static IWikiModel tracModel = new TracModel(tracUrl, tracUrl);
 
   private JPanel contentPane;

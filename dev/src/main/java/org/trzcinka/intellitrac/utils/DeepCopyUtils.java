@@ -14,30 +14,32 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.dto;
+package org.trzcinka.intellitrac.utils;
 
+import org.apache.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
- * Data interface representing IntelliTrac configuration.
+ * Deep copy.
+ * <p/>
+ * Created on: 2008-12-06 19:33:47 <br/>
+ * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */
-public interface TracConfiguration {
-  ConnectionSettings getConnectionSettings();
 
-  void setConnectionSettings(ConnectionSettings connectionSettings);
+public class DeepCopyUtils {
+  private static final Logger log = Logger.getLogger(DeepCopyUtils.class.getName());
 
-  DefaultValues getDefaultValues();
-
-  void setDefaultValues(DefaultValues defaultValues);
-
-  List<Template> getTicketTemplates();
-
-  void setTicketTemplates(List<Template> templates);
-
-  SendCodePointerSettings getSendCodePointerSettings();
-
-  void setSendCodePointerSettings(SendCodePointerSettings sendCodePointerSettings);
+  public static <T extends Copiable> List<T> deepCopy(Collection<T> list) {
+    List<T> result = new ArrayList<T>(list.size());
+    for (T t : list) {
+      result.add((T) t.deepCopy());
+    }
+    return result;
+  }
 
 }

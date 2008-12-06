@@ -23,19 +23,22 @@ import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
-import com.intellij.openapi.project.Project;
-import com.intellij.util.xmlb.XmlSerializerUtil;
+import org.ho.yaml.Yaml;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.trzcinka.intellitrac.dto.TracConfiguration;
+import org.trzcinka.intellitrac.dto.*;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.utils.DeepCopyUtils;
 import org.trzcinka.intellitrac.view.configuration.ConfigurationForm;
 import org.trzcinka.intellitrac.view.view_utils.IntelliTracIcons;
 
 import javax.swing.*;
+import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Represents per-project plugin configuration.
@@ -49,16 +52,30 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
 
   static final String COMPONENT_NAME = "IntelliTrac.ConfigurationComponent";
 
+  private static final String DEFAULT_TICKET_TEMPLATES_FILENAME = "default_ticket_templates.yml";
+  private static final String DEFAULT_SEND_CODE_POINTER_SETTINGS_FILENAME = "default_send_code_pointer_settings.yml";
+
   private ConfigurationForm form;
 
-  private String tracUrl;
-  private String login;
-  private String password;
-
-  public ConfigurationComponent(Project project) {
-  }
+  private ConnectionSettings connectionSettings;
+  private DefaultValues defaultValues;
+  private List<Template> ticketTemplates;
+  private SendCodePointerSettings sendCodePointerSettings;
 
   public ConfigurationComponent() {
+    initializeDefaults();
+  }
+
+  private void initializeDefaults() {
+    try {
+      connectionSettings = new ConnectionSettings();
+      defaultValues = new DefaultValues();
+      ticketTemplates = Yaml.loadType(getClass().getResourceAsStream("/" + DEFAULT_TICKET_TEMPLATES_FILENAME), ArrayList.class);
+      InputStream scpSettings = getClass().getResourceAsStream("/" + DEFAULT_SEND_CODE_POINTER_SETTINGS_FILENAME);
+      sendCodePointerSettings = Yaml.loadType(scpSettings, SendCodePointerSettings.class);
+    } catch (Exception e) {
+      logger.error("Could not load default data from plugin resources. The IntelliTrac plugin is probably damaged.", e);
+    }
   }
 
   public void initComponent() {
@@ -149,7 +166,7 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
 
   private void setIntelliTracConfiguration() {
     try {
-      TracGatewayLocator.retrieveTracGateway().setConfiguration(this);
+      TracGatewayLocator.retrieveTracGateway().setConfiguration(connectionSettings);
     } catch (MalformedURLException e) {
       TracGatewayLocator.handleConnectionProblem();
     }
@@ -188,36 +205,57 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
    * @param state loaded component state
    */
   public void loadState(ConfigurationComponent state) {
-    XmlSerializerUtil.copyBean(state, this);
+    if (state.getConnectionSettings() != null) {
+      connectionSettings = state.getConnectionSettings();
+    }
+    if (state.getDefaultValues() != null) {
+      defaultValues = state.getDefaultValues();
+    }
+    if (state.getSendCodePointerSettings() != null) {
+      sendCodePointerSettings = state.getSendCodePointerSettings();
+    }
+    if (state.getTicketTemplates() != null) {
+      setTicketTemplates(state.getTicketTemplates());
+    }
     try {
-      TracGatewayLocator.retrieveTracGateway().setConfiguration(this);
+      if (connectionSettings != null && !connectionSettings.empty()) {
+        TracGatewayLocator.retrieveTracGateway().setConfiguration(connectionSettings);
+      }
     } catch (MalformedURLException e) {
-      logger.info("Problem loading configuration", e);
+      logger.error("Problem loading configuration", e);
     }
   }
 
-  public String getTracUrl() {
-    return tracUrl;
+
+  public ConnectionSettings getConnectionSettings() {
+    return connectionSettings;
   }
 
-  public void setTracUrl(String tracUrl) {
-    this.tracUrl = tracUrl;
+  public void setConnectionSettings(ConnectionSettings connectionSettings) {
+    this.connectionSettings = connectionSettings;
   }
 
-  public String getLogin() {
-    return login;
+  public DefaultValues getDefaultValues() {
+    return defaultValues;
   }
 
-  public void setLogin(String login) {
-    this.login = login;
+  public void setDefaultValues(DefaultValues defaultValues) {
+    this.defaultValues = defaultValues;
   }
 
-  public String getPassword() {
-    return password;
+  public List<Template> getTicketTemplates() {
+    return ticketTemplates;
   }
 
-  public void setPassword(String password) {
-    this.password = password;
+  public void setTicketTemplates(List<Template> ticketTemplates) {
+    this.ticketTemplates = DeepCopyUtils.deepCopy(ticketTemplates);
   }
 
+  public SendCodePointerSettings getSendCodePointerSettings() {
+    return sendCodePointerSettings;
+  }
+
+  public void setSendCodePointerSettings(SendCodePointerSettings sendCodePointerSettings) {
+    this.sendCodePointerSettings = sendCodePointerSettings;
+  }
 }

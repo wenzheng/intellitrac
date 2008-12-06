@@ -28,9 +28,9 @@ import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 import org.apache.xmlrpc.client.XmlRpcCommonsTransportFactory;
 import org.trzcinka.intellitrac.dto.Attachment;
+import org.trzcinka.intellitrac.dto.ConnectionSettings;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.dto.TicketChange;
-import org.trzcinka.intellitrac.dto.TracConfiguration;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracError;
 import org.trzcinka.intellitrac.gateway.TracGateway;
@@ -71,23 +71,23 @@ public class XmlRpcTracGateway implements TracGateway {
     return instance;
   }
 
-  public void testConnection(TracConfiguration configuration) throws ConnectionFailedException, MalformedURLException {
+  public void testConnection(ConnectionSettings settings) throws ConnectionFailedException, MalformedURLException {
     try {
-      XmlRpcClient xmlRpcClient = prepareClient(configuration);
+      XmlRpcClient xmlRpcClient = prepareClient(settings);
       xmlRpcClient.execute("system.listMethods", EMPTY_ARRAY);
     } catch (XmlRpcException e) {
       handleException(e);
     }
   }
 
-  private XmlRpcClient prepareClient(TracConfiguration configuration) throws MalformedURLException {
+  private XmlRpcClient prepareClient(ConnectionSettings settings) throws MalformedURLException {
     XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-    config.setServerURL(new URL(StringUtils.removeEnd(configuration.getTracUrl(), "/") + "/login/xmlrpc"));
+    config.setServerURL(new URL(StringUtils.removeEnd(settings.getTracUrl(), "/") + "/login/xmlrpc"));
 
     XmlRpcClient xmlRpcClient = new XmlRpcClient();
     xmlRpcClient.setConfig(config);
     XmlRpcCommonsTransportFactory transportFactory = new XmlRpcCommonsTransportFactory(xmlRpcClient);
-    Credentials credentials = new UsernamePasswordCredentials(configuration.getLogin(), configuration.getPassword());
+    Credentials credentials = new UsernamePasswordCredentials(settings.getLogin(), settings.getPassword());
     HttpClient httpClient = new HttpClient();
     httpClient.getState().setCredentials(AuthScope.ANY, credentials);
 
@@ -107,11 +107,11 @@ public class XmlRpcTracGateway implements TracGateway {
   /**
    * Sets the given configuration.
    *
-   * @param configuration configuration.
+   * @param settings settings.
    * @throws MalformedURLException when provided configuration URL is malformed.
    */
-  public void setConfiguration(TracConfiguration configuration) throws MalformedURLException {
-    client = prepareClient(configuration);
+  public void setConfiguration(ConnectionSettings settings) throws MalformedURLException {
+    client = prepareClient(settings);
     configurationSet = true;
   }
 
