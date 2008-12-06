@@ -40,7 +40,7 @@ public class ApplicationModel {
   private ApplicationModel() {
   }
 
-  public Project getProject() {
+  public static Project getProject() {
     DataContext dataContext = DataManager.getInstance().getDataContext();
     return DataKeys.PROJECT.getData(dataContext);
   }
