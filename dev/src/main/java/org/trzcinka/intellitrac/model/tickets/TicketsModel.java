@@ -73,6 +73,10 @@ public class TicketsModel {
     notifyListeners(currentState);
   }
 
+  public State getCurrentState() {
+    return currentState;
+  }
+
   /**
    * Returns previous state or does nothing if there is no previous state. Notifies its listeners about the change.
    */

@@ -26,12 +26,14 @@ public class ToolWindowForm extends BaseForm {
   private JTabbedPane tabbedPane;
   private JPanel rootComponent;
 
+  private TicketsTabForm ticketsTabForm;
+
   public ToolWindowForm() {
   }
 
   private void createUIComponents() {
     tabbedPane = new JTabbedPane();
-    TicketsTabForm ticketsTabForm = new TicketsTabForm();
+    ticketsTabForm = new TicketsTabForm();
     tabbedPane.addTab(bundle.getString("tool_window.tabs.tickets"), ticketsTabForm.getRootComponent());
   }
 
@@ -39,4 +41,11 @@ public class ToolWindowForm extends BaseForm {
     return rootComponent;
   }
 
+  public void appendTextToComment(String text) {
+    ticketsTabForm.appendTextToComment(text);
+  }
+
+  public void appendTextToDescription(String text) {
+    ticketsTabForm.appendTextToDescription(text);
+  }
 }

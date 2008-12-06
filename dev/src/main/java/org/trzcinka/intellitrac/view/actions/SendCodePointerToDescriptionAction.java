@@ -16,9 +16,11 @@
 
 package org.trzcinka.intellitrac.view.actions;
 
-import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import org.apache.log4j.Logger;
+import org.trzcinka.intellitrac.components.ToolWindowComponent;
+import org.trzcinka.intellitrac.model.tickets.State;
+import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 
 /**
  * todo class description
@@ -29,11 +31,18 @@ import org.apache.log4j.Logger;
  * @author Michal Trzcinka
  */
 
-public class SendCodePointerToDescriptionAction extends AnAction {
+public class SendCodePointerToDescriptionAction extends BaseSendCodePointerAction {
   private static final Logger log = Logger.getLogger(SendCodePointerToDescriptionAction.class.getName());
 
-  public void actionPerformed(AnActionEvent event) {
-    //TODO: Implement
+  void appendText(ToolWindowComponent toolWindowComponent, String text) {
+    toolWindowComponent.appendTextToDescription(text);
+  }
+
+  @Override
+  public void update(AnActionEvent e) {
+    State state = TicketsModel.getInstance().getCurrentState();
+    boolean enabled = state == State.TICKET_EDITOR || state == State.TICKET_CREATOR;
+    e.getPresentation().setEnabled(enabled);
   }
 
 }

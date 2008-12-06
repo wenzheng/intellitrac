@@ -71,4 +71,19 @@ public class TicketsTabForm extends BaseTicketsForm implements TicketsStateChang
     headerLabel.setText(bundle.getString(headerKey));
   }
 
+  public void appendTextToComment(String text) {
+    if (ticketsModel.getCurrentState().equals(State.TICKET_CREATOR)) {
+      ticketCreatorForm.appendTextToComment(text);
+    } else if (ticketsModel.getCurrentState().equals(State.TICKET_EDITOR)) {
+      ticketEditorForm.appendTextToComment(text);
+    }
+  }
+
+  public void appendTextToDescription(String text) {
+    if (ticketsModel.getCurrentState().equals(State.TICKET_CREATOR)) {
+      ticketCreatorForm.appendTextToDescription(text);
+    } else if (ticketsModel.getCurrentState().equals(State.TICKET_EDITOR)) {
+      ticketEditorForm.appendTextToDescription(text);
+    }
+  }
 }

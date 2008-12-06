@@ -183,7 +183,7 @@
                 <constraints/>
                 <properties>
                   <icon value="images/new_template.png"/>
-                  <text resource-bundle="bundle" key="configuration.send_code_pointer_templates.new"/>
+                  <text resource-bundle="bundle" key="configuration.ticket_templates.new"/>
                 </properties>
               </component>
               <component id="15fc9" class="javax.swing.JButton" binding="removeButton" default-binding="true">
@@ -191,7 +191,7 @@
                 <properties>
                   <enabled value="false"/>
                   <icon value="images/delete_template.png"/>
-                  <text resource-bundle="bundle" key="configuration.send_code_pointer_templates.remove"/>
+                  <text resource-bundle="bundle" key="configuration.ticket_templates.remove"/>
                 </properties>
               </component>
             </children>

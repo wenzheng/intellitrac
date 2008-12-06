@@ -30,7 +30,7 @@ import java.text.MessageFormat;
 
 public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTicketListener {
 
-  private static Logger log = Logger.getInstance(TicketEditorForm.class.getName());
+  private static Logger logger = Logger.getInstance(TicketEditorForm.class.getName());
 
   public void currentTicketChanged(Ticket ticket) {
     synchronizeButton.setVisible(true);
@@ -88,4 +88,11 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
 
   }
 
+  public void appendTextToComment(String text) {
+    commentTextPane.setText(descriptionTextPane.getText() + text);
+  }
+
+  public void appendTextToDescription(String text) {
+    descriptionTextPane.setText(descriptionTextPane.getText() + text);
+  }
 }
