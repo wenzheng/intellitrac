@@ -18,6 +18,7 @@ package org.trzcinka.intellitrac.view.toolwindow.tickets.reports_list;
 
 import com.intellij.openapi.ui.Messages;
 import org.trzcinka.intellitrac.dto.Report;
+import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.model.tickets.State;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
@@ -57,7 +58,7 @@ public class ReportsListForm extends BaseTicketsForm {
         Report selectedReport = (Report) reportsList.getSelectedValue();
         if (selectedReport != null) {
           String message = bundle.getString("tool_window.tickets.reports_list.confirm_report_removal");
-          int answer = Messages.showYesNoDialog(project, message, bundle.getString("dialogs.warning"), Messages.getQuestionIcon());
+          int answer = Messages.showYesNoDialog(ApplicationModel.getProject(), message, bundle.getString("dialogs.warning"), Messages.getQuestionIcon());
           if (answer == 0) {
             ticketsModel.getReportsListModel().removeReport(selectedReport);
           }

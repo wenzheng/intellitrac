@@ -17,10 +17,12 @@
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
 import com.intellij.openapi.diagnostic.Logger;
+import org.trzcinka.intellitrac.components.ConfigurationComponent;
 import org.trzcinka.intellitrac.dto.Attachment;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
 
@@ -70,7 +72,8 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
         } else if (reassignToRadioButton.isSelected()) {
           t.setOwner(reassignedUser.getText());
         } else if (acceptRadioButton.isSelected()) {
-          t.setStatus("accepted"); //TODO: hardcoding
+          t.setStatus(IntelliTracConfiguration.getInstance().getConfiguration().getString("status_upon_accepting"));
+          t.setOwner(ApplicationModel.getProject().getComponent(ConfigurationComponent.class).getConnectionSettings().getLogin());
         }
 
         try {

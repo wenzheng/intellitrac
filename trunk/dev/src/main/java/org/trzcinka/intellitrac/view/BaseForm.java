@@ -25,6 +25,5 @@ import java.util.ResourceBundle;
 public abstract class BaseForm {
 
   protected static ResourceBundle bundle = BundleLocator.getBundle();
-  protected static Project project = ApplicationModel.getInstance().getProject();
 
 }
