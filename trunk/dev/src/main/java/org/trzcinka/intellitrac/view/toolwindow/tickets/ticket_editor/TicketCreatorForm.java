@@ -16,6 +16,7 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
+import com.intellij.openapi.diagnostic.Logger;
 import org.apache.commons.lang.StringUtils;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
@@ -26,6 +27,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class TicketCreatorForm extends BaseTicketEditorForm {
+
+  private static Logger logger = Logger.getInstance(TicketCreatorForm.class.getName());
 
   ActionListener retrieveSubmitButtonActionListener() {
     return new ActionListener() {
@@ -67,4 +70,11 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     fillCombosAndChanges(ticket);
   }
 
+  public void appendTextToComment(String text) {
+    commentTextPane.setText(descriptionTextPane.getText() + text);
+  }
+
+  public void appendTextToDescription(String text) {
+    descriptionTextPane.setText(descriptionTextPane.getText() + text);
+  }
 }

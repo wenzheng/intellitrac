@@ -16,32 +16,27 @@
 
 package org.trzcinka.intellitrac.view.actions;
 
-import com.intellij.openapi.actionSystem.AnActionEvent;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.trzcinka.intellitrac.components.ToolWindowComponent;
-import org.trzcinka.intellitrac.model.tickets.State;
-import org.trzcinka.intellitrac.model.tickets.TicketsModel;
+import org.trzcinka.intellitrac.dto.Template;
 
 /**
  * todo class description
  * <p/>
- * Created on: 2008-11-29 22:15:21 <br/>
+ * Created on: 2008-12-06 20:57:58 <br/>
  * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */
 
-public class SendCodePointerToCommentAction extends BaseSendCodePointerAction {
-  private static final Logger log = Logger.getLogger(SendCodePointerToCommentAction.class.getName());
+public class TemplateProcessor {
+  private static final Logger log = Logger.getLogger(TemplateProcessor.class.getName());
 
-  void appendText(ToolWindowComponent toolWindowComponent, String text) {
-    toolWindowComponent.appendTextToComment(text);
+  public static String processTemplate(Template template, TemplateParams params) {
+    String templateText = template.getContent();
+    String withFileReplaced = StringUtils.replace(templateText, TemplateParams.FILE_NAME, params.getFileName());
+    String withLineReplaced = StringUtils.replace(withFileReplaced, TemplateParams.LINE, String.valueOf(params.getLine()));
+    return StringUtils.replace(withLineReplaced, TemplateParams.SELECTION, String.valueOf(params.getSelection()));
   }
 
-  @Override
-  public void update(AnActionEvent e) {
-    State state = TicketsModel.getInstance().getCurrentState();
-    boolean enabled = state == State.TICKET_EDITOR;
-    e.getPresentation().setEnabled(enabled);
-  }
 }

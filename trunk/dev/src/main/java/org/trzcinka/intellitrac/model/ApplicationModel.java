@@ -22,6 +22,9 @@
  */
 package org.trzcinka.intellitrac.model;
 
+import com.intellij.ide.DataManager;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.actionSystem.DataKeys;
 import com.intellij.openapi.project.Project;
 
 /**
@@ -29,8 +32,6 @@ import com.intellij.openapi.project.Project;
  */
 public class ApplicationModel {
   private static ApplicationModel instance = new ApplicationModel();
-
-  private Project project;
 
   public static ApplicationModel getInstance() {
     return instance;
@@ -40,10 +41,8 @@ public class ApplicationModel {
   }
 
   public Project getProject() {
-    return project;
+    DataContext dataContext = DataManager.getInstance().getDataContext();
+    return DataKeys.PROJECT.getData(dataContext);
   }
 
-  public void setProject(Project project) {
-    this.project = project;
-  }
 }

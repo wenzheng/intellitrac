@@ -26,7 +26,6 @@ import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jetbrains.annotations.NotNull;
 import org.trzcinka.intellitrac.BundleLocator;
-import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 import org.trzcinka.intellitrac.view.toolwindow.ToolWindowForm;
 import org.trzcinka.intellitrac.view.view_utils.IntelliTracIcons;
@@ -41,15 +40,15 @@ public class ToolWindowComponent implements ProjectComponent {
 
   private Project project;
 
+  private ToolWindowForm toolWindowForm;
+
   public ToolWindowComponent(Project project) {
     this.project = project;
     initializeModels(project);
   }
 
   private void initializeModels(Project project) {
-    ApplicationModel.getInstance().setProject(project);
     TicketsModel.getInstance().getReportsListModel().setReportListHolder(project.getComponent(ReportsConfigurationComponent.class));
-
   }
 
   public void initComponent() {
@@ -62,7 +61,7 @@ public class ToolWindowComponent implements ProjectComponent {
     toolWindow.setIcon(IntelliTracIcons.getInstance().getSmallIcon());
 
     ContentFactory contentFactory = PeerFactory.getInstance().getContentFactory();
-    ToolWindowForm toolWindowForm = new ToolWindowForm();
+    toolWindowForm = new ToolWindowForm();
     Content content = contentFactory.createContent(toolWindowForm.getRootComponent(), null, false);
 
     toolWindow.getContentManager().addContent(content);
@@ -89,4 +88,11 @@ public class ToolWindowComponent implements ProjectComponent {
   public void projectClosed() {
   }
 
+  public void appendTextToComment(String text) {
+    toolWindowForm.appendTextToComment(text);
+  }
+
+  public void appendTextToDescription(String text) {
+    toolWindowForm.appendTextToDescription(text);
+  }
 }
