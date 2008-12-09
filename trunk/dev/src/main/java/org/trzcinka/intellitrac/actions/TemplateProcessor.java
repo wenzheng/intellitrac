@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.actions;
+package org.trzcinka.intellitrac.actions;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;

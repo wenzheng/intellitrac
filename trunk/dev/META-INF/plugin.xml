@@ -28,10 +28,10 @@
       <add-to-group anchor="last" group-id="EditorPopupMenu"/>
       <separator/>
       <action id="IntelliTrac.SendCodePointerToDescriptionAction"
-              class="org.trzcinka.intellitrac.view.actions.SendCodePointerToDescriptionAction" text="To description"/>
+              class="org.trzcinka.intellitrac.actions.SendCodePointerToDescriptionAction" text="To description"/>
 
       <action id="IntelliTrac.SendCodePointerToCommentAction"
-              class="org.trzcinka.intellitrac.view.actions.SendCodePointerToCommentAction" text="To comment"/>
+              class="org.trzcinka.intellitrac.actions.SendCodePointerToCommentAction" text="To comment"/>
     </group>
 
 

@@ -223,6 +223,17 @@ public class XmlRpcTracGateway implements TracGateway {
     }
   }
 
+  public String wikiToHtml(String rawText) throws ConnectionFailedException, TracError {
+    String result = null;
+    try {
+      Object response = retrieveClient().execute("wiki.wikiToHtml", new Object[]{rawText == null ? StringUtils.EMPTY : rawText});
+      result = (String) response;
+    } catch (XmlRpcException e) {
+      handleException(e);
+    }
+    return result;
+  }
+
   private List<Attachment> retrieveAttachments(int ticketId) throws ConnectionFailedException, TracError {
     List<Attachment> result = new ArrayList<Attachment>();
     try {

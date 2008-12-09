@@ -27,9 +27,9 @@ import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
 import org.trzcinka.intellitrac.model.tickets.TicketsModel;
+import org.trzcinka.intellitrac.view.TracSyntaxEditor;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.BaseTicketsForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.ConstantToolbarForm;
-import static org.trzcinka.intellitrac.view.view_utils.FormUtils.fillComboBox;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -60,7 +60,7 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   private JComboBox versionComboBox;
   protected JTextField keywordsTextField;
   protected JTextField ccTextField;
-  protected JTextPane descriptionTextPane;
+  protected TracSyntaxEditor descriptionTextPane;
   private JRadioButton leaveRadioButton;
   protected JRadioButton resolveAsRadioButton;
   private JComboBox resolutionsComboBox;
@@ -68,7 +68,7 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
   protected JTextField reassignedUser;
   protected JRadioButton acceptRadioButton;
   protected JButton submitChangesButton;
-  protected JTextPane commentTextPane;
+  protected TracSyntaxEditor commentTextPane;
   protected JPanel actionsPanel;
   protected JTextField assignToTextField;
   protected JLabel assignToLabel;
@@ -231,19 +231,6 @@ public abstract class BaseTicketEditorForm extends BaseTicketsForm implements Cu
     return result;
   }
 
-
-  protected void fillCombosAndChanges(Ticket ticket) {
-    try {
-      fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), ticket.getComponent(), true);
-      fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), ticket.getPriority(), true);
-      fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), ticket.getType(), true);
-      fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), ticket.getMilestone(), true);
-      fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), ticket.getVersion(), true);
-      fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), ticket.getResolution(), true);
-    } catch (ConnectionFailedException e) {
-      TracGatewayLocator.handleConnectionProblem();
-    }
-  }
 
   protected final void showDoneLabel() {
     final String lastText = submitChangesButton.getText();

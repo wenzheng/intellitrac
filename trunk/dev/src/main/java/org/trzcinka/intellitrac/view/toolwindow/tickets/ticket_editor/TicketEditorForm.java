@@ -25,6 +25,7 @@ import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
+import org.trzcinka.intellitrac.view.view_utils.FormUtils;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,7 +44,9 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
     keywordsTextField.setText(ticket.getKeywords());
     ccTextField.setText(ticket.getCc());
     descriptionTextPane.setText(ticket.getDescription());
-
+    descriptionTextPane.setPreviewMode();
+    commentTextPane.setText(null);
+    commentTextPane.setEditMode();
     changeHistoryButton.setVisible(true);
 
     actionsPanel.setVisible(true);
@@ -97,5 +100,18 @@ public class TicketEditorForm extends BaseTicketEditorForm implements CurrentTic
 
   public void appendTextToDescription(String text) {
     descriptionTextPane.setText(descriptionTextPane.getText() + text);
+  }
+
+  private void fillCombosAndChanges(Ticket ticket) {
+    try {
+      FormUtils.fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), ticket.getComponent(), true);
+      FormUtils.fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), ticket.getPriority(), true);
+      FormUtils.fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), ticket.getType(), true);
+      FormUtils.fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), ticket.getMilestone(), true);
+      FormUtils.fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), ticket.getVersion(), true);
+      FormUtils.fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), ticket.getResolution(), true);
+    } catch (ConnectionFailedException e) {
+      TracGatewayLocator.handleConnectionProblem();
+    }
   }
 }

@@ -16,9 +16,11 @@
 
 package org.trzcinka.intellitrac.dto;
 
+import org.trzcinka.intellitrac.utils.Copiable;
+
 import java.util.Date;
 
-public class TicketChange {
+public class TicketChange implements Copiable<TicketChange> {
 
   public static final String COMMENT = "comment";
 
@@ -75,6 +77,17 @@ public class TicketChange {
 
   public void setPermanent(boolean permanent) {
     this.permanent = permanent;
+  }
+
+  public TicketChange deepCopy() {
+    TicketChange result = new TicketChange();
+    result.author = author;
+    result.field = field;
+    result.newValue = newValue;
+    result.oldValue = oldValue;
+    result.permanent = permanent;
+    result.time = time;
+    return result;
   }
 
 }

@@ -14,39 +14,28 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.actions;
+package org.trzcinka.intellitrac.view.toolwindow.help;
+
+import org.apache.log4j.Logger;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * todo class description
+ * <p/>
+ * Created on: 2008-12-09 01:53:21 <br/>
+ * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */
 
-public class TemplateParams {
+public class HelpTabForm {
+  private static final Logger log = Logger.getLogger(HelpTabForm.class.getName());
+  private JPanel rootComponent;
 
-  public static final String FILE_NAME = "${filename}";
-  public static final String LINE = "${line}";
-  public static final String SELECTION = "${selection}";
-
-  private String fileName;
-  private int line;
-  private String selection;
-
-  public TemplateParams(String fileName, int line, String selection) {
-    this.fileName = fileName;
-    this.line = line;
-    this.selection = selection;
+  public Component getRootComponent() {
+    return rootComponent;
   }
 
-  public String getFileName() {
-    return fileName;
-  }
-
-  public int getLine() {
-    return line;
-  }
-
-  public String getSelection() {
-    return selection;
-  }
 }

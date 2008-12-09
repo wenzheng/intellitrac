@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.actions;
+package org.trzcinka.intellitrac.actions;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -68,6 +68,5 @@ public abstract class BaseSendCodePointerAction extends AnAction {
 
   abstract void appendText(ToolWindowComponent toolWindowComponent, String text);
 
-  
 
 }

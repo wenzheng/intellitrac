@@ -26,6 +26,9 @@ import com.intellij.ide.DataManager;
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.actionSystem.DataKeys;
 import com.intellij.openapi.project.Project;
+import org.trzcinka.intellitrac.components.ConfigurationComponent;
+import org.trzcinka.intellitrac.dto.ConnectionSettings;
+import org.trzcinka.intellitrac.dto.DefaultValues;
 
 /**
  * Represents general application model. Currently just holds current project instance.
@@ -43,6 +46,14 @@ public class ApplicationModel {
   public static Project getProject() {
     DataContext dataContext = DataManager.getInstance().getDataContext();
     return DataKeys.PROJECT.getData(dataContext);
+  }
+
+  public static ConnectionSettings getConnectionSettings() {
+    return getProject().getComponent(ConfigurationComponent.class).getConnectionSettings();
+  }
+
+  public static DefaultValues getDefaultValues() {
+    return getProject().getComponent(ConfigurationComponent.class).getDefaultValues();
   }
 
 }
