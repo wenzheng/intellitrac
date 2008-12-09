@@ -3,7 +3,7 @@
 
 = Table Of Contents =
 
-= What is IntelliTrac? =
+= What is IntelliTrac =
 
 IntelliTrac is an open-source IntelliJ IDEA plugin that enables you to manage Trac environments from within the IDE. It requires Trac 0.11 environment with XML-RPC plugin installed. See blabla
 
@@ -20,6 +20,11 @@ If you don't have XML-RPC plugin installed, please visit http://trac-hacks.org/w
 
 *Important:* when you download the zipped source of the plugin, you will discover there are three directories: 0.10, sandbox and trunk. Please install the plugin from trunk directory - there may appear some problems with 0.10 while running Trac on Python < 2.5.
 
- # Key features
+To ensure the plugin is up and running, launch http://your_trac_environment/xmlrpc in your web browser. You should see a list of available XML-RPC procedures.
+
+= Key features =
+
+
+
  # FAQ/troubleshooting
  # Feedback
