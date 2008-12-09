@@ -1,3 +1,4 @@
 #summary A short user's guide to IntelliTrac.
+#labels Featured
 
 = Table Of Contents =
