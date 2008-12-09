@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.trzcinka.intellitrac.view.actions;
+package org.trzcinka.intellitrac.actions;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import org.apache.log4j.Logger;

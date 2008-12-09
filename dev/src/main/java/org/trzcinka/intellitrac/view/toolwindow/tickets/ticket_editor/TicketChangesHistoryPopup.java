@@ -16,28 +16,20 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
-import info.bliki.wiki.model.IWikiModel;
-import info.bliki.wiki.model.TracModel;
-import org.trzcinka.intellitrac.components.ConfigurationComponent;
 import org.trzcinka.intellitrac.dto.TicketChange;
-import org.trzcinka.intellitrac.model.ApplicationModel;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.List;
 
 public class TicketChangesHistoryPopup extends JDialog {
   private static final ListCellRenderer CELL_RENDERER = new TicketChangesListCellRenderer();
 
-  private static String tracUrl = ApplicationModel.getInstance().getProject().getComponent(ConfigurationComponent.class).getConnectionSettings().getTracUrl();
-  private static IWikiModel tracModel = new TracModel(tracUrl, tracUrl);
-
   private JPanel contentPane;
-  private JButton buttonOK;
   private JList changesList;
   private JEditorPane commentPane;
   private DefaultListModel changesListModel;
@@ -49,29 +41,22 @@ public class TicketChangesHistoryPopup extends JDialog {
     this.changes = changes;
     setContentPane(contentPane);
     setModal(true);
-    getRootPane().setDefaultButton(buttonOK);
-
-    buttonOK.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent e) {
-        onOK();
-      }
-    });
 
     changesList.addListSelectionListener(new ListSelectionListener() {
       public void valueChanged(ListSelectionEvent e) {
         TicketChange ticketChange = (TicketChange) changesList.getSelectedValue();
         if (ticketChange.getField().equals(TicketChange.COMMENT)) {
           String value = ticketChange.getNewValue();
-          commentPane.setText(tracModel.render(value));
+          try {
+            commentPane.setText(TracGatewayLocator.retrieveTracGateway().wikiToHtml(value));
+          } catch (ConnectionFailedException e1) {
+            TracGatewayLocator.handleConnectionProblem();
+          }
         } else {
           commentPane.setText(null);
         }
       }
     });
-  }
-
-  private void onOK() {
-    dispose();
   }
 
   private void createUIComponents() {

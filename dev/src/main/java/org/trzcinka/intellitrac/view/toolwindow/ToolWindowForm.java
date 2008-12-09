@@ -17,7 +17,9 @@
 package org.trzcinka.intellitrac.view.toolwindow;
 
 import org.trzcinka.intellitrac.view.BaseForm;
+import org.trzcinka.intellitrac.view.toolwindow.help.HelpTabForm;
 import org.trzcinka.intellitrac.view.toolwindow.tickets.TicketsTabForm;
+import org.trzcinka.intellitrac.view.toolwindow.wiki.WikiTabForm;
 
 import javax.swing.*;
 
@@ -27,6 +29,9 @@ public class ToolWindowForm extends BaseForm {
   private JPanel rootComponent;
 
   private TicketsTabForm ticketsTabForm;
+  private WikiTabForm wikiTabForm;
+  private HelpTabForm helpTabForm;
+
 
   public ToolWindowForm() {
   }
@@ -34,7 +39,11 @@ public class ToolWindowForm extends BaseForm {
   private void createUIComponents() {
     tabbedPane = new JTabbedPane();
     ticketsTabForm = new TicketsTabForm();
+    wikiTabForm = new WikiTabForm();
+    helpTabForm = new HelpTabForm();
     tabbedPane.addTab(bundle.getString("tool_window.tabs.tickets"), ticketsTabForm.getRootComponent());
+    tabbedPane.addTab(bundle.getString("tool_window.tabs.wiki"), wikiTabForm.getRootComponent());
+    tabbedPane.addTab(bundle.getString("tool_window.tabs.help"), helpTabForm.getRootComponent());
   }
 
   public JComponent getRootComponent() {

@@ -34,10 +34,10 @@ import java.util.List;
 public class DeepCopyUtils {
   private static final Logger log = Logger.getLogger(DeepCopyUtils.class.getName());
 
-  public static <T extends Copiable> List<T> deepCopy(Collection<T> list) {
+  public static <T extends Copiable<T>> List<T> deepCopy(Collection<T> list) {
     List<T> result = new ArrayList<T>(list.size());
     for (T t : list) {
-      result.add((T) t.deepCopy());
+      result.add(t.deepCopy());
     }
     return result;
   }

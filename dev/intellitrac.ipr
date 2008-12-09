@@ -255,6 +255,9 @@
       <item class="org.trzcinka.intellitrac.gui.components.toolwindow.tickets.ConstantToolbarForm" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
       </item>
+      <item class="org.trzcinka.intellitrac.view.TracSyntaxEditor" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
     </group>
   </component>
   <component name="ProjectFileVersion" converted="true" />
@@ -517,7 +520,6 @@
         <root url="jar://$PROJECT_DIR$/lib/src/xmlrpc-server-3.1-sources.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/src/commons-lang-2.4-sources.jar!/" />
         <root url="jar://$PROJECT_DIR$/lib/src/src_openapi.zip!/" />
-        <root url="file://$PROJECT_DIR$/lib/src/bliki" />
         <root url="jar://$PROJECT_DIR$/lib/src/commons-io-1.4-sources.jar!/" />
         <root url="file://$PROJECT_DIR$/lib/src/httpclient-3.1/java" />
       </SOURCES>

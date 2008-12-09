@@ -146,4 +146,11 @@ public interface TracGateway {
    */
   void saveAttachment(int ticketId, File attachment, String description, boolean replace) throws ConnectionFailedException, TracError;
 
+  /**
+   * @param rawText text (may be null).
+   * @return Renders given Wiki text in HTML.
+   * @throws ConnectionFailedException if there were connection problems.
+   * @throws TracError                 if there were unknown Trac problems.
+   */
+  String wikiToHtml(String rawText) throws ConnectionFailedException, TracError;
 }

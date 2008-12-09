@@ -18,10 +18,13 @@ package org.trzcinka.intellitrac.view.toolwindow.tickets.ticket_editor;
 
 import com.intellij.openapi.diagnostic.Logger;
 import org.apache.commons.lang.StringUtils;
+import org.trzcinka.intellitrac.dto.DefaultValues;
 import org.trzcinka.intellitrac.dto.Ticket;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.model.tickets.State;
+import org.trzcinka.intellitrac.view.view_utils.FormUtils;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -57,6 +60,7 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     keywordsTextField.setText(StringUtils.EMPTY);
     ccTextField.setText(StringUtils.EMPTY);
     descriptionTextPane.setText(StringUtils.EMPTY);
+    descriptionTextPane.setEditMode();
     commentTextPane.setText(StringUtils.EMPTY);
 
     changeHistoryButton.setVisible(false);
@@ -67,8 +71,9 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     attachmentsPanel.setVisible(false);
     commentPanel.setVisible(false);
 
-    fillCombosAndChanges(ticket);
+    fillCombosAndChanges();
   }
+
 
   public void appendTextToComment(String text) {
     commentTextPane.setText(descriptionTextPane.getText() + text);
@@ -76,5 +81,22 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
 
   public void appendTextToDescription(String text) {
     descriptionTextPane.setText(descriptionTextPane.getText() + text);
+  }
+
+  private void fillCombosAndChanges() {
+    DefaultValues defaultValues = ApplicationModel.getDefaultValues();
+    if (defaultValues == null) {
+      defaultValues = new DefaultValues();
+    }
+    try {
+      FormUtils.fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), defaultValues.getComponent(), true);
+      FormUtils.fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), defaultValues.getPriority(), true);
+      FormUtils.fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), defaultValues.getType(), true);
+      FormUtils.fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), defaultValues.getMilestone(), true);
+      FormUtils.fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), defaultValues.getVersion(), true);
+      FormUtils.fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), null, true);
+    } catch (ConnectionFailedException e) {
+      TracGatewayLocator.handleConnectionProblem();
+    }
   }
 }
