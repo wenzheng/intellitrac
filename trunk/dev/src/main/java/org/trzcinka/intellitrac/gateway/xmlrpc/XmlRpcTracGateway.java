@@ -34,6 +34,7 @@ import org.trzcinka.intellitrac.dto.TicketChange;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 import org.trzcinka.intellitrac.gateway.TracError;
 import org.trzcinka.intellitrac.gateway.TracGateway;
+import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 
 import java.io.File;
 import java.io.IOException;
@@ -82,7 +83,8 @@ public class XmlRpcTracGateway implements TracGateway {
 
   private XmlRpcClient prepareClient(ConnectionSettings settings) throws MalformedURLException {
     XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-    config.setServerURL(new URL(StringUtils.removeEnd(settings.getTracUrl(), "/") + "/login/xmlrpc"));
+    String suffix = IntelliTracConfiguration.getInstance().getConfiguration().getString("xmlrpc_suffix");
+    config.setServerURL(new URL(StringUtils.removeEnd(settings.getTracUrl(), "/") + suffix));
 
     XmlRpcClient xmlRpcClient = new XmlRpcClient();
     xmlRpcClient.setConfig(config);

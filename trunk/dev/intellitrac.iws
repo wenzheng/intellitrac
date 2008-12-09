@@ -42,43 +42,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/actions" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/wiki/WikiTabForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketCreatorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketCreatorForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/SendCodePointerToDescriptionAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/SendCodePointerToDescriptionAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/help/HelpTabForm.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/TracSyntaxEditor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/help" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/utils/DeepCopyUtils.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/utils/DeepCopyUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/ApplicationModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/ApplicationModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/TracSyntaxEditor.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/TemplateProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/TemplateProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/bundle.properties" afterPath="$PROJECT_DIR$/src/main/resources/bundle.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/TemplateParams.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/TemplateParams.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketEditorForm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/help/HelpTabForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.java" />
-      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\jar\bliki-3.0.8.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGateway.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\actions\TemplateProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/TemplateProcessor.java" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\actions\TemplateParams.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/TemplateParams.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\actions\BaseSendCodePointerAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/BaseSendCodePointerAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/BaseSendCodePointerAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/BaseSendCodePointerAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/wiki/WikiTabForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TicketChange.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/dto/TicketChange.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/ToolWindowForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/ToolWindowForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/SendCodePointerToCommentAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/SendCodePointerToCommentAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/BaseTicketEditorForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.ipr" afterPath="$PROJECT_DIR$/intellitrac.ipr" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\actions\SendCodePointerToDescriptionAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/SendCodePointerToDescriptionAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/wiki" />
-      <change type="MOVED" beforePath="C:\dev\projects\intellitrac\dev\src\main\java\org\trzcinka\intellitrac\view\actions\SendCodePointerToCommentAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/actions/SendCodePointerToCommentAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,6 +72,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java" line="266" class="org.trzcinka.intellitrac.gateway.xmlrpc.XmlRpcTracGateway" package="org.trzcinka.intellitrac.gateway.xmlrpc">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -152,8 +134,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -229,6 +211,10 @@
           <option name="myItemId" value="intellitrac" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
@@ -279,8 +265,8 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -311,358 +297,14 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="09.12.08 02:00" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\Messages_en.properties</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\HtmlTokenizer.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\Utils.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\CompactXmlSerializer.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\PrettyXmlSerializer.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\EndTagToken.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\CommentToken.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\SimpleXmlSerializer.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\DoctypeToken.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\ContentToken.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\HtmlTagProvider.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\BaseToken.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\ITagInfoProvider.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\TagToken.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\TagNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\SpecialEntities.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\CommandLine.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\TagInfo.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\XmlSerializer.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\DivErrorboxExtractor.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\AbstractHtmlExtractor.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\HtmlFormExtractor.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\HtmlForm.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\HtmlCleaner.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\latex.properties</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\Messages_de.properties</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\HtmlToDocbookContentHandler.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\FormattingXMLStreamWriter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\DocbookGenerator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\IgnoreDtdEntityResolver.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\BBCodeModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\IEventListener.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\SemanticRelation.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\Configuration.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\AbstractWikiModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\TracModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\APIWikiModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\PDFWikiModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\IConfiguration.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\WikiModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\SemanticAttribute.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\ImageFormat.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\DefaultEventListener.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\IWikiModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\AbstractTracModel.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\Reference.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\PrintArticle.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\WikiXMLParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\IArticleFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\WikiArticle.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\PDFConverter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\LaTeXConverter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\IParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\TracParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\MagicWord.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\Util.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPRow.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\Encoder.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\AbstractParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WikipediaScanner.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\StringPair.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPList.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WikipediaParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\ITextConverter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPCell.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\TemplateParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WikiTextReader.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPListElement.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\HTMLConverter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPTable.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Switch.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Padright.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\AbstractTemplateFunction.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\LCFirst.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\UC.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Ifexist.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Localurl.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Expr.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Padleft.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\UCFirst.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\URLEncode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\NS.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Ifeq.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Fullurl.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\ITemplateFunction.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Ifexpr.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\If.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\LC.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\SyntaxError.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\IntegerNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\FloatNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\FractionNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\FunctionNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\SymbolNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\StringNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\IParserFactory.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\ASTNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\NumberNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IBooleanBoolean1Function.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDoubleValue.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\DoubleNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IBooleanBoolean2Function.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDouble0Function.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDoubleFunction.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDouble1Function.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IBooleanDouble2Function.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDouble2Function.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\DoubleEvaluator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\Scanner.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\DivideOperator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\SubtractOperator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\ASTNodeFactory.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PrePlusOperator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PostfixOperator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PrefixOperator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\InfixOperator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\Operator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PreMinusOperator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\Parser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\util</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\util\Console.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\util\GenerateOperatorArrays.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\util\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Time.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\BrTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HTMLTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\TableOfContentTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\DtTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HrTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\RefTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPParagraphTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPBoldItalicTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HTMLBlockTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\ATag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\ReferencesTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\PreTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\DdTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPATag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\MathTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HTMLEndTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPPreTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\SourceCodeFormatter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\XMLCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\CSharpCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\JavaCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\ABAPCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\GroovyCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\AbstractCPPBasedCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\JavaScriptCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\PHPCodeFilter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\PTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\DlTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\SourceTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\NowikiTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\TagStack.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\IBodyTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\INoBodyParsingTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\Attribute.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\WikiTagNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\NodeAttribute.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\AbstractNode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\TrJSPWikiTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\ToJSPWiki.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\TdJSPWikiTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\ThJSPWikiTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\HTML2WikiConverter.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\HTMLTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\TdTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\IHTMLToWiki.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ThTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ListTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\OpenCloseHTMLTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ImgTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ToWikipedia.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ATag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\AbstractHTMLToWiki.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\TrTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\OpenCloseTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\TableTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\AbstractHTMLTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\NoOutputTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\CaptionTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ListGCTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ThGCTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ToMoinMoin.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ToGoogleCode.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\TrGCTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ToTrac.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\TableGCTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\TdGCTag.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\Messages.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\MethodException.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\HtmlUtilities.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\AbstractXMLParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Console.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\UnexpectedAnswerException.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\NetworkException.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\XMLUserParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Page.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Category.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\User.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\TopicData.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\WikiDB.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\ImageData.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\DocumentCreator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\MediaWikiComm.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Connector.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\XMLPagesParser.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Link.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Revision.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\pdf</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\pdf\PDFGenerator.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\pdf\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\latex</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\latex\PropertyManager.java</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\package.html</PATH>
-            <PATH vcs="svn" revision="120">C:\dev\projects\intellitrac\dev\lib\src\bliki\operators.txt</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
-  </component>
   <component name="RunManager" selected="Plugin.Plugin">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -692,33 +334,22 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="intellitrac" />
       <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
       <option name="PROGRAM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
       <module name="" />
@@ -742,17 +373,21 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
+    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="Make" value="true" />
+      </method>
     </configuration>
     <configuration default="false" name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="intellitrac" />
@@ -915,14 +550,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="10" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="7" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30064517" order="4" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29096773" order="0" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967743" order="0" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.375134" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2401803" order="6" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2808146" order="1" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25723472" order="3" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="17" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" order="11" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="11" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21548387" order="1" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" order="0" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
@@ -946,7 +581,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring finished" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -1004,36 +639,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketCreatorForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="72" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.30642202">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketChangesHistoryPopup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.33211008">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/TracSyntaxEditor.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/JetBrains/idea-7.0.3-dev/lib/src/src_openapi.zip!/com/intellij/ide/BrowserUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="22" selection-start="2366" selection-end="2366" vertical-scroll-proportion="-0.042201836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/TracSyntaxEditor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="54" selection-start="2158" selection-end="2158" vertical-scroll-proportion="0.34311926">
@@ -1085,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="699" selection-end="710" vertical-scroll-proportion="0.65504587">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/wiki/WikiTabForm.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
@@ -1115,6 +713,43 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/XmlRpcTracGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="50" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.33740458">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="46" selection-start="580" selection-end="580" vertical-scroll-proportion="0.38931298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="31" selection-start="8227" selection-end="8227" vertical-scroll-proportion="0.69160306">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/ConnectionFailedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="781" selection-end="781" vertical-scroll-proportion="0.23358779">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/xmlrpc/CastUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="54" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.9357798">
+          <folding />
         </state>
       </provider>
     </entry>
