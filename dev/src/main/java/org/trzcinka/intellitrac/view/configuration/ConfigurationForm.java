@@ -16,11 +16,13 @@
 
 package org.trzcinka.intellitrac.view.configuration;
 
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.DocumentAdapter;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.*;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gateway.TracError;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.utils.CollectionsUtils;
@@ -43,6 +45,8 @@ import java.util.ResourceBundle;
  * project settings.
  */
 public class ConfigurationForm {
+
+  private static Logger logger = Logger.getInstance(ConfigurationForm.class.getName());
 
   private static TracGateway gateway = TracGatewayLocator.retrieveTracGateway();
 
@@ -174,8 +178,12 @@ public class ConfigurationForm {
         fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), data.getDefaultValues().getType(), false);
         fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), data.getDefaultValues().getMilestone(), false);
         fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), data.getDefaultValues().getVersion(), false);
+      } catch (TracError e) {
+        if (logger.isDebugEnabled()) {
+          logger.debug(e);
+        }
       } catch (ConnectionFailedException e) {
-        //nothing to do
+        TracGatewayLocator.handleConnectionProblem();
       }
     }
 
