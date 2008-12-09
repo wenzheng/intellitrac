@@ -11,7 +11,7 @@ IntelliTrac is an open-source IntelliJ IDEA plugin that enables you to manage Tr
 
 == Requirements ==
 
- * IntelliJ IDEA 7 (8 ??)
+ * IntelliJ IDEA 7/8
  * Trac (at least 0.10) with XML-RPC plugin
 
 == XML-RPC plugin ==
