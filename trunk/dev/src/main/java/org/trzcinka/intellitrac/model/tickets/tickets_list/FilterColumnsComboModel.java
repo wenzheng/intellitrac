@@ -26,7 +26,6 @@ import java.util.List;
  * Model for filter columns.
  * <p/>
  * Created on: 2008-11-23 18:40:43 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

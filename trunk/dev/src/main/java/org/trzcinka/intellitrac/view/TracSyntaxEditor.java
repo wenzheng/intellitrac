@@ -36,7 +36,6 @@ import java.util.ResourceBundle;
  * JEditorPane wrapper that allows to edit using TracWiki syntax and preview.
  * <p/>
  * Created on: 2008-12-07 18:53:25 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

@@ -26,7 +26,6 @@ import java.util.List;
  * todo class description
  * <p/>
  * Created on: 2008-12-03 22:42:27 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

@@ -27,7 +27,6 @@ import java.awt.event.KeyListener;
  * Base class for validators.
  * <p/>
  * Created on: 2008-11-16 22:31:29 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

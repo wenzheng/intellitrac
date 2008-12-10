@@ -26,7 +26,6 @@ import java.awt.*;
  * Renders elements of filter columns combo.
  * <p/>
  * Created on: 2008-11-23 18:52:56 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

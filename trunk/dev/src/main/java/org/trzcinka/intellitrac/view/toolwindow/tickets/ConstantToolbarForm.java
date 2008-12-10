@@ -16,14 +16,17 @@
 
 package org.trzcinka.intellitrac.view.toolwindow.tickets;
 
+import org.trzcinka.intellitrac.dto.Template;
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.model.ApplicationModel;
 import org.trzcinka.intellitrac.model.tickets.State;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
-public class ConstantToolbarForm extends BaseTicketsForm {
+public class ConstantToolbarForm extends BaseTicketsForm implements ActionListener {
 
   private JPanel rootComponent;
 
@@ -33,21 +36,44 @@ public class ConstantToolbarForm extends BaseTicketsForm {
   private JButton goBack;
 
   public ConstantToolbarForm() {
-    goHome.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent e) {
-        ticketsModel.setCurrentState(State.REPORTS_LIST);
-      }
-    });
-    goBack.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent e) {
-        ticketsModel.goBack();
-      }
-    });
-    newTicket.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent e) {
+    newTicket.addActionListener(this);
+    goBack.addActionListener(this);
+    goHome.addActionListener(this);
+  }
+
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource() == goHome) {
+      ticketsModel.setCurrentState(State.REPORTS_LIST);
+    } else if (e.getSource() == goBack) {
+      ticketsModel.goBack();
+    } else if (e.getSource() == newTicket) {
+      List<Template> ticketTemplates = ApplicationModel.getTicketTemplates();
+      if (ticketTemplates.isEmpty()) {
         ticketsModel.getCurrentTicketModel().setCurrentTicket(new Ticket());
         ticketsModel.setCurrentState(State.TICKET_CREATOR);
+      } else if (ticketTemplates.size() == 1) {
+        ticketsModel.getCurrentTicketModel().setCurrentTicket(new Ticket(ticketTemplates.get(0).getContent()));
+        ticketsModel.setCurrentState(State.TICKET_CREATOR);
+      } else {
+        showTemplatesMenu(ticketTemplates);
       }
-    });
+
+    }
   }
+
+  private void showTemplatesMenu(Iterable<Template> ticketTemplates) {
+    JPopupMenu popup = new JPopupMenu();
+    for (final Template template : ticketTemplates) {
+      JMenuItem menuItem = new JMenuItem(template.getName());
+      menuItem.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          ticketsModel.getCurrentTicketModel().setCurrentTicket(new Ticket(template.getContent()));
+          ticketsModel.setCurrentState(State.TICKET_CREATOR);
+        }
+      });
+      popup.add(menuItem);
+    }
+    popup.show(newTicket, newTicket.getX(), newTicket.getY());
+  }
+
 }

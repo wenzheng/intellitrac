@@ -20,10 +20,8 @@ import org.apache.log4j.Logger;
 import org.trzcinka.intellitrac.utils.Copiable;
 
 /**
- * todo class description
  * <p/>
  * Created on: 2008-11-29 23:44:42 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

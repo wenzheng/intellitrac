@@ -23,10 +23,8 @@ import org.trzcinka.intellitrac.model.tickets.State;
 import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 
 /**
- * todo class description
  * <p/>
  * Created on: 2008-11-29 22:15:21 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

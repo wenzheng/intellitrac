@@ -29,6 +29,9 @@ import com.intellij.openapi.project.Project;
 import org.trzcinka.intellitrac.components.ConfigurationComponent;
 import org.trzcinka.intellitrac.dto.ConnectionSettings;
 import org.trzcinka.intellitrac.dto.DefaultValues;
+import org.trzcinka.intellitrac.dto.Template;
+
+import java.util.List;
 
 /**
  * Represents general application model. Currently just holds current project instance.
@@ -56,4 +59,7 @@ public class ApplicationModel {
     return getProject().getComponent(ConfigurationComponent.class).getDefaultValues();
   }
 
+  public static List<Template> getTicketTemplates() {
+    return getProject().getComponent(ConfigurationComponent.class).getTicketTemplates();
+  }
 }

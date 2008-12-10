@@ -24,7 +24,6 @@ import java.util.List;
  * Collections-related utility methods.
  * <p/>
  * Created on: 2008-12-06 19:53:45 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

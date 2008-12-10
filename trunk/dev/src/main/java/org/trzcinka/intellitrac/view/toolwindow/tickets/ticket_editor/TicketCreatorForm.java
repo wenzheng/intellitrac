@@ -59,7 +59,7 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     ownerLabel.setText(StringUtils.EMPTY);
     keywordsTextField.setText(StringUtils.EMPTY);
     ccTextField.setText(StringUtils.EMPTY);
-    descriptionTextPane.setText(StringUtils.EMPTY);
+    descriptionTextPane.setText(ticket.getDescription());
     descriptionTextPane.setEditMode();
     commentTextPane.setText(StringUtils.EMPTY);
 
