@@ -1,4 +1,5 @@
 #summary GUI description.
+#labels Deprecated
 
 = Main panel =
 
