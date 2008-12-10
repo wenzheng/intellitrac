@@ -26,7 +26,6 @@ import java.util.List;
  * Deep copy.
  * <p/>
  * Created on: 2008-12-06 19:33:47 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

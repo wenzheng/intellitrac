@@ -45,6 +45,13 @@ public class Ticket {
   private List<TicketChange> changes = new ArrayList<TicketChange>();
   private List<Attachment> attachments = new ArrayList<Attachment>();
 
+  public Ticket(String description) {
+    this.description = description;
+  }
+
+  public Ticket() {
+  }
+
   public Integer getId() {
     return id;
   }

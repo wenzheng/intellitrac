@@ -24,7 +24,6 @@ import javax.swing.*;
  * todo class description
  * <p/>
  * Created on: 2008-11-09 19:20:16 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

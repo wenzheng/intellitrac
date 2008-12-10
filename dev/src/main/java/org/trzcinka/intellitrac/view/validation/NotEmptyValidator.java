@@ -26,7 +26,6 @@ import javax.swing.text.JTextComponent;
  * Validator that checks if given text component is not empty.
  * <p/>
  * Created on: 2008-11-16 22:33:33 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

@@ -29,7 +29,6 @@ import java.text.MessageFormat;
  * Renders single attachment element.
  * <p/>
  * Created on: 2008-09-20 23:49:29 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

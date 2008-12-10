@@ -19,10 +19,8 @@ package org.trzcinka.intellitrac.dto;
 import org.apache.log4j.Logger;
 
 /**
- * todo class description
  * <p/>
  * Created on: 2008-11-29 23:46:39 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

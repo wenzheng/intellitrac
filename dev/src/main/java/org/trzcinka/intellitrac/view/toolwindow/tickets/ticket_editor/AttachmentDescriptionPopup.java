@@ -23,7 +23,6 @@ import javax.swing.*;
 /**
  * <p/>
  * Created on: 2008-11-02 23:26:12 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

@@ -29,10 +29,8 @@ import org.trzcinka.intellitrac.components.ToolWindowComponent;
 import org.trzcinka.intellitrac.dto.Template;
 
 /**
- * todo class description
  * <p/>
  * Created on: 2008-12-06 23:01:04 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

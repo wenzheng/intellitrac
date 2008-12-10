@@ -17,7 +17,7 @@
 package org.trzcinka.intellitrac.actions;
 
 /**
- * todo class description
+ * Holds ticket template params.
  *
  * @author Michal Trzcinka
  */

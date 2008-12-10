@@ -33,7 +33,6 @@ import java.util.ResourceBundle;
  * todo class description
  * <p/>
  * Created on: 2008-12-09 01:48:39 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

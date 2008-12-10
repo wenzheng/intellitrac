@@ -25,7 +25,6 @@ import java.util.Date;
  * Adapts XML-RPC response to Attachment.
  * <p/>
  * Created on: 2008-09-21 00:05:14 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */

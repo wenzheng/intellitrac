@@ -38,7 +38,6 @@ import org.trzcinka.intellitrac.model.IntelliTracConfiguration;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.ConnectException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -264,11 +263,7 @@ public class XmlRpcTracGateway implements TracGateway {
   }
 
   private void handleException(XmlRpcException e) throws ConnectionFailedException {
-    if (e.getCause() != null && e.getCause() instanceof ConnectException) {
-      throw new ConnectionFailedException(e);
-    } else {
-      throw new TracError(e);
-    }
+    throw new ConnectionFailedException(e);
   }
 
 }

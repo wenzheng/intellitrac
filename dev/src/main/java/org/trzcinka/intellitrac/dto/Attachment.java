@@ -25,7 +25,6 @@ import java.util.Date;
  * attachment body.
  * <p/>
  * Created on: 2008-09-20 23:59:27 <br/>
- * <a href="http://www.grapesoftware.com">www.grapesoftware.com</a>
  *
  * @author Michal Trzcinka
  */
