@@ -148,7 +148,7 @@ public class TicketsListForm extends BaseTicketsForm implements CurrentReportLis
       filterStringTextField.setText(StringUtils.EMPTY);
     } catch (ConnectionFailedException e) {
       TracGatewayLocator.handleConnectionProblem();
-      ticketsModel.setCurrentState(State.REPORTS_LIST);
+      ticketsModel.getCurrentReportModel().setCurrentReport(new Report());
     }
   }
 

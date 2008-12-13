@@ -20,6 +20,7 @@ import com.intellij.openapi.ui.Messages;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.gateway.xmlrpc.XmlRpcTracGateway;
 
+import javax.swing.*;
 import java.util.ResourceBundle;
 
 /**
@@ -34,7 +35,9 @@ public class TracGatewayLocator {
   }
 
   public static void handleConnectionProblem() {
-    Messages.showMessageDialog(bundle.getString("configuration.connection.dialogs.connection_failed"), bundle.getString("dialogs.error"), Messages.getErrorIcon());
+    if (SwingUtilities.isEventDispatchThread()) {
+      Messages.showMessageDialog(bundle.getString("configuration.connection.dialogs.connection_failed"), bundle.getString("dialogs.error"), Messages.getErrorIcon());
+    }
   }
 
 }
