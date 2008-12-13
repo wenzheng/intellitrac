@@ -30,6 +30,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.trzcinka.intellitrac.dto.*;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
+import static org.trzcinka.intellitrac.model.tickets.State.REPORTS_LIST;
+import org.trzcinka.intellitrac.model.tickets.TicketsModel;
 import org.trzcinka.intellitrac.utils.DeepCopyUtils;
 import org.trzcinka.intellitrac.view.configuration.ConfigurationForm;
 import org.trzcinka.intellitrac.view.view_utils.IntelliTracIcons;
@@ -79,7 +81,6 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
   }
 
   public void initComponent() {
-
   }
 
   public void disposeComponent() {
@@ -129,7 +130,7 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
   @Nullable
   @NonNls
   public String getHelpTopic() {
-    return null;  //TODO: Implement
+    return null;
   }
 
   /**
@@ -151,7 +152,11 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
    * @return true if the settings were modified, false otherwise.
    */
   public boolean isModified() {
-    return form != null && form.isModified(this);
+    boolean modified = form != null && form.isModified(this);
+    if (modified) {
+      TicketsModel.getInstance().setCurrentState(REPORTS_LIST);
+    }
+    return modified;
   }
 
   /**
@@ -258,4 +263,5 @@ public class ConfigurationComponent implements ProjectComponent, Configurable,
   public void setSendCodePointerSettings(SendCodePointerSettings sendCodePointerSettings) {
     this.sendCodePointerSettings = sendCodePointerSettings;
   }
+
 }

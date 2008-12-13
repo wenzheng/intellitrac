@@ -51,7 +51,7 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     };
   }
 
-  public void currentTicketChanged(Ticket ticket) {
+  public void currentTicketChanged(Ticket ticket) throws ConnectionFailedException {
     synchronizeButton.setVisible(false);
     idLabel.setText(StringUtils.EMPTY);
     summaryTextField.setText(StringUtils.EMPTY);
@@ -83,20 +83,16 @@ public class TicketCreatorForm extends BaseTicketEditorForm {
     descriptionTextPane.setText(descriptionTextPane.getText() + text);
   }
 
-  private void fillCombosAndChanges() {
+  private void fillCombosAndChanges() throws ConnectionFailedException {
     DefaultValues defaultValues = ApplicationModel.getDefaultValues();
     if (defaultValues == null) {
       defaultValues = new DefaultValues();
     }
-    try {
-      FormUtils.fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), defaultValues.getComponent(), true);
-      FormUtils.fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), defaultValues.getPriority(), true);
-      FormUtils.fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), defaultValues.getType(), true);
-      FormUtils.fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), defaultValues.getMilestone(), true);
-      FormUtils.fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), defaultValues.getVersion(), true);
-      FormUtils.fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), null, true);
-    } catch (ConnectionFailedException e) {
-      TracGatewayLocator.handleConnectionProblem();
-    }
+    FormUtils.fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), defaultValues.getComponent(), true);
+    FormUtils.fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), defaultValues.getPriority(), true);
+    FormUtils.fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), defaultValues.getType(), true);
+    FormUtils.fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), defaultValues.getMilestone(), true);
+    FormUtils.fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), defaultValues.getVersion(), true);
+    FormUtils.fillComboBox(resolutionsComboBoxModel, gateway.retrieveResolutions(), null, true);
   }
 }

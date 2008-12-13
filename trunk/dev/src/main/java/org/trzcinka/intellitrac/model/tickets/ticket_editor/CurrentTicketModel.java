@@ -17,6 +17,8 @@
 package org.trzcinka.intellitrac.model.tickets.ticket_editor;
 
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
+import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.model.tickets.CurrentTicketListener;
 
 import java.util.ArrayList;
@@ -42,8 +44,13 @@ public class CurrentTicketModel {
   }
 
   private void notifyListeners() {
-    for (CurrentTicketListener listener : listeners) {
-      listener.currentTicketChanged(currentTicket);
+    try {
+      for (CurrentTicketListener listener : listeners) {
+        listener.currentTicketChanged(currentTicket);
+      }
+    } catch (ConnectionFailedException e) {
+      currentTicket = new Ticket();
+      TracGatewayLocator.handleConnectionProblem();
     }
   }
 

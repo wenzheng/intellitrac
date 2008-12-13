@@ -93,7 +93,9 @@ public class ReportsListForm extends BaseTicketsForm {
     Report selectedReport = (Report) reportsList.getSelectedValue();
     if (selectedReport != null) {
       ticketsModel.getCurrentReportModel().setCurrentReport(selectedReport);
-      ticketsModel.setCurrentState(State.TICKETS_LIST);
+      if (ticketsModel.getCurrentReportModel().getCurrentReport() == selectedReport) {
+        ticketsModel.setCurrentState(State.TICKETS_LIST);
+      }
     }
   }
 

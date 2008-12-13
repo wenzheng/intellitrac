@@ -22,7 +22,6 @@ import com.intellij.ui.DocumentAdapter;
 import org.trzcinka.intellitrac.BundleLocator;
 import org.trzcinka.intellitrac.dto.*;
 import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
-import org.trzcinka.intellitrac.gateway.TracError;
 import org.trzcinka.intellitrac.gateway.TracGateway;
 import org.trzcinka.intellitrac.gateway.TracGatewayLocator;
 import org.trzcinka.intellitrac.utils.CollectionsUtils;
@@ -31,9 +30,7 @@ import static org.trzcinka.intellitrac.view.view_utils.FormUtils.fillComboBox;
 import org.trzcinka.intellitrac.view.view_utils.MouseCursors;
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -69,6 +66,7 @@ public class ConfigurationForm {
   private JEditorPane scpWithoutSelectionEditorPane;
   private JButton newButton;
   private JButton removeButton;
+  private JPanel defaultValuesPanel;
 
   private DefaultComboBoxModel componentComboBoxModel;
   private DefaultComboBoxModel priorityComboBoxModel;
@@ -153,6 +151,29 @@ public class ConfigurationForm {
         ticketTemplatesListModel.remove(ticketTemplatesList.getSelectedIndex());
       }
     });
+
+    rootComponent.addChangeListener(new ChangeListener() {
+      public void stateChanged(ChangeEvent e) {
+        if (defaultValuesPanel == rootComponent.getSelectedComponent()) {
+          ConnectionSettings connectionSettings = new ConnectionSettings();
+          connectionSettings.setLogin(login.getText());
+          connectionSettings.setPassword(password.getText());
+          connectionSettings.setTracUrl(tracUrl.getText());
+          try {
+            gateway.setConfiguration(connectionSettings);
+            fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), componentComboBox.getSelectedItem(), false);
+            fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), priorityComboBox.getSelectedItem(), false);
+            fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), typeComboBox.getSelectedItem(), false);
+            fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), milestoneComboBox.getSelectedItem(), false);
+            fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), versionComboBox.getSelectedItem(), false);
+          } catch (Exception e1) {
+            if (logger.isDebugEnabled()) {
+              logger.debug(e1);
+            }
+          }
+        }
+      }
+    });
   }
 
 
@@ -173,17 +194,15 @@ public class ConfigurationForm {
       versionComboBoxModel.setSelectedItem(defaultValues.getVersion());
 
       try {
-        fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), data.getDefaultValues().getComponent(), false);
-        fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), data.getDefaultValues().getPriority(), false);
-        fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), data.getDefaultValues().getType(), false);
-        fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), data.getDefaultValues().getMilestone(), false);
-        fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), data.getDefaultValues().getVersion(), false);
-      } catch (TracError e) {
+        fillComboBox(componentComboBoxModel, gateway.retrieveComponents(), defaultValues.getComponent(), false);
+        fillComboBox(priorityComboBoxModel, gateway.retrievePriorities(), defaultValues.getPriority(), false);
+        fillComboBox(typeComboBoxModel, gateway.retrieveTypes(), defaultValues.getType(), false);
+        fillComboBox(milestoneComboBoxModel, gateway.retrieveMilestones(), defaultValues.getMilestone(), false);
+        fillComboBox(versionComboBoxModel, gateway.retrieveVersions(), defaultValues.getVersion(), false);
+      } catch (Exception e) {
         if (logger.isDebugEnabled()) {
           logger.debug(e);
         }
-      } catch (ConnectionFailedException e) {
-        TracGatewayLocator.handleConnectionProblem();
       }
     }
 

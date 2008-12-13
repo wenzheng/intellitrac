@@ -49,15 +49,20 @@ public class ConstantToolbarForm extends BaseTicketsForm implements ActionListen
     } else if (e.getSource() == newTicket) {
       List<Template> ticketTemplates = ApplicationModel.getTicketTemplates();
       if (ticketTemplates.isEmpty()) {
-        ticketsModel.getCurrentTicketModel().setCurrentTicket(new Ticket());
-        ticketsModel.setCurrentState(State.TICKET_CREATOR);
+        doSetCurrentTicket(new Ticket());
       } else if (ticketTemplates.size() == 1) {
-        ticketsModel.getCurrentTicketModel().setCurrentTicket(new Ticket(ticketTemplates.get(0).getContent()));
-        ticketsModel.setCurrentState(State.TICKET_CREATOR);
+        doSetCurrentTicket(new Ticket(ticketTemplates.get(0).getContent()));
       } else {
         showTemplatesMenu(ticketTemplates);
       }
 
+    }
+  }
+
+  private void doSetCurrentTicket(Ticket ticket) {
+    ticketsModel.getCurrentTicketModel().setCurrentTicket(ticket);
+    if (ticketsModel.getCurrentTicketModel().getCurrentTicket() == ticket) {
+      ticketsModel.setCurrentState(State.TICKET_CREATOR);
     }
   }
 
@@ -67,8 +72,7 @@ public class ConstantToolbarForm extends BaseTicketsForm implements ActionListen
       JMenuItem menuItem = new JMenuItem(template.getName());
       menuItem.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          ticketsModel.getCurrentTicketModel().setCurrentTicket(new Ticket(template.getContent()));
-          ticketsModel.setCurrentState(State.TICKET_CREATOR);
+          doSetCurrentTicket(new Ticket(template.getContent()));
         }
       });
       popup.add(menuItem);

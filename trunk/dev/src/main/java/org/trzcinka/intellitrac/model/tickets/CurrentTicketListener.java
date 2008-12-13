@@ -17,10 +17,11 @@
 package org.trzcinka.intellitrac.model.tickets;
 
 import org.trzcinka.intellitrac.dto.Ticket;
+import org.trzcinka.intellitrac.gateway.ConnectionFailedException;
 
 public interface CurrentTicketListener {
 
-  void currentTicketChanged(Ticket ticket);
+  void currentTicketChanged(Ticket ticket) throws ConnectionFailedException;
 
 }
 
