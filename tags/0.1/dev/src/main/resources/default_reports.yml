@@ -1,0 +1,21 @@
+---
+- !report
+    id: 1
+    name: All tickets
+    description: Lists all tickets.
+    query: order='priority'
+- !report
+    id: 2
+    name: All active tickets
+    description: Lists all active tickets.
+    query: status!='closed'&order='priority'
+- !report
+    id: 3
+    name: My all tickets
+    description: Lists all tickets assigned to the user.
+    query: owner=$USER&order='priority'
+- !report
+    id: 4
+    name: My active tickets
+    description: Lists all active tickets assigned to the user.
+    query: owner=$USER&status!='closed'&order='priority' 
