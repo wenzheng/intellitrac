@@ -2,7 +2,7 @@
 <idea-plugin>
   <name>IntelliTrac</name>
   <description>Trac integration for IntelliJ IDEA.</description>
-  <version>1.0</version>
+  <version>0.1</version>
   <vendor>Michal Trzcinka</vendor>
   <idea-version since-build="3000"/>
 
