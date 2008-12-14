@@ -42,17 +42,269 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.form" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/configuration/ConfigurationForm.java" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\ToJSPWiki.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\IWikiModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/wikipedia" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Padleft.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\HtmlTagProvider.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\Messages.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HTMLEndTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ATag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PrefixOperator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPPreTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Link.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\DoubleEvaluator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\HtmlCleaner.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\JavaScriptCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\ReferencesTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\IEventListener.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\TagToken.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ThGCTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\pdf\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\TrGCTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\UC.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\AbstractHTMLTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\DlTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Category.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\InfixOperator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\PreTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Padright.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HTMLBlockTag.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api/creator" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\operators.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\TemplateParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDouble2Function.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PreMinusOperator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/docbook" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\NodeAttribute.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\PDFWikiModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\XMLUserParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\HtmlToDocbookContentHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\ThJSPWikiTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\DocbookGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\Scanner.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\XmlSerializer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\LaTeXConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\DdTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\NS.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\NowikiTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Ifexist.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\IgnoreDtdEntityResolver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\CommandLine.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\NoOutputTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\MediaWikiComm.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Connector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/util" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\GroovyCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\TdTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\HTMLTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\FunctionNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\Util.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\Messages_en.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HTMLTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Console.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\WikiArticle.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\DtTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\DivErrorboxExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ToTrac.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\TableTag.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPListElement.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\Parser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\AbstractHtmlExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\HtmlTokenizer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\User.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\AbstractNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\pdf\PDFGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/ast" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/eval" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\XMLCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\HtmlFormExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\DefaultEventListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/dump" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\util\GenerateOperatorArrays.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PrePlusOperator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\NumberNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\HTML2WikiConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\Configuration.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\ContentToken.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\UnexpectedAnswerException.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\PHPCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\HTMLConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\ImageData.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\IHTMLToWiki.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\FloatNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\MathTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\TagInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\NetworkException.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\DocumentCreator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ToGoogleCode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ImgTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\LCFirst.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\TdGCTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\SubtractOperator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Time.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner/util" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ToWikipedia.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\TagStack.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\IBodyTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\ATag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPParagraphTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\util\HtmlForm.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\SourceTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\AbstractHTMLToWiki.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\APIWikiModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ListTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\TrJSPWikiTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\SemanticAttribute.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\SemanticRelation.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\JavaCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\TracModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\DoctypeToken.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intellitrac.iws" afterPath="$PROJECT_DIR$/intellitrac.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketCreatorForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ticket_editor/TicketCreatorForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/tickets_list/TicketsListForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/tickets_list/TicketsListForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/CurrentTicketListener.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/CurrentTicketListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/gateway/TracGatewayLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/ticket_editor/CurrentTicketModel.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/model/tickets/ticket_editor/CurrentTicketModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/components/ConfigurationComponent.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/components/ConfigurationComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ConstantToolbarForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/ConstantToolbarForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/reports_list/ReportsListForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/trzcinka/intellitrac/view/toolwindow/tickets/reports_list/ReportsListForm.java" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\ITextConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Revision.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\SpecialEntities.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\TrTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\AbstractParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IBooleanBoolean1Function.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\OpenCloseTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\Operator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\WikiXMLParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\PrettyXmlSerializer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/api" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ToMoinMoin.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\EndTagToken.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IBooleanBoolean2Function.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPBoldItalicTag.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\ImageFormat.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\PrintArticle.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\SimpleXmlSerializer.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\OpenCloseHTMLTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\PostfixOperator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\ThTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\ITemplateFunction.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WikiTextReader.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IBooleanDouble2Function.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\TracParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\MethodException.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\DivideOperator.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\dump\IArticleFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/code" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\Page.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\CSharpCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\IParserFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\CaptionTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\IConfiguration.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDouble0Function.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\TagNode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags/util" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\HtmlUtilities.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\util\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\ListGCTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\Encoder.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\googlecode\TableGCTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\XMLPagesParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\WPATag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\IntegerNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WikipediaParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\WikiTagNode.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/googlecode" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\UCFirst.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\PTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\Attribute.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\AbstractTemplateFunction.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPList.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\LC.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\AbstractTracModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDoubleValue.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\WikiDB.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\operator\ASTNodeFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\URLEncode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/latex" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\CompactXmlSerializer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/org" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\AbstractCPPBasedCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\INoBodyParsingTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Ifeq.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/filter" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\docbook\FormattingXMLStreamWriter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\wikipedia\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\IParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\ITagInfoProvider.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\ABAPCodeFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\MagicWord.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\latex.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\FractionNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\Utils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\BrTag.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/model" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\jspwiki\TdJSPWikiTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\util\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\util\Console.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDoubleFunction.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Ifexpr.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\WikiModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\Messages_de.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Localurl.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\RefTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\TableOfContentTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\Reference.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\ASTNode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/tags" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Fullurl.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\creator\TopicData.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\If.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\code\SourceCodeFormatter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\SyntaxError.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\PDFConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\StringNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\latex\PropertyManager.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\tags\HrTag.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPCell.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\AbstractWikiModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WikipediaScanner.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\StringPair.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\api\AbstractXMLParser.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPTable.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\DoubleNode.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\html\package.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Switch.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\CommentToken.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\filter\WPRow.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\eval\IDouble1Function.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\org\htmlcleaner\BaseToken.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/html/jspwiki" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\model\BBCodeModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\Expr.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/org/htmlcleaner" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/src/bliki/info/bliki/wiki/template/expr/operator" afterPath="" />
+      <change type="DELETED" beforePath="C:\dev\projects\intellitrac\dev\lib\src\bliki\info\bliki\wiki\template\expr\ast\SymbolNode.java" afterPath="" />
     </list>
     <ignored path="intellitrac.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +320,7 @@
     <option name="CLEAR_OUTPUT_DIRECTORY" value="true" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="C:\Documents and Settings\mitr\.IntelliJIdea70\system\coverage\intellitrac$Tests$default package.es" NAME="&lt;default&gt; Coverage Results" MODIFIED="1221946929779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" />
+    <SUITE FILE_PATH="C:\Documents and Settings\mitr\.IntelliJIdea70\system\coverage\intellitrac$Tests$default package.es" NAME="&lt;default&gt; Coverage Results" MODIFIED="1229192845796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" />
     <SUITE FILE_PATH="C:\Documents and Settings\mitr\.IntelliJIdea70\system\coverage\intellitrac$Tests$org.es" NAME="org Coverage Results" MODIFIED="1217625880640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -126,8 +378,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -203,6 +455,10 @@
           <option name="myItemId" value="intellitrac" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="intellitrac" />
+          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+        </PATH_ELEMENT>
       </PATH>
     </subPane>
   </component>
@@ -253,8 +509,8 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -286,6 +542,52 @@
     <option name="showLabels" value="true" />
   </component>
   <component name="RunManager" selected="Plugin.Plugin">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="ADDITIONAL_CLASS_PATH" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <envs />
+      <method>
+        <option name="Make" value="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="intellitrac" />
+      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
+      <option name="PROGRAM_PARAMETERS" />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -315,33 +617,6 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="intellitrac" />
-      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=512m -XX:PermSize=128m -ea -XX:-UseParallelOldGC -server" />
-      <option name="PROGRAM_PARAMETERS" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <envs />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
@@ -357,25 +632,6 @@
       <method>
         <option name="Make" value="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="false" name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="intellitrac" />
@@ -431,47 +687,9 @@
         <option name="Make" value="true" />
       </method>
     </configuration>
-    <configuration default="false" name="Unnamed" type="TestNG" factoryName="TestNG" enabled="false" merge="false">
-      <module name="intellitrac" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="org.trzcinka.intellitrac" />
-      <option name="MAIN_CLASS_NAME" value="org.trzcinka.intellitrac.Poo" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="1982" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="Make" value="true" />
-      </method>
-    </configuration>
-    <list size="3">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Plugin.Plugin" />
       <item index="1" class="java.lang.String" itemvalue="TestNG.Tests" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.Unnamed" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -539,7 +757,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" order="7" />
       <window_info id="Maven projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30064517" order="4" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27483872" order="0" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31832796" order="2" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31832796" order="2" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" order="2" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2401803" order="6" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2808146" order="1" />
@@ -569,7 +787,7 @@
     <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring finished" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
