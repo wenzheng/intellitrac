@@ -1,0 +1,1 @@
+![http://intellitrac.googlecode.com/svn/trunk/doc/img/model-view_architecture.png](http://intellitrac.googlecode.com/svn/trunk/doc/img/model-view_architecture.png)
